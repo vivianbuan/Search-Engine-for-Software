@@ -7,3 +7,4 @@ This doc helps to keep track of the related readings so far.
 ### Week 2
 * Chapter 3 and Chapter 4 of Search User Interfaces: http://searchuserinterfaces.com/book/
 * Brandt’s “Example-Centric Programming: Integrating Web Search into the Development Environment” (CHI 2010) http://joelbrandt.org/publications/brandt_chi2010_example_centric_programming.pdf
+* A document of software search related work: https://docs.google.com/document/d/1MmJ5hdSBAkFW0tnnhlVfJ4TOihG1F8vAMBASnK6g3ig/edit
