@@ -7,6 +7,7 @@ These documents are sitting under [Team Drive Folder](https://drive.google.com/d
  - [Project Plan](https://docs.google.com/document/d/1DMkskv_KecEGFEBNWty32g4zq_XHTv5BNQS4Gj2nZus/edit) <br />
  - [E295 Round 3 Writing - Capstone Problem Space (paper)](https://docs.google.com/document/d/1ceHCXGE1-apYXRMp1TOplRyBTT0powtpRWBqebFccz8/edit)
  - [E295 Round 3 Presentation - Capstone Problem Space (presentation)](https://docs.google.com/presentation/d/1K1sIbVlDni3jeicJxFmDAPUR4sEQwHSaM9Ef-U_PPi4/edit)
+ - [Detailed Timeline for Spring 2018](https://docs.google.com/document/d/1K_zdnjVG5Z8NAvj3EtiplYYQzWzQ4KstHcY_ifEXS1Y/edit)
 
 ## Links to Meeting Note
 Meetign notes are mostly sitting under issues.
