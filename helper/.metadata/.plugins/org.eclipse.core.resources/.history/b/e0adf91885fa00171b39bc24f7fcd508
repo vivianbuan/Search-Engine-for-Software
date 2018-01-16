@@ -1,0 +1,13 @@
+import java.io.File;
+
+public class FormulaToDocument {
+
+	public static void main(String[] args) {
+		
+		File file = new File("").getCanonicalFile();
+		System.out.println(currentDir);
+		File parentDir = currentDir.getParentFile();
+		System.out.println(parentDir);
+	}
+
+}

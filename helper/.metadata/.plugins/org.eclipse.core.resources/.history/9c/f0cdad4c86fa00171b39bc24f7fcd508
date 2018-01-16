@@ -1,0 +1,36 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FormulaToDocument {
+
+	public static void main(String[] args) {
+		
+		File currentDir;
+		String line = null;
+		
+		try {
+			// get data directory
+			currentDir = new File("").getCanonicalFile();
+			File parentDir = currentDir.getParentFile().getParentFile();
+			File formulaDir = new File(parentDir, "data/homebrew_formula");
+			
+			// read data from doc
+			File curFile = new File(formulaDir, "a2ps.rb");
+			FileReader fr = new FileReader(curFile);
+			BufferedReader bufferedReader = new BufferedReader(fr);
+			// start from second line, read until an empty line reached
+            while((line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }   
+
+            // Always close files.
+            bufferedReader.close();  
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
