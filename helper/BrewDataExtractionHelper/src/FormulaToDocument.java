@@ -10,6 +10,10 @@ import java.io.Writer;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+/*
+ * Extract content from homebrew formula (https://github.com/Homebrew/homebrew-core/tree/master/Formula)
+ * into json files.
+ * */
 public class FormulaToDocument {
 
 	public static void main(String[] args) {
