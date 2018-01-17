@@ -39,11 +39,17 @@ public class FormulaToDocument {
             for (File curFile: formulaDir.listFiles()) {
             	System.out.println(curFile.getName());
             	
+            	String fileName = curFile.getName();
+            	String packageName = fileName.substring(0, fileName.length()-3); // get rid of ".rb"
+            	
+            	JSONObject jsonObject = new JSONObject();
+            	jsonObject.put("name", packageName);
+            	
     			// read data from doc
 //    			File curFile = new File(formulaDir, "aircrack-ng.rb");
     			FileReader fr = new FileReader(curFile);
     			BufferedReader bufferedReader = new BufferedReader(fr);
-    			JSONObject jsonObject = new JSONObject();
+    			
     			// start from second line, read until "bottle"
     			bufferedReader.readLine();
     			while((line = bufferedReader.readLine()) != null) {
