@@ -1,0 +1,2 @@
+{ "packages": ["tensorflow", "pytorch", "scikit-learn"]
+}
