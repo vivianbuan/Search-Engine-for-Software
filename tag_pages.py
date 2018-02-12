@@ -38,8 +38,7 @@ def main():
 
 			# Iterate through all packages and see if page mentions it
 			for package in package_dict['packages']:
-				print(soup.find_all(name=True, string=re.compile(package)))
-				cur_dict[package] = len(soup.find_all(name=True, string=package))
+				cur_dict[package] = len(soup.find_all(name=True, string=re.compile(package)))
 
 		# Update number of occurences of packages within each page
 		out_dict[page] = cur_dict
