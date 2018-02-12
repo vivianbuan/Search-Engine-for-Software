@@ -1,5 +1,7 @@
 """
-Python script to tag crawled HTML pages with the package names mentioned within the page.
+Python script to tag crawled HTML pages with the package names mentioned within the page. The script only
+checks for mentions of package names in the content between tags.
+
 Script requires 2 arguments, the file path to a JSON file that lists all packages to be checked against, 
 and file path to directory of HTML pages to be tagged.
 
