@@ -1,0 +1,41 @@
+{% extends "search_engine/header.html" %}
+
+{% block content %}
+
+{% block styles %}
+{% load staticfiles %}
+<link rel='stylesheet' href="{% static 'search_engine/results.css'%}" type='text/css' />
+{% endblock %}
+
+
+<div class="container-fluid entire-page">
+
+	<div class="input-group">
+		<input type="text" class="form-control query-bar" id="query-bar" placeholder="Search for...">
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="button"> Search!</button>
+		</span<a href=""></a>
+	</div>
+
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			</div>
+		</div>
+	</nav>
+
+	<div class="row">
+		<div class="col-sm-6">
+			{% for r in results %}
+			<div class="result">
+				<div class="result-title "> <a href={{r.url}}> {{r.title}} </a></div>
+				<div class="result-url ">  {{r.url}}  </div>
+				<div class="result-description"> {{r.desc}} </div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

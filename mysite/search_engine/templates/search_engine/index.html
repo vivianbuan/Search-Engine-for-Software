@@ -1,0 +1,30 @@
+{% extends "search_engine/header.html" %}
+
+{% block styles %}
+{% load staticfiles %}
+<link rel='stylesheet' href="{% static 'search_engine/index.css'%}" type='text/css' />
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+	<h1 class="center-text"> Search Engine for Software Packages </h1>
+		
+
+
+	<div class="row">
+		<div class="center-block">
+			<input class="query-bar" name="query" type="text">
+		</div>
+	</div>
+
+
+	<div class="row button-row">
+		<div class="center-block">
+			<input class="btn btn-default search-button" type="button" value="Search">
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+.result{line-height: 1.3}
+.result-title {
+	padding-top: 10px;
+	padding-bottom: 4px;
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: navy;
+}
+.result-url {
+	font-size: 10px;
+}
+.result-description {
+	font-size: 12px;
+}
+
+.entire-page{
+	padding-top: 50px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
