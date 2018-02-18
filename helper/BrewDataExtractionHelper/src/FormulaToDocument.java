@@ -5,9 +5,9 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.io.Writer;
+import java.util.HashSet;
+import java.util.Set;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 /*
@@ -22,6 +22,9 @@ public class FormulaToDocument {
 		String line = null;
 		int count = 0;
 		
+		Set<String> keys = new HashSet<>();
+		keys.add("name");
+		
 		try {
 			// get data directory
 			currentDir = new File("").getCanonicalFile();
@@ -32,14 +35,19 @@ public class FormulaToDocument {
 //			outputFile.createNewFile();
 //			FileWriter fileWriter = new FileWriter(outputFile);
 //            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            Writer bufferedWriter = new BufferedWriter(new OutputStreamWriter(
+            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(
                     new FileOutputStream("brew_formula.json"), "utf-8"));
-            JSONArray jsonArr = new JSONArray();
+//            JSONArray jsonArr = new JSONArray();
+            
+           bufferedWriter.write("[");
+           bufferedWriter.newLine();
 			
             for (File curFile: formulaDir.listFiles()) {
-            	System.out.println(curFile.getName());
-            	
             	String fileName = curFile.getName();
+//            	System.out.println(fileName);
+            	int dotIndex = fileName.lastIndexOf('.');
+            	if (!fileName.substring(dotIndex+1).equals("rb")) continue;
+            	
             	String packageName = fileName.substring(0, fileName.length()-3); // get rid of ".rb"
             	
             	JSONObject jsonObject = new JSONObject();
@@ -63,21 +71,29 @@ public class FormulaToDocument {
     				if (value.startsWith("\"")) value = value.substring(1);
     				if (value.endsWith("\"")) value = value.substring(0, value.length()-1);
     				jsonObject.put(tmp[0], value);
+    				keys.add(tmp[0]);
     			}
-    			jsonArr.add(jsonObject);
+//    			jsonArr.add(jsonObject);
+    			
+//    			System.out.println(jsonObject.toJSONString());
+    			bufferedWriter.write(jsonObject.toJSONString());
+    			bufferedWriter.write(",");
+    			bufferedWriter.newLine();
     			
     			// close file
     			bufferedReader.close();
     			count++;
             }
             
-			bufferedWriter.write(jsonArr.toJSONString());
+//			bufferedWriter.write(jsonArr.toJSONString());
+            bufferedWriter.write("]");
 			
 
             // close files. 
             bufferedWriter.close();
             
             System.out.println("Done! Total " + count + " files.");
+            System.out.println(keys.toString());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
