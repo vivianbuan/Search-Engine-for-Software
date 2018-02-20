@@ -21,3 +21,21 @@ a {
 	padding-left: 100px;
 	padding-right: 100px;
 }
+
+.full-width {
+	width: 100%;
+}
+
+.package-card {
+	border-style: solid;
+	border-width: 1px;
+	margin-left: 4px;
+	margin-right: 4px;
+	text-align: center;
+	padding: 0px;
+	border-color: gray;
+}
+
+.package-card img {
+	width: 100%;
+}

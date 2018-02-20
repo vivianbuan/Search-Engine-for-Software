@@ -11,10 +11,14 @@
 <div class="container-fluid entire-page">
 
 	<div class="input-group">
-		<input type="text" class="form-control query-bar" id="query-bar" placeholder="Search for...">
-		<span class="input-group-btn">
-			<button class="btn btn-default" type="button"> Search!</button>
-		</span<a href=""></a>
+		<form action="/results/" method="get" class="full-width">
+			<div class="row">
+				<div class="col-sm-6">
+				<input type="text" class="form-control query-bar" name="searchInput" id="query-bar" placeholder="Search for...">
+		  		</div>
+		  		<button type="submit" class="btn btn-default">Search</button>
+		  	</div>
+		</form>
 	</div>
 
 
@@ -24,6 +28,30 @@
 			</div>
 		</div>
 	</nav>
+
+	<!-- <div class="card" style="width: 10rem;">
+	  <img class="card-img-top" src="{% static 'search_engine/default.png' %}" alt="Card image cap">
+	  <div class="card-block">
+	    <h4 class="card-title">Card title</h4>
+	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+	    <a href="#" class="btn btn-primary">Go somewhere</a>
+	  </div>
+	</div> -->
+
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="row">
+				{% for p in packages %}
+					<div class="col-sm-2 package-card">
+						<img src="{% static 'search_engine/default.png' %}" alt="Card image cap">
+						{{ p.name}}
+						<button class="btn btn-default">See More</button>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
 
 	<div class="row">
 		<div class="col-sm-6">
