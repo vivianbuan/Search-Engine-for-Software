@@ -15,7 +15,24 @@ def results(request):
 		result['url']   = 'www.reallylongurl.com'
 		result['desc']  = cicero_lorem_ipsum
 		results.append(result)
-	return render(request, 'search_engine/results_page.html', {'results': results})
+
+	filters = []
+	for i in range(5):
+		fil = {}
+		fil['name'] = 'foobar'
+		fil['options'] = ['option 1', 'option 2', 'option 3', 'option 4', 'option 5']
+		filters.append(fil)
+
+	selected_packages = [];
+	for i in range(3):
+		sp = {}
+		sp['average_forum_response_time'] = 2
+		sp['average_forum_response_time_type'] = 'minutes'
+		sp['license'] = 'MIT'
+		sp['documentation_quality'] = 5
+		# sp['']
+
+	return render(request, 'search_engine/results_page.html', {'results': results, 'filters': filters, 'selected_packages': selected_packages})
 
 
 

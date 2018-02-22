@@ -1,11 +1,12 @@
 {% extends "search_engine/header.html" %}
 
-{% block content %}
-
 {% block styles %}
 {% load staticfiles %}
 <link rel='stylesheet' href="{% static 'search_engine/results.css'%}" type='text/css' />
 {% endblock %}
+
+{% block content %}
+
 
 
 <div class="container-fluid entire-page">
@@ -17,16 +18,24 @@
 		</span<a href=""></a>
 	</div>
 
-
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-			</div>
+	<div class="panel panel-default package-panel">
+	 	<div class="panel-body">
+	 		The goal is to show a list of packages here.
 		</div>
-	</nav>
+	</div>
+
 
 	<div class="row">
-		<div class="col-sm-6">
+		<div class="col-sm-8">
+
+			<div class="panel panel-default">
+				<div class="panel-body"> Comparing Packages - currently assuming that 3 are selected</div>
+				<table class="table">
+
+				</table>
+			</div>
+		<div class="col-sm-8">
+
 			{% for r in results %}
 			<div class="result">
 				<div class="result-title "> <a href={{r.url}}> {{r.title}} </a></div>
@@ -34,6 +43,28 @@
 				<div class="result-description"> {{r.desc}} </div>
 			</div>
 			{% endfor %}
+		</div>
+
+
+
+		</div>
+		<!-- <div class="col-sm-2"></div> -->
+		<div class="col-sm-4">
+			<div class="panel panel-default">
+			 	<div class="panel-body">
+			 		why isn't this panel working
+					{% for fil in filters %}
+					<div class="filter">
+						<div class="filter-name"> {{fil.name}} </div>
+						{% for op in fil.options %}
+  						<div class="option option-{{op}}">
+  							<input class="checkbox-{{op}}" type="checkbox" > {{op}}
+  						</div>
+						{% endfor %}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
