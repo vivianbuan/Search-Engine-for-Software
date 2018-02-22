@@ -3,6 +3,9 @@
 {% block styles %}
 {% load staticfiles %}
 <link rel='stylesheet' href="{% static 'search_engine/results.css'%}" type='text/css' />
+
+<script src="{% static 'search_engine/results.js' %}"></script>
+
 {% endblock %}
 
 {% block content %}
@@ -13,8 +16,8 @@
 
 	<div class="input-group">
 		<form action="/results/" method="get" class="full-width">
-			<div class="row">
-				<div class="col-sm-6">
+			<div class="row" class="margin-med">
+				<div class="col-sm-11">
 				<input type="text" class="form-control query-bar" name="searchInput" id="query-bar" placeholder="Search for...">
 		  		</div>
 		  		<button type="submit" class="btn btn-default">Search</button>
@@ -22,22 +25,27 @@
 		</form>
 	</div>
 
-	<div class="panel panel-default package-panel">
-	 	<div class="panel-body">
-			<div class="row">
-				<div class="col-sm-6">
-						{% for p in packages %}
-							<div class="col-sm-2 package-card">
-								<img src="{% static 'search_engine/default.png' %}" alt="Card image cap">
-								{{ p.name}}
-								<button class="btn btn-default">See More</button>
-							</div>
-						{% endfor %}
-					</div>
+
+<button id="test-btn"> Click To Test Whether JS Page Is Compiling - (Alert should show up)</button>
+
+	<!-- start package panel -->
+	<div class="row margin-top">
+		<div class="col-sm-9">
+
+			<div class="panel panel-default package-panel">
+			 	<div class="panel-body">
+			
+					{% for p in packages %}
+						<div class="col-sm-2 package-card">
+							<img src="{% static 'search_engine/default.png' %}" alt="Card image cap">
+							{{ p.name}}
+							<button class="btn btn-default package-button" id="{{p.name}}">See More</button>
+						</div>
+					{% endfor %}
+
+			
 				</div>
 			</div>
-		</div>
-	</div>
 
 
 	<!-- <div class="card" style="width: 10rem;">
@@ -51,34 +59,46 @@
 
 
 
-	<div class="row">
-		<div class="col-sm-8">
 
 			<div class="panel panel-default">
-				<div class="panel-body"> Comparing Packages - currently assuming that 3 are selected</div>
-				<table class="table">
+				<!-- <div class="panel-body "> Comparing Packages - currently assuming that 3 are selected</div> -->
+				<table class="table table-responsive">
+					<thead>
+						<tr>
+							<th> </th>
+							{% for package_name in packages_for_table.name.values %}
+								<th> {{package_name}} </th>
+							{% endfor %}
+						</tr>
+					</thead>
+					<tbody>
+						{% for quality, package_vals in packages_for_table.items %}
+							<tr>
+								<td> {{quality}} </td>
+								{% for package_name, val in package_vals.items %}
+							 	<td> {{val}} </td>
+							 	{% endfor %}
+							</tr>
 
+						{% endfor %}
+					</tbody>
 				</table>
 			</div>
-		<div class="col-sm-8">
 
-			{% for r in results %}
-			<div class="result">
-				<div class="result-title "> <a href={{r.url}}> {{r.title}} </a></div>
-				<div class="result-url ">  {{r.url}}  </div>
-				<div class="result-description"> {{r.desc}} </div>
+				{% for r in results %}
+				<div class="result">
+					<div class="result-title "> <a class="result-title" href={{r.url}}> {{r.title}} </a></div>
+					<div class="result-url ">  {{r.url}}  </div>
+					<div class="result-description"> {{r.desc}} </div>
+				</div>
+				{% endfor %}
 			</div>
-			{% endfor %}
-		</div>
 
 
-
-		</div>
 		<!-- <div class="col-sm-2"></div> -->
-		<div class="col-sm-4">
+		<div class="col-sm-3">
 			<div class="panel panel-default">
 			 	<div class="panel-body">
-			 		why isn't this panel working
 					{% for fil in filters %}
 					<div class="filter">
 						<div class="filter-name"> {{fil.name}} </div>
@@ -92,6 +112,7 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 </div>
 

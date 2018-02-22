@@ -1,30 +1,17 @@
-
-.result{line-height: 1.3}
-.result-title {
-	padding-top: 10px;
-	padding-bottom: 4px;
-	font-size: 20px;
-}
-
-a {
-	text-decoration: none;
-	color: navy;
-}
-.result-url {
-	font-size: 10px;
-}
-.result-description {
-	font-size: 12px;
-}
-
 .entire-page{
 	padding-top: 100px;
 	padding-left: 100px;
 	padding-right: 100px;
+	/*width: 80%;*/
 }
-
+/*
 .full-width {
 	width: 100%;
+}*/
+
+
+.margin-top {
+	padding-top: 10px;
 }
 
 .package-card {
@@ -39,4 +26,24 @@ a {
 
 .package-card img {
 	width: 100%;
+}
+
+
+
+.result{line-height: 1.3}
+.result-title {
+	padding-top: 10px;
+	padding-bottom: 4px;
+	font-size: 20px;
+}
+
+.result-title a {
+	text-decoration: none;
+	color: navy;
+}
+.result-url {
+	font-size: 10px;
+}
+.result-description {
+	font-size: 12px;
 }
