@@ -4,7 +4,25 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
 	return render(request, 'search_engine/index.html')
+
 def results(request):
+	# get the search input (so we can use it later)
+	searchInput = request.GET.get('searchInput')
+
+	#making up temp values for packages
+	packages = []
+	for i in range(5):
+		package = {}
+		package['name'] = "my_name"
+		package['rating'] = 5
+		package['response_time'] = "2hrs"
+		package['license'] = "MIT"
+		package['published'] = "2014-03-12"
+		package['last_modified'] = "2016-07-21"
+		package['num_contributor'] = "10"
+		package['size'] = "2MB"
+		package['dependencies'] = "None"
+		packages.append(package)
 
 	#lets just say results look like this.
 	cicero_lorem_ipsum = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
@@ -32,7 +50,7 @@ def results(request):
 		sp['documentation_quality'] = 5
 		# sp['']
 
-	return render(request, 'search_engine/results_page.html', {'results': results, 'filters': filters, 'selected_packages': selected_packages})
+	return render(request, 'search_engine/results_page.html', {'results': results, 'packages': packages, 'filters': filters, 'selected_packages': selected_packages})
 
 
 
