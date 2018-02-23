@@ -60,30 +60,28 @@
 
 
 
-			<div class="panel panel-default">
 				<!-- <div class="panel-body "> Comparing Packages - currently assuming that 3 are selected</div> -->
-				<table class="table table-responsive">
+				<table class="table table-responsive package-table">
 					<thead>
 						<tr>
-							<th> </th>
+							<th class="table-header"> </th>
 							{% for package_name in packages_for_table.name.values %}
-								<th> {{package_name}} </th>
+								<th class="{{package_name}}-table table-header"> {{package_name}} </th>
 							{% endfor %}
 						</tr>
 					</thead>
 					<tbody>
 						{% for quality, package_vals in packages_for_table.items %}
 							<tr>
-								<td> {{quality}} </td>
+								<td class="{{quality}}-table-column"> {{quality}} </td>
 								{% for package_name, val in package_vals.items %}
-							 	<td> {{val}} </td>
+							 	<td class="{{package_name}}-table {{package_name}}-table-value"> {{val}} </td>
 							 	{% endfor %}
 							</tr>
 
 						{% endfor %}
 					</tbody>
 				</table>
-			</div>
 
 				{% for r in results %}
 				<div class="result">
