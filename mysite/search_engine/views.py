@@ -8,10 +8,10 @@ def index(request):
 	return render(request, 'search_engine/index.html')
 
 def results(request):
-        connection = urlopen('http://35.227.144.206:8983/solr/collection_name/select?q=*:*')
-        indexer_response = eval(connection.read());
-        indexer_response = indexer_response['response']['numFound']
-        indexer_response = 'THIS IS THE INDEXER RESPONSE' 
+    connection = urlopen('http://35.227.144.206:8983/solr/collection_name/select?q=*:*')
+    indexer_response = eval(connection.read());
+    indexer_response = indexer_response['response']['numFound']
+    indexer_response = 'THIS IS THE INDEXER RESPONSE' 
     # get the search input (so we can use it later)
     searchInput = request.GET.get('searchInput')
 
