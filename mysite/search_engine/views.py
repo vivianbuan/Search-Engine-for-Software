@@ -1,14 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import random
+from urllib2 import *
 
 # Create your views here.
 def index(request):
 	return render(request, 'search_engine/index.html')
 
 def results(request):
-	# get the search input (so we can use it later)
-	searchInput = request.GET.get('searchInput')
+        connection = urlopen('http://35.227.144.206:8983/solr/collection_name/select?q=*:*')
+        indexer_response = eval(connection.read());
+        indexer_response = indexer_response['response']['numFound']
+        indexer_response = 'THIS IS THE INDEXER RESPONSE' 
+    # get the search input (so we can use it later)
+    searchInput = request.GET.get('searchInput')
 
 	#making up temp values for packages
 	packages = []
@@ -62,7 +67,7 @@ def results(request):
 	# 	sp['published'] = "need to change this to date object"
 	# 	sp['num_contributor']
 
-	return render(request, 'search_engine/results_page.html', {'results': results, 'packages': packages, 'filters': filters, 'packages_for_table': packages_for_table})
+        return render(request, 'search_engine/results_page.html', {'indexer': indexer_response, 'results': results, 'packages': packages, 'filters': filters, 'packages_for_table': packages_for_table})
 
 
 # def get_package_data(request):
