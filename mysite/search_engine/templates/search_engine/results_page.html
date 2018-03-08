@@ -10,8 +10,10 @@
 
 {% block content %}
 
+{% for indexer_result in indexer.docs %}
 
-
+	{{indexer_result.homepage}}
+{% endfor %}
 <div class="container-fluid entire-page">
 
 	<div class="input-group">
@@ -26,7 +28,7 @@
 	</div>
 
 
-	<button id="test-btn"> {{indexer}} Click To Test Whether JS Page Is Compiling - (Alert should show up)</button>
+	<button id="test-btn">  Click To Test Whether JS Page Is Compiling - (Alert should show up)</button>
 
 	<!-- start package panel -->
 	<div class="row margin-top">
@@ -64,18 +66,18 @@
 				<table class="table table-responsive package-table">
 					<thead>
 						<tr>
-							<th class="table-header"> </th>
+							<th class="package-table-header"> </th>
 							{% for package_name in packages_for_table.name.values %}
-								<th class="{{package_name}}-table table-header"> {{package_name}} </th>
+								<th class="{{package_name}}-table package-table-header"> {{package_name}} </th>
 							{% endfor %}
 						</tr>
 					</thead>
 					<tbody>
 						{% for quality, package_vals in packages_for_table.items %}
 							<tr>
-								<td class="{{quality}}-table-column"> {{quality}} </td>
+								<td class="{{quality}}-table-column package-table-row"> {{quality}} </td>
 								{% for package_name, val in package_vals.items %}
-							 	<td class="{{package_name}}-table {{package_name}}-table-value"> {{val}} </td>
+							 	<td class="{{package_name}}-table {{package_name}}-table-value package-table-row"> {{val}} </td>
 							 	{% endfor %}
 							</tr>
 

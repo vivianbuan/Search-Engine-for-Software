@@ -19,13 +19,13 @@ $(document).ready(function() {
 	    });
 
 		var count = 0;
-		$('.table-header').each(function() {
-	    	if ($(this).is(":visible")) {
+		$('.package-table-header').each(function() {
+	    	if ($(this).css('display') != 'none') {
 	    		count++;
 	    	}
-
 	    	// if ($(this).find('td:empty')) { alert('one empty')}
 	    });
+        alert(count);
 
 	    if (count <= 1){
 	    	$('.package-table').toggle();

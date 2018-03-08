@@ -29,6 +29,16 @@
 	width: 100%;
 }
 
+.package-table {
+	display: none;
+}
+.package-table-header{
+	display: none;
+}
+.package-table-row{
+	display: none;
+}
+
 
 
 .result{line-height: 1.3}
