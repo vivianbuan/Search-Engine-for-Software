@@ -1,21 +1,74 @@
-[
-  {
+{
+  "angular": {
+    "name": "angular",
     "_childDocuments_": [
-      "django1.html",
-      "django2.html"
-    ],
-    "name": "django"
+      {
+        "link": "https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely",
+        "title": "How do I delete a Git branch both locally and remotely?",
+        "view_count": 5293815,
+        "up_vote_count": 12726,
+        "creation_date": 1262653935,
+        "answer_count": 40,
+        "last_edit_date": 1514124699
+      }
+    ]
   },
-  {
-    "_childDocuments_": [
-      "angular1.html"
-    ],
-    "name": "angular"
+  "django": {
+    "name": "django",
+    "_childDocuments_": []
   },
-  {
+  "flask": {
+    "name": "flask",
+    "_childDocuments_": []
+  },
+  "git": {
+    "name": "git",
     "_childDocuments_": [
-      "flask1.html"
-    ],
-    "name": "flask"
+      {
+        "link": "https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array",
+        "title": "Why is it faster to process a sorted array than an unsorted array?",
+        "view_count": 1167058,
+        "up_vote_count": 20754,
+        "creation_date": 1340805096,
+        "answer_count": 21,
+        "last_edit_date": 1519930284
+      },
+      {
+        "link": "https://stackoverflow.com/questions/927358/how-to-undo-the-most-recent-commits-in-git",
+        "title": "How to undo the most recent commits in Git",
+        "view_count": 6043820,
+        "up_vote_count": 16721,
+        "creation_date": 1243620554,
+        "answer_count": 67,
+        "last_edit_date": 1518818337
+      },
+      {
+        "link": "https://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type",
+        "title": "What is the correct JSON content type?",
+        "view_count": 2045352,
+        "up_vote_count": 8823,
+        "creation_date": 1232897119,
+        "answer_count": 33,
+        "last_edit_date": 1495540503
+      },
+      {
+        "link": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+        "title": "What is the difference between &#39;git pull&#39; and &#39;git fetch&#39;?",
+        "view_count": 2135095,
+        "up_vote_count": 9459,
+        "creation_date": 1226742669,
+        "answer_count": 46,
+        "last_edit_date": 1486974674
+      },
+      {
+        "link": "https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely",
+        "title": "How do I delete a Git branch both locally and remotely?",
+        "view_count": 5293815,
+        "up_vote_count": 12726,
+        "creation_date": 1262653935,
+        "answer_count": 40,
+        "last_edit_date": 1514124699
+      }
+    ]
   }
-]
+}
