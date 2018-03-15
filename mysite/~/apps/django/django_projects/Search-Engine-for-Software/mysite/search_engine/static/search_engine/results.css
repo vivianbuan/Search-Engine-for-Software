@@ -1,0 +1,60 @@
+.entire-page{
+	padding-top: 100px;
+	padding-left: 100px;
+	padding-right: 100px;
+	/*width: 80%;*/
+}
+/*
+.full-width {
+	width: 100%;
+}*/
+
+
+.margin-top {
+	padding-top: 10px;
+}
+
+
+.package-card {
+	border-style: solid;
+	border-width: 1px;
+	margin-left: 4px;
+	margin-right: 4px;
+	text-align: center;
+	padding: 0px;
+	border-color: gray;
+}
+
+.package-card img {
+	width: 100%;
+}
+
+.package-table {
+	display: none;
+}
+.package-table-header{
+	display: none;
+}
+.package-table-row{
+	display: none;
+}
+
+
+
+.result{line-height: 1.3}
+.result-title {
+	padding-top: 10px;
+	padding-bottom: 4px;
+	font-size: 20px;
+}
+
+.result-title a {
+	text-decoration: none;
+	color: navy;
+}
+.result-url {
+	font-size: 10px;
+}
+.result-description {
+	font-size: 12px;
+}
