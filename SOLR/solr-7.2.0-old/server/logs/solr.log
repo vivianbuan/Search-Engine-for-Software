@@ -1,0 +1,129 @@
+2018-02-18 00:39:09.727 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-02-18 00:39:10.140 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
+2018-02-18 00:39:10.140 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-02-18 00:39:10.141 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0
+2018-02-18 00:39:10.168 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-02-18T00:39:10.144Z
+2018-02-18 00:39:10.169 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-02-18 00:39:10.202 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/server/solr
+2018-02-18 00:39:10.211 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/server/solr/solr.xml
+2018-02-18 00:39:16.086 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/server/solr
+2018-02-18 00:39:16.171 INFO  (main) [   ] o.e.j.s.Server Started @7102ms
+2018-02-18 00:40:02.593 INFO  (qtp1911728085-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=70
+2018-02-18 00:40:02.652 INFO  (qtp1911728085-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=17
+2018-02-18 00:40:02.665 INFO  (qtp1911728085-12) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-02-18 00:40:02.665 INFO  (qtp1911728085-12) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=nesting_example&action=STATUS&wt=json} status=0 QTime=1
+2018-02-18 00:40:02.723 INFO  (qtp1911728085-18) [   ] o.a.s.h.a.CoreAdminOperation core create command name=nesting_example&action=CREATE&instanceDir=nesting_example&wt=json
+2018-02-18 00:40:02.793 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.c.SolrResourceLoader [nesting_example] Added 53 libs to classloader, from paths: [/Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/contrib/clustering/lib, /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/contrib/extraction/lib, /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/contrib/langid/lib, /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/contrib/velocity/lib, /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/dist]
+2018-02-18 00:40:03.030 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
+2018-02-18 00:40:03.200 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.s.IndexSchema [nesting_example] Schema name=default-config
+2018-02-18 00:40:03.722 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-02-18 00:40:03.760 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.c.CoreContainer Creating SolrCore 'nesting_example' using configuration from instancedir /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/server/solr/nesting_example, trusted=true
+2018-02-18 00:40:03.782 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-02-18 00:40:03.790 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.c.SolrCore [[nesting_example] ] Opening new SolrCore at [/Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/server/solr/nesting_example], dataDir=[/Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/server/solr/nesting_example/data/]
+2018-02-18 00:40:03.880 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-02-18 00:40:09.368 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-02-18 00:40:09.368 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-02-18 00:40:09.375 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-02-18 00:40:09.375 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-02-18 00:40:09.398 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.s.SolrIndexSearcher Opening [Searcher@5fc928a0[nesting_example] main]
+2018-02-18 00:40:09.411 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/server/solr/nesting_example/conf
+2018-02-18 00:40:09.437 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-02-18 00:40:09.444 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-02-18 00:40:09.454 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-02-18 00:40:09.541 INFO  (searcherExecutor-7-thread-1-processing-x:nesting_example) [   x:nesting_example] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@5fc928a0[nesting_example] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-02-18 00:40:09.541 INFO  (searcherExecutor-7-thread-1-processing-x:nesting_example) [   x:nesting_example] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-02-18 00:40:09.541 INFO  (searcherExecutor-7-thread-1-processing-x:nesting_example) [   x:nesting_example] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-02-18 00:40:09.547 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1592697195905155072
+2018-02-18 00:40:09.549 INFO  (searcherExecutor-7-thread-1-processing-x:nesting_example) [   x:nesting_example] o.a.s.c.SolrCore [nesting_example] Registered new searcher Searcher@5fc928a0[nesting_example] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-02-18 00:40:09.554 INFO  (qtp1911728085-18) [   x:nesting_example] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=nesting_example&action=CREATE&instanceDir=nesting_example&wt=json} status=0 QTime=6830
+2018-02-18 00:40:39.743 INFO  (qtp1911728085-12) [   x:nesting_example] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /Users/vivianbuan/Documents/SEFS/SOLR/solr-7.2.0/server/solr/nesting_example/conf/managed-schema
+2018-02-18 00:40:39.770 INFO  (qtp1911728085-12) [   x:nesting_example] o.a.s.u.p.LogUpdateProcessorFactory [nesting_example]  webapp=/solr path=/update params={}{} 0 321
+2018-02-18 00:40:39.771 ERROR (qtp1911728085-12) [   x:nesting_example] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: [doc=null] missing required field: id
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:233)
+	at org.apache.solr.update.DocumentBuilder.toDocument(DocumentBuilder.java:101)
+	at org.apache.solr.update.AddUpdateCommand$1.next(AddUpdateCommand.java:210)
+	at org.apache.solr.update.AddUpdateCommand$1.next(AddUpdateCommand.java:183)
+	at org.apache.lucene.index.DocumentsWriterPerThread.updateDocuments(DocumentsWriterPerThread.java:267)
+	at org.apache.lucene.index.DocumentsWriter.updateDocuments(DocumentsWriter.java:451)
+	at org.apache.lucene.index.IndexWriter.updateDocuments(IndexWriter.java:1532)
+	at org.apache.solr.update.DirectUpdateHandler2.updateDocument(DirectUpdateHandler2.java:961)
+	at org.apache.solr.update.DirectUpdateHandler2.updateDocOrDocValues(DirectUpdateHandler2.java:954)
+	at org.apache.solr.update.DirectUpdateHandler2.doNormalUpdate(DirectUpdateHandler2.java:334)
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc0(DirectUpdateHandler2.java:271)
+	at org.apache.solr.update.DirectUpdateHandler2.addDoc(DirectUpdateHandler2.java:221)
+	at org.apache.solr.update.processor.RunUpdateProcessor.processAdd(RunUpdateProcessorFactory.java:67)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55)
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.doLocalAdd(DistributedUpdateProcessor.java:910)
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.versionAdd(DistributedUpdateProcessor.java:1121)
+	at org.apache.solr.update.processor.DistributedUpdateProcessor.processAdd(DistributedUpdateProcessor.java:616)
+	at org.apache.solr.update.processor.LogUpdateProcessorFactory$LogUpdateProcessor.processAdd(LogUpdateProcessorFactory.java:103)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55)
+	at org.apache.solr.update.processor.AddSchemaFieldsUpdateProcessorFactory$AddSchemaFieldsUpdateProcessor.processAdd(AddSchemaFieldsUpdateProcessorFactory.java:475)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55)
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:118)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55)
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:118)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55)
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:118)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55)
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:118)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55)
+	at org.apache.solr.update.processor.FieldNameMutatingUpdateProcessorFactory$1.processAdd(FieldNameMutatingUpdateProcessorFactory.java:75)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55)
+	at org.apache.solr.update.processor.FieldMutatingUpdateProcessor.processAdd(FieldMutatingUpdateProcessor.java:118)
+	at org.apache.solr.update.processor.UpdateRequestProcessor.processAdd(UpdateRequestProcessor.java:55)
+	at org.apache.solr.update.processor.AbstractDefaultValueUpdateProcessorFactory$DefaultValueUpdateProcessor.processAdd(AbstractDefaultValueUpdateProcessorFactory.java:92)
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.handleAdds(JsonLoader.java:501)
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.processUpdate(JsonLoader.java:145)
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.load(JsonLoader.java:121)
+	at org.apache.solr.handler.loader.JsonLoader.load(JsonLoader.java:84)
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:97)
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:68)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2503)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:710)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:516)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:382)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:283)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:108)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-02-18 00:40:39.917 INFO  (qtp1911728085-16) [   x:nesting_example] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1592697227750408192,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-02-18 00:40:39.917 INFO  (qtp1911728085-16) [   x:nesting_example] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@147811b3 commitCommandVersion:1592697227750408192
+2018-02-18 00:40:39.921 INFO  (qtp1911728085-16) [   x:nesting_example] o.a.s.s.SolrIndexSearcher Opening [Searcher@6e3290e[nesting_example] main]
+2018-02-18 00:40:39.922 INFO  (qtp1911728085-16) [   x:nesting_example] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-02-18 00:40:39.923 INFO  (searcherExecutor-7-thread-1-processing-x:nesting_example) [   x:nesting_example] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@6e3290e[nesting_example] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-02-18 00:40:39.923 INFO  (searcherExecutor-7-thread-1-processing-x:nesting_example) [   x:nesting_example] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-02-18 00:40:39.923 INFO  (searcherExecutor-7-thread-1-processing-x:nesting_example) [   x:nesting_example] o.a.s.c.SolrCore [nesting_example] Registered new searcher Searcher@6e3290e[nesting_example] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-02-18 00:40:39.923 INFO  (qtp1911728085-16) [   x:nesting_example] o.a.s.u.p.LogUpdateProcessorFactory [nesting_example]  webapp=/solr path=/update params={commit=true}{commit=} 0 7
+2018-02-18 00:56:25.308 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=944427387
+2018-02-18 00:56:25.313 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2018-02-18 00:56:25.313 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2018-02-18 00:56:25.313 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
+2018-02-18 00:56:25.320 INFO  (coreCloseExecutor-12-thread-1) [   x:nesting_example] o.a.s.c.SolrCore [nesting_example]  CLOSING SolrCore org.apache.solr.core.SolrCore@57031956
+2018-02-18 00:56:25.320 INFO  (coreCloseExecutor-12-thread-1) [   x:nesting_example] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nesting_example, tag=1459820886

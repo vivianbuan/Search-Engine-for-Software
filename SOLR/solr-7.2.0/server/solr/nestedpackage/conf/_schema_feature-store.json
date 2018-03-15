@@ -1,0 +1,35 @@
+{
+  "initArgs":{},
+  "initializedOn":"2018-03-15T07:29:09.799Z",
+  "updatedSinceInit":"2018-03-15T07:36:27.031Z",
+  "managedList":[
+    {
+      "name":"tfidf_sim_a",
+      "class":"org.apache.solr.ltr.feature.SolrFeature",
+      "params":{"q":"{!dismax qf=text_tfidf}${text_a}"},
+      "store":"brew_formula_feature_store"},
+    {
+      "name":"tfidf_sim_b",
+      "class":"org.apache.solr.ltr.feature.SolrFeature",
+      "params":{"q":"{!dismax qf=text_tfidf}${text_b}"},
+      "store":"brew_formula_feature_store"},
+    {
+      "name":"bm25_sim_a",
+      "class":"org.apache.solr.ltr.feature.SolrFeature",
+      "params":{"q":"{!dismax qf=text}${text_a}"},
+      "store":"brew_formula_feature_store"},
+    {
+      "name":"bm25_sim_b",
+      "class":"org.apache.solr.ltr.feature.SolrFeature",
+      "params":{"q":"{!dismax qf=text}${text_b}"},
+      "store":"brew_formula_feature_store"},
+    {
+      "name":"max_sim",
+      "class":"org.apache.solr.ltr.feature.SolrFeature",
+      "params":{"q":"{!dismax qf='text text_tfidf'}${text}"},
+      "store":"brew_formula_feature_store"},
+    {
+      "name":"original_score",
+      "class":"org.apache.solr.ltr.feature.OriginalScoreFeature",
+      "params":null,
+      "store":"brew_formula_feature_store"}]}
