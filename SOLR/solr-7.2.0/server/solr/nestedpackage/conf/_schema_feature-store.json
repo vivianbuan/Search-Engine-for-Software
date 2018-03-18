@@ -1,7 +1,7 @@
 {
   "initArgs":{},
-  "initializedOn":"2018-03-15T07:29:09.799Z",
-  "updatedSinceInit":"2018-03-15T07:36:27.031Z",
+  "initializedOn":"2018-03-18T22:48:28.934Z",
+  "updatedSinceInit":"2018-03-18T22:53:11.280Z",
   "managedList":[
     {
       "name":"tfidf_sim_a",
@@ -16,17 +16,17 @@
     {
       "name":"bm25_sim_a",
       "class":"org.apache.solr.ltr.feature.SolrFeature",
-      "params":{"q":"{!dismax qf=text}${text_a}"},
+      "params":{"q":"{!dismax qf=desc}${text_a}"},
       "store":"brew_formula_feature_store"},
     {
       "name":"bm25_sim_b",
       "class":"org.apache.solr.ltr.feature.SolrFeature",
-      "params":{"q":"{!dismax qf=text}${text_b}"},
+      "params":{"q":"{!dismax qf=desc}${text_b}"},
       "store":"brew_formula_feature_store"},
     {
       "name":"max_sim",
       "class":"org.apache.solr.ltr.feature.SolrFeature",
-      "params":{"q":"{!dismax qf='text text_tfidf'}${text}"},
+      "params":{"q":"{!dismax qf='desc text_tfidf'}${text}"},
       "store":"brew_formula_feature_store"},
     {
       "name":"original_score",

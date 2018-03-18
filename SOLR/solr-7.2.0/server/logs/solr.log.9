@@ -1,0 +1,93 @@
+2018-03-15 07:00:28.490 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-03-15 07:00:28.713 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
+2018-03-15 07:00:28.713 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-03-15 07:00:28.714 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0
+2018-03-15 07:00:28.723 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-15T07:00:28.714907Z
+2018-03-15 07:00:28.723 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-03-15 07:00:28.734 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-15 07:00:28.738 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/solr.xml
+2018-03-15 07:00:29.085 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-15 07:00:29.086 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [nestedpackage]
+2018-03-15 07:00:29.090 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-03-15 07:00:29.136 INFO  (main) [   ] o.e.j.s.Server Started @6063ms
+2018-03-15 07:00:29.141 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrResourceLoader [nestedpackage] Added 53 libs to classloader, from paths: [/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
+2018-03-15 07:00:29.245 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
+2018-03-15 07:00:29.363 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
+2018-03-15 07:00:29.698 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-03-15 07:00:29.718 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
+2018-03-15 07:00:29.741 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-03-15 07:00:29.745 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
+2018-03-15 07:00:29.762 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-03-15 07:00:29.933 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-03-15 07:00:29.933 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-03-15 07:00:29.943 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-03-15 07:00:29.943 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-03-15 07:00:30.004 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.SolrIndexSearcher Opening [Searcher@57785d9e[nestedpackage] main]
+2018-03-15 07:00:30.005 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrCore [nestedpackage]  CLOSING SolrCore org.apache.solr.core.SolrCore@5727c578
+2018-03-15 07:00:30.006 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=1462224248
+2018-03-15 07:00:42.130 ERROR (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.CachingDirectoryFactory Timeout waiting for all directory ref counts to be released - gave up waiting on CachedDir<<refCount=1;path=/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/index;done=false>>
+2018-03-15 07:00:42.133 ERROR (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.CachingDirectoryFactory Error closing directory:org.apache.solr.common.SolrException: Timeout waiting for all directory ref counts to be released - gave up waiting on CachedDir<<refCount=1;path=/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/index;done=false>>
+	at org.apache.solr.core.CachingDirectoryFactory.close(CachingDirectoryFactory.java:178)
+	at org.apache.solr.core.SolrCore.close(SolrCore.java:1633)
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1000)
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:863)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1037)
+	at org.apache.solr.core.CoreContainer.lambda$load$13(CoreContainer.java:642)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	at java.util.concurrent.FutureTask.run(java.base@9-internal/FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:188)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@9-internal/ThreadPoolExecutor.java:1158)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@9-internal/ThreadPoolExecutor.java:632)
+	at java.lang.Thread.run(java.base@9-internal/Thread.java:804)
+
+2018-03-15 07:00:42.138 ERROR (coreContainerWorkExecutor-2-thread-1) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be created
+java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [nestedpackage]
+	at java.util.concurrent.FutureTask.report(java.base@9-internal/FutureTask.java:123)
+	at java.util.concurrent.FutureTask.get(java.base@9-internal/FutureTask.java:193)
+	at org.apache.solr.core.CoreContainer.lambda$load$14(CoreContainer.java:671)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorService.java:176)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@9-internal/Executors.java:514)
+	at java.util.concurrent.FutureTask.run(java.base@9-internal/FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:188)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@9-internal/ThreadPoolExecutor.java:1158)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@9-internal/ThreadPoolExecutor.java:632)
+	at java.lang.Thread.run(java.base@9-internal/Thread.java:804)
+Caused by: org.apache.solr.common.SolrException: Unable to create core [nestedpackage]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1053)
+	at org.apache.solr.core.CoreContainer.lambda$load$13(CoreContainer.java:642)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:197)
+	... 5 more
+Caused by: org.apache.solr.common.SolrException: Error opening new searcher
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1008)
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:863)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1037)
+	... 7 more
+Caused by: org.apache.solr.common.SolrException: Error opening new searcher
+	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2095)
+	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2215)
+	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1091)
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:980)
+	... 9 more
+Caused by: java.lang.IllegalArgumentException: cannot change DocValues type from SORTED_NUMERIC to SORTED_SET for field "version"
+	at org.apache.lucene.index.FieldInfo.setDocValuesType(FieldInfo.java:212)
+	at org.apache.lucene.index.FieldInfos$Builder.addOrUpdateInternal(FieldInfos.java:438)
+	at org.apache.lucene.index.FieldInfos$Builder.add(FieldInfos.java:451)
+	at org.apache.lucene.index.FieldInfos$Builder.add(FieldInfos.java:446)
+	at org.apache.lucene.index.FieldInfos$Builder.add(FieldInfos.java:380)
+	at org.apache.lucene.index.MultiFields.getMergedFieldInfos(MultiFields.java:268)
+	at org.apache.solr.index.SlowCompositeReaderWrapper.getFieldInfos(SlowCompositeReaderWrapper.java:263)
+	at org.apache.solr.search.SolrIndexSearcher.<init>(SolrIndexSearcher.java:279)
+	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2063)
+	... 12 more
+2018-03-15 07:00:43.458 INFO  (qtp1069716895-46) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521097243341} status=0 QTime=3
+2018-03-15 07:00:43.474 INFO  (qtp1069716895-77) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521097243341} status=0 QTime=19
+2018-03-15 07:00:43.487 INFO  (qtp1069716895-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521097243341} status=0 QTime=7
+2018-03-15 07:00:45.446 INFO  (qtp1069716895-40) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521097243341} status=0 QTime=0
+2018-03-15 07:00:45.447 INFO  (qtp1069716895-45) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={wt=json&_=1521097243341} status=0 QTime=0
+2018-03-15 07:00:45.454 INFO  (qtp1069716895-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521097243341} status=0 QTime=6
+2018-03-15 07:03:00.048 INFO  (qtp1069716895-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=5
+2018-03-15 07:03:00.091 INFO  (qtp1069716895-77) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={deleteInstanceDir=true&core=nestedpackage&deleteDataDir=true&action=UNLOAD&wt=json&deleteIndex=true} status=0 QTime=29
+2018-03-15 07:03:08.886 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=397071633
+2018-03-15 07:03:08.886 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2018-03-15 07:03:08.887 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2018-03-15 07:03:08.887 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null

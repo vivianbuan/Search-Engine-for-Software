@@ -1,7 +1,6 @@
-OpenJDK 64-Bit Server VM warning: Option UseParNewGC was deprecated in version 9.0 and will likely be removed in a future release.
-2018-03-15 18:10:04.248 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
-2018-03-15 18:10:04.475 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
-2018-03-15 18:10:04.475 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2018-03-15 18:10:04.475 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0
-2018-03-15 18:10:04.483 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-15T18:10:04.476202Z
-2018-03-15 18:10:04.484 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-03-18 22:57:34.678 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-03-18 22:57:34.901 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
+2018-03-18 22:57:34.901 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-03-18 22:57:34.901 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
+2018-03-18 22:57:34.911 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-18T22:57:34.902Z
+2018-03-18 22:57:34.912 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE

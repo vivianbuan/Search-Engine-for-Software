@@ -2,7 +2,7 @@
 This file list some commands that might be useful to run indexer.
 ## The tutorial
 https://lucene.apache.org/solr/guide/7_2/solr-tutorial.html<br />
-Please reference this page for how to strat node if needed.
+Please reference this page for how to start node if needed.
 ## Start Node with LTR (Learning To Rank)
 `bin/solr start -Dsolr.ltr.enabled=true`
 ## Installation of LTR (Learning To Rank)
@@ -23,12 +23,12 @@ Copy and paste the following into `/path/to/solr-<version>/solr/server/solr/nest
 `curl -XPUT 'http://localhost:8983/solr/nestedpackage/schema/feature-store' --data-binary "@./data/brew_formula_features.json" -H 'Content-type:application/json'`
 ## Deleting Features
 If there is already an existing feature store, you have to delete the existing features first before uploading new ones
-`curl -XDELETE 'http://localhost:8983/solr/nestedpackage/schema/feature-store'`
+`curl -XDELETE 'http://localhost:8983/solr/nestedpackage/schema/feature-store/brew_formula_feature_store'`
 ## Uploading Model
 `curl -XPUT 'http://localhost:8983/solr/nestedpackage/schema/model-store' --data-binary "@./data/brew_formula_model.json" -H 'Content-type:application/json'`
 ## Sample query
 - Simple query: `curl "http://localhost:8983/solr/nestedpackage/select?q=YOURQUERY"`
 - Query child field: `q=_childDocuments_.title:python`
-- LTR query: `curl "http://localhost:8983/solr/nestedpackage/query?q=desc:python interface&rq={!ltr model=brew_formula_model efi.text_a=python efi.text_b=interface efi.text='python interface'}&fl=id,score,[features]"`
+- LTR query: `curl "http://localhost:8983/solr/nestedpackage/query?q=python visualization&df=desc&rq={!ltr model=brew_formula_model efi.text_a=python efi.text_b=visualization efi.text='python visualization'}&fl=name,desc,[features]"`
 ## Shutdown all Nodes
 `bin/solr stop -all`

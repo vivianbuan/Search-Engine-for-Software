@@ -1,171 +1,57 @@
-2018-03-15 07:21:47.083 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
-2018-03-15 07:21:47.306 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
-2018-03-15 07:21:47.306 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2018-03-15 07:21:47.306 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0
-2018-03-15 07:21:47.316 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-15T07:21:47.307423Z
-2018-03-15 07:21:47.316 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
-2018-03-15 07:21:47.329 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
-2018-03-15 07:21:47.333 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/solr.xml
-2018-03-15 07:21:47.713 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
-2018-03-15 07:21:47.713 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [nestedpackage]
-2018-03-15 07:21:47.719 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
-2018-03-15 07:21:47.758 INFO  (main) [   ] o.e.j.s.Server Started @6099ms
-2018-03-15 07:21:47.761 WARN  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrConfig Couldn't add files from /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/ltr/lib filtered by .*\.jar to classpath: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/ltr/lib
-2018-03-15 07:21:47.767 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrResourceLoader [nestedpackage] Added 54 libs to classloader, from paths: [/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
-2018-03-15 07:21:47.884 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
-2018-03-15 07:21:47.999 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
-2018-03-15 07:21:48.400 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2018-03-15 07:21:48.428 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
-2018-03-15 07:21:48.446 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
-2018-03-15 07:21:48.450 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
-2018-03-15 07:21:48.467 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
-2018-03-15 07:21:48.663 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2018-03-15 07:21:48.664 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2018-03-15 07:21:48.674 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
-2018-03-15 07:21:48.674 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2018-03-15 07:21:48.740 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.SolrIndexSearcher Opening [Searcher@6940006[nestedpackage] main]
-2018-03-15 07:21:48.747 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-15 07:21:48.753 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.ltr.store.rest.ManagedFeatureStore for path /schema/feature-store
-2018-03-15 07:21:48.754 WARN  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResource No stored data found for /schema/feature-store
-2018-03-15 07:21:48.754 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedFeatureStore ------ managed feature ~ loading ------
-2018-03-15 07:21:48.755 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResource Notified 1 observers of /schema/feature-store
-2018-03-15 07:21:48.755 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.RestManager Registered new managed resource /schema/feature-store
-2018-03-15 07:21:48.756 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.ltr.store.rest.ManagedModelStore for path /schema/model-store
-2018-03-15 07:21:48.757 WARN  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResource No stored data found for /schema/model-store
-2018-03-15 07:21:48.757 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedModelStore INIT model store
-2018-03-15 07:21:48.757 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedModelStore ------ managed models ~ loading ------
-2018-03-15 07:21:48.757 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResource Notified 1 observers of /schema/model-store
-2018-03-15 07:21:48.757 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.RestManager Registered new managed resource /schema/model-store
-2018-03-15 07:21:48.762 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2018-03-15 07:21:48.765 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2018-03-15 07:21:48.770 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
-2018-03-15 07:21:48.805 INFO  (searcherExecutor-7-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@6940006[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C4476)))}
-2018-03-15 07:21:48.805 INFO  (searcherExecutor-7-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2018-03-15 07:21:48.805 INFO  (searcherExecutor-7-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2018-03-15 07:21:48.813 INFO  (searcherExecutor-7-thread-1) [   ] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@6940006[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C4476)))}
-2018-03-15 07:21:58.622 INFO  (qtp1069716895-78) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521098518495} status=0 QTime=2
-2018-03-15 07:21:58.633 INFO  (qtp1069716895-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521098518495} status=0 QTime=14
-2018-03-15 07:22:01.361 INFO  (qtp1069716895-47) [   ] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=*:*&_=1521098518594} hits=4476 status=0 QTime=48
-2018-03-15 07:23:31.586 INFO  (qtp1069716895-45) [   ] /solr SolrRestApi: [Restlet] ServerServlet: component class is null
-2018-03-15 07:23:31.642 INFO  (qtp1069716895-45) [   ] /solr SolrRestApi: [Restlet] Attaching application: org.apache.solr.rest.SolrSchemaRestApi@6e632e4f to URI: /solr/schema
-2018-03-15 07:23:31.651 INFO  (qtp1069716895-45) [   ] o.a.s.r.SolrSchemaRestApi createInboundRoot started for /schema
-2018-03-15 07:23:31.654 INFO  (qtp1069716895-45) [   ] o.a.s.r.RestManager Attached managed resource at path: /feature-store
-2018-03-15 07:23:31.654 INFO  (qtp1069716895-45) [   ] o.a.s.r.RestManager Attached managed resource at path: /managed
-2018-03-15 07:23:31.654 INFO  (qtp1069716895-45) [   ] o.a.s.r.RestManager Attached managed resource at path: /model-store
-2018-03-15 07:23:31.654 INFO  (qtp1069716895-45) [   ] o.a.s.r.RestManager Attached 3 ManagedResource endpoints to Restlet router: /schema
-2018-03-15 07:23:31.654 INFO  (qtp1069716895-45) [   ] o.a.s.r.SolrSchemaRestApi createInboundRoot complete for /schema
-2018-03-15 07:23:31.659 INFO  (qtp1069716895-45) [   ] o.a.s.r.RestManager Found ManagedResource [org.apache.solr.ltr.store.rest.ManagedFeatureStore@189102db] for /schema/feature-store
-2018-03-15 07:23:31.662 ERROR (qtp1069716895-45) [   ] o.a.s.r.RestManager null:org.noggit.JSONParser$ParseException: JSON Parse Error: char=.,position=0 AFTER='.' BEFORE='/data/brew_formula_features.json'
-	at org.noggit.JSONParser.err(JSONParser.java:419)
-	at org.noggit.JSONParser.handleNonDoubleQuoteString(JSONParser.java:775)
-	at org.noggit.JSONParser.next(JSONParser.java:981)
-	at org.noggit.JSONParser.nextEvent(JSONParser.java:1026)
-	at org.noggit.ObjectBuilder.<init>(ObjectBuilder.java:43)
-	at org.noggit.ObjectBuilder.getVal(ObjectBuilder.java:36)
-	at org.noggit.ObjectBuilder.fromJSON(ObjectBuilder.java:32)
-	at org.apache.solr.rest.RestManager$ManagedEndpoint.parseJsonFromRequestBody(RestManager.java:425)
-	at org.apache.solr.rest.RestManager$ManagedEndpoint.put(RestManager.java:340)
-	at org.restlet.resource.ServerResource.doHandle(ServerResource.java:447)
-	at org.restlet.resource.ServerResource.doConditionalHandle(ServerResource.java:359)
-	at org.restlet.resource.ServerResource.handle(ServerResource.java:1044)
-	at org.restlet.resource.Finder.handle(Finder.java:236)
-	at org.restlet.routing.Filter.doHandle(Filter.java:150)
-	at org.restlet.routing.Filter.handle(Filter.java:197)
-	at org.restlet.routing.Router.doHandle(Router.java:422)
-	at org.restlet.routing.Router.handle(Router.java:639)
-	at org.restlet.routing.Filter.doHandle(Filter.java:150)
-	at org.restlet.routing.Filter.handle(Filter.java:197)
-	at org.restlet.routing.Filter.doHandle(Filter.java:150)
-	at org.restlet.routing.Filter.handle(Filter.java:197)
-	at org.restlet.routing.Filter.doHandle(Filter.java:150)
-	at org.restlet.engine.application.StatusFilter.doHandle(StatusFilter.java:140)
-	at org.restlet.routing.Filter.handle(Filter.java:197)
-	at org.restlet.routing.Filter.doHandle(Filter.java:150)
-	at org.restlet.routing.Filter.handle(Filter.java:197)
-	at org.restlet.engine.CompositeHelper.handle(CompositeHelper.java:202)
-	at org.restlet.engine.application.ApplicationHelper.handle(ApplicationHelper.java:75)
-	at org.restlet.Application.handle(Application.java:385)
-	at org.restlet.routing.Filter.doHandle(Filter.java:150)
-	at org.restlet.routing.Filter.handle(Filter.java:197)
-	at org.restlet.routing.Router.doHandle(Router.java:422)
-	at org.restlet.routing.Router.handle(Router.java:639)
-	at org.restlet.routing.Filter.doHandle(Filter.java:150)
-	at org.restlet.routing.Filter.handle(Filter.java:197)
-	at org.restlet.routing.Router.doHandle(Router.java:422)
-	at org.restlet.routing.Router.handle(Router.java:639)
-	at org.restlet.routing.Filter.doHandle(Filter.java:150)
-	at org.restlet.routing.Filter.handle(Filter.java:197)
-	at org.restlet.engine.CompositeHelper.handle(CompositeHelper.java:202)
-	at org.restlet.Component.handle(Component.java:408)
-	at org.restlet.Server.handle(Server.java:507)
-	at org.restlet.engine.connector.ServerHelper.handle(ServerHelper.java:63)
-	at org.restlet.engine.adapter.HttpServerHelper.handle(HttpServerHelper.java:143)
-	at org.restlet.ext.servlet.ServerServlet.service(ServerServlet.java:1117)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
-	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:848)
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:584)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
-	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:566)
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
-	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:199)
-	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:74)
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:391)
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
-	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
-	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
-	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
-	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
-	at org.eclipse.jetty.server.Server.handle(Server.java:534)
-	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
-	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
-	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:283)
-	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:108)
-	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
-	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
-	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
-	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
-	at java.lang.Thread.run(java.base@9-internal/Thread.java:804)
-
-2018-03-15 07:23:31.662 INFO  (qtp1069716895-45) [   ] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/feature-store params={} msg={JSON Parse Error: char=.,position=0 AFTER='.' BEFORE='/data/brew_formula_features.json'} status=500 QTime=80
-2018-03-15 07:24:22.451 INFO  (qtp1069716895-48) [   ] o.a.s.r.RestManager Found ManagedResource [org.apache.solr.ltr.store.rest.ManagedFeatureStore@189102db] for /schema/feature-store
-2018-03-15 07:24:22.453 INFO  (qtp1069716895-48) [   ] o.a.s.r.ManagedResource Processing update to /schema/feature-store: [{store=brew_formula_feature_store, name=numPython, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!func}termfreq(_childDocuments_.title, 'python')}}, {store=brew_formula_feature_store, name=originalScore, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params={}}] is a java.util.ArrayList
-2018-03-15 07:24:22.454 INFO  (qtp1069716895-48) [   ] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=brew_formula_feature_store, name=numPython, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!func}termfreq(_childDocuments_.title, 'python')}}
-2018-03-15 07:24:22.480 INFO  (qtp1069716895-48) [   ] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=brew_formula_feature_store, name=originalScore, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params={}}
-2018-03-15 07:24:22.485 INFO  (qtp1069716895-48) [   ] o.a.s.r.ManagedResourceStorage Saved JSON object to path _schema_feature-store.json using file:dir=/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-15 07:24:22.486 INFO  (qtp1069716895-48) [   ] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/feature-store params={} status=0 QTime=37
-2018-03-15 07:24:30.106 INFO  (qtp1069716895-76) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521098518495} status=0 QTime=0
-2018-03-15 07:24:30.107 INFO  (qtp1069716895-40) [   ] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521098670091} status=0 QTime=0
-2018-03-15 07:24:30.115 INFO  (qtp1069716895-42) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521098518495} status=0 QTime=8
-2018-03-15 07:24:30.124 INFO  (qtp1069716895-45) [   ] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521098670091} status=0 QTime=0
-2018-03-15 07:24:31.544 INFO  (qtp1069716895-46) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521098518495} status=0 QTime=0
-2018-03-15 07:24:31.559 INFO  (qtp1069716895-39) [   ] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521098670091} status=0 QTime=0
-2018-03-15 07:24:31.564 INFO  (qtp1069716895-76) [   ] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=_schema_feature-store.json&contentType=application/json;charset%3Dutf-8&wt=json&_=1521098670091} status=0 QTime=0
-2018-03-15 07:24:31.568 INFO  (qtp1069716895-48) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521098518495} status=0 QTime=24
-2018-03-15 07:24:31.588 INFO  (qtp1069716895-44) [   ] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521098670091} status=0 QTime=0
-2018-03-15 07:25:04.315 INFO  (qtp1069716895-45) [   ] o.a.s.r.RestManager Found ManagedResource [ManagedModelStore [store=ModelStore [availableModels=[]], featureStores=org.apache.solr.ltr.store.rest.ManagedFeatureStore@189102db]] for /schema/model-store
-2018-03-15 07:25:04.316 INFO  (qtp1069716895-45) [   ] o.a.s.r.ManagedResource Processing update to /schema/model-store: {store=brew_formula_feature_store, name=brew_formula_model, class=org.apache.solr.ltr.model.LinearModel, features=[{name=numPython}, {name=originalScore}], params={weight={numPython=0.5, originalScore=0.5}}} is a java.util.LinkedHashMap
-2018-03-15 07:25:04.332 INFO  (qtp1069716895-45) [   ] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/model-store params={} msg={org.apache.solr.ltr.model.ModelException: Model type does not exist org.apache.solr.ltr.model.LinearModel} status=400 QTime=20
-2018-03-15 07:25:21.862 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=397071633
-2018-03-15 07:25:21.862 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
-2018-03-15 07:25:21.862 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
-2018-03-15 07:25:21.862 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
-2018-03-15 07:25:21.863 INFO  (coreCloseExecutor-12-thread-1) [   ] o.a.s.c.SolrCore [nestedpackage]  CLOSING SolrCore org.apache.solr.core.SolrCore@67532550
-2018-03-15 07:25:21.863 INFO  (coreCloseExecutor-12-thread-1) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=1733502288
+2018-03-15 18:10:04.248 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-03-15 18:10:04.475 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
+2018-03-15 18:10:04.475 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-03-15 18:10:04.475 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0
+2018-03-15 18:10:04.483 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-15T18:10:04.476202Z
+2018-03-15 18:10:04.484 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-03-15 18:10:04.496 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-15 18:10:04.502 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/solr.xml
+2018-03-15 18:10:04.858 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-15 18:10:04.859 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [nestedpackage]
+2018-03-15 18:10:04.862 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-03-15 18:10:04.905 WARN  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrConfig Couldn't add files from /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/ltr/lib filtered by .*\.jar to classpath: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/ltr/lib
+2018-03-15 18:10:04.907 INFO  (main) [   ] o.e.j.s.Server Started @6100ms
+2018-03-15 18:10:04.910 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrResourceLoader [nestedpackage] Added 54 libs to classloader, from paths: [/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
+2018-03-15 18:10:05.017 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
+2018-03-15 18:10:05.127 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
+2018-03-15 18:10:05.476 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-03-15 18:10:05.505 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
+2018-03-15 18:10:05.525 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-03-15 18:10:05.528 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
+2018-03-15 18:10:05.544 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-03-15 18:10:05.716 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-03-15 18:10:05.716 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-03-15 18:10:05.725 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-03-15 18:10:05.725 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-03-15 18:10:05.779 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.SolrIndexSearcher Opening [Searcher@1624478c[nestedpackage] main]
+2018-03-15 18:10:05.785 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-15 18:10:05.790 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.ltr.store.rest.ManagedFeatureStore for path /schema/feature-store
+2018-03-15 18:10:05.790 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_feature-store.json using file:dir=/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-15 18:10:05.790 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResource Loaded initArgs {} for /schema/feature-store
+2018-03-15 18:10:05.790 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedFeatureStore ------ managed feature ~ loading ------
+2018-03-15 18:10:05.790 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=tfidf_sim_a, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=text_tfidf}${text_a}}, store=brew_formula_feature_store}
+2018-03-15 18:10:05.796 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=tfidf_sim_b, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=text_tfidf}${text_b}}, store=brew_formula_feature_store}
+2018-03-15 18:10:05.796 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_a, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=text}${text_a}}, store=brew_formula_feature_store}
+2018-03-15 18:10:05.796 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_b, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=text}${text_b}}, store=brew_formula_feature_store}
+2018-03-15 18:10:05.796 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=max_sim, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf='text text_tfidf'}${text}}, store=brew_formula_feature_store}
+2018-03-15 18:10:05.796 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=original_score, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params=null, store=brew_formula_feature_store}
+2018-03-15 18:10:05.797 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResource Notified 1 observers of /schema/feature-store
+2018-03-15 18:10:05.797 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.RestManager Registered new managed resource /schema/feature-store
+2018-03-15 18:10:05.798 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.ltr.store.rest.ManagedModelStore for path /schema/model-store
+2018-03-15 18:10:05.799 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_model-store.json using file:dir=/home/joshua/experiments/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-15 18:10:05.799 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResource Loaded initArgs {} for /schema/model-store
+2018-03-15 18:10:05.799 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedModelStore INIT model store
+2018-03-15 18:10:05.799 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedModelStore ------ managed models ~ loading ------
+2018-03-15 18:10:05.803 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.l.s.r.ManagedModelStore adding model brew_formula_model
+2018-03-15 18:10:05.803 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.ManagedResource Notified 1 observers of /schema/model-store
+2018-03-15 18:10:05.803 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.r.RestManager Registered new managed resource /schema/model-store
+2018-03-15 18:10:05.806 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-03-15 18:10:05.810 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-03-15 18:10:05.815 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-03-15 18:10:05.846 INFO  (searcherExecutor-7-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@1624478c[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C4476)))}
+2018-03-15 18:10:05.847 INFO  (searcherExecutor-7-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-03-15 18:10:05.847 INFO  (searcherExecutor-7-thread-1) [   ] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-03-15 18:10:05.850 INFO  (searcherExecutor-7-thread-1) [   ] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@1624478c[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C4476)))}
+2018-03-15 18:14:49.689 INFO  (qtp1069716895-77) [   ] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/query params={q=python+interface&fl=id,score,[features]&rq={!ltr+model%3Dbrew_formula_model+efi.text_a%3Dpython+efi.text_b%3Dinterface+efi.text%3D'python+interface'}} hits=0 status=0 QTime=30
+2018-03-15 18:15:21.703 INFO  (qtp1069716895-40) [   ] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=python+interface&fl=score,+[features]&_=1521128469345} hits=0 status=0 QTime=3
+2018-03-15 18:15:47.908 INFO  (qtp1069716895-47) [   ] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/query params={q=desc:python+interface&fl=id,score,[features]&rq={!ltr+model%3Dbrew_formula_model+efi.text_a%3Dpython+efi.text_b%3Dinterface+efi.text%3D'python+interface'}} hits=46 status=0 QTime=52

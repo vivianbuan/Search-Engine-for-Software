@@ -394,6 +394,15 @@
       <filter class="solr.SnowballPorterFilterFactory" language="Swedish"/>
     </analyzer>
   </fieldType>
+  <fieldType name="text_tfidf" class="solr.TextField" positionIncrementGap="100">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+    </analyzer>
+    <similarity class="solr.ClassicSimilarityFactory"/>
+  </fieldType>
   <fieldType name="text_th" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
       <tokenizer class="solr.ThaiTokenizerFactory"/>
@@ -427,7 +436,7 @@
   <field name="class" type="text_general"/>
   <field name="conflicts_with" type="text_general"/>
   <field name="depends_on" type="text_general"/>
-  <field name="desc" type="text_general"/>
+  <field name="desc" type="text_general" multiValued="true" indexed="true" stored="true"/>
   <field name="fatal" type="booleans"/>
   <field name="head" type="text_general"/>
   <field name="homepage" type="text_general"/>
@@ -440,6 +449,7 @@
   <field name="satisfy" type="text_general"/>
   <field name="satisfy__build_env" type="text_general"/>
   <field name="sha256" type="text_general"/>
+  <field name="text_tfidf" type="text_tfidf" multiValued="true" indexed="true" stored="false"/>
   <field name="url" type="text_general"/>
   <field name="version" type="text_general"/>
   <field name="version_scheme" type="plongs"/>
@@ -505,6 +515,7 @@
   <dynamicField name="*_f" type="pfloat" indexed="true" stored="true"/>
   <dynamicField name="*_d" type="pdouble" indexed="true" stored="true"/>
   <dynamicField name="*_p" type="location" indexed="true" stored="true"/>
+  <copyField source="desc" dest="text_tfidf"/>
   <copyField source="_childDocuments_.answer" dest="_childDocuments_.answer_str" maxChars="256"/>
   <copyField source="mirror" dest="mirror_str" maxChars="256"/>
   <copyField source="sha256" dest="sha256_str" maxChars="256"/>
@@ -512,7 +523,6 @@
   <copyField source="url" dest="url_str" maxChars="256"/>
   <copyField source="_childDocuments_.url" dest="_childDocuments_.url_str" maxChars="256"/>
   <copyField source="_childDocuments_.title" dest="_childDocuments_.title_str" maxChars="256"/>
-  <copyField source="desc" dest="desc_str" maxChars="256"/>
   <copyField source="homepage" dest="homepage_str" maxChars="256"/>
   <copyField source="head" dest="head_str" maxChars="256"/>
   <copyField source="_revision" dest="_revision_str" maxChars="256"/>
@@ -526,4 +536,5 @@
   <copyField source="satisfy" dest="satisfy_str" maxChars="256"/>
   <copyField source="require" dest="require_str" maxChars="256"/>
   <copyField source="conflicts_with" dest="conflicts_with_str" maxChars="256"/>
+  <copyField source="desc" dest="desc_str" maxChars="256"/>
 </schema>

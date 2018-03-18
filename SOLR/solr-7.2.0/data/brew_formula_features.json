@@ -15,19 +15,19 @@
     "store" : "brew_formula_feature_store",
     "name" : "bm25_sim_a",
     "class" : "org.apache.solr.ltr.feature.SolrFeature",
-    "params" : { "q" : "{!dismax qf=text}${text_a}" }
+    "params" : { "q" : "{!dismax qf=desc}${text_a}" }
   },
   {
     "store" : "brew_formula_feature_store",
     "name" : "bm25_sim_b",
     "class" : "org.apache.solr.ltr.feature.SolrFeature",
-    "params" : { "q" : "{!dismax qf=text}${text_b}" }
+    "params" : { "q" : "{!dismax qf=desc}${text_b}" }
   },
   {
     "store" : "brew_formula_feature_store",
     "name" : "max_sim",
     "class" : "org.apache.solr.ltr.feature.SolrFeature",
-    "params" : { "q" : "{!dismax qf='text text_tfidf'}${text}" }
+    "params" : { "q" : "{!dismax qf='desc text_tfidf'}${text}" }
   },
   {
     "store" : "brew_formula_feature_store",
