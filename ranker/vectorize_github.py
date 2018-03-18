@@ -17,35 +17,36 @@ from urllib.parse import urlparse
 from urllib.request import urlopen
 from gensim import corpora, models, similarities
 
+
 def main():
-	github_filepath = sys.argv[1]
-	query = sys.argv[2]
-	pp = pprint.PrettyPrinter(indent=4)
-	package_list = []
+    github_filepath = sys.argv[1]
+    query = sys.argv[2]
+    pp = pprint.PrettyPrinter(indent=4)
+    package_list = []
 
-	# Global package statistics for normalization
-	stats_dict = {}
-	total_collaborator_count = 0
-	total_fork_count = 0
-	total_inv_last_push = 0
-	total_inv_last_update = 0
-	total_star_count = 0
-	total_watcher_count = 0
+    # Global package statistics for normalization
+    stats_dict = {}
+    total_collaborator_count = 0
+    total_fork_count = 0
+    total_inv_last_push = 0
+    total_inv_last_update = 0
+    total_star_count = 0
+    total_watcher_count = 0
 
-	# Corpora for text-based analytics
-	all_documents = {}
-	homepage_content_documents = []
-	readme_documents = []
-	repo_documents = []
+    # Corpora for text-based analytics
+    all_documents = {}
+    homepage_content_documents = []
+    readme_documents = []
+    repo_documents = []
 
-	# Load Github metadata from JSON file
-	with open(github_filepath) as f:
-		github_dict = json.load(f)
+    # Load Github metadata from JSON file
+    with open(github_filepath) as f:
+        github_dict = json.load(f)
 
-	# Check if Github metadata was previously preprocessed
-	if os.path.isfile("./tmp/package_list") and os.path.isfile("./tmp/stats_dict.json") and os.path.isfile("./tmp/all_documents.json"):
-		with open("./tmp/package_list", 'rb') as f:
-			package_list = pickle.load(f)
+    # Check if Github metadata was previously preprocessed
+    if os.path.isfile("./tmp/package_list") and os.path.isfile("./tmp/stats_dict.json") and os.path.isfile("./tmp/all_documents.json"):
+        with open("./tmp/package_list", 'rb') as f:
+                package_list = pickle.load(f)
 
 		with open("./tmp/stats_dict.json", 'r') as f:
 			stats_dict = json.load(f)

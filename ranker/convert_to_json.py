@@ -5,7 +5,6 @@ To run this script, run the command:
 python convert_to_json.py <path/to/github.txt> <path/to/output.txt>
 """
 
-import re
 import sys
 import json
 import simplejson
