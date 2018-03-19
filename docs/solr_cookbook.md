@@ -37,8 +37,8 @@ If there is already an existing feature store, you have to delete the existing f
 $ ./bin/solr start -c -p 8983 -s example/cloud/node1/solr
 $ ./bin/solr start -c -p 7574 -s example/cloud/node2/solr -z localhost:9983
 ```
-- Create collection and index
-`-format solr` is needed to make the child documents work properly
+- Create collection and index<br />
+**important**: `-format solr` is needed to make the child documents work properly
 ```
 $ bin/solr create -c demo
 $ bin/post -c demo ./data/example-data-solr.json -format solr
