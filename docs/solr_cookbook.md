@@ -63,8 +63,9 @@ curl -X POST -H 'Content-type:application/json' --data-binary '{"add-copy-field"
 - Query child field: `q=_childDocuments_.title:python`
 - LTR query: `curl "http://localhost:8983/solr/nestedpackage/query?q=desc:python interface&rq={!ltr model=brew_formula_model efi.text_a=python efi.text_b=interface efi.text='python interface'}&fl=id,score,[features]"`
 ### List of query for Avery
-- Sample result checkout: https://docs.google.com/document/d/1as7AEXQVZipIXmikV_0v6_66JLHpMZ2nWOvD6g4dWi0/edit?usp=sharing
-- Return a list of mixed information, that is both github package info and stackoverflow page/answer will returned as separate object
+- Sample results checkout: https://docs.google.com/document/d/1as7AEXQVZipIXmikV_0v6_66JLHpMZ2nWOvD6g4dWi0/edit?usp=sharing
+- This page has some example on faceting for more query idea: https://github.com/alisatl/solr-revolution-2016-nested-demo
+- Return a list of mixed information, that is both github package info and stackoverflow page/answer will returned as separate object (case 1 in google doc)
 ```
 http://35.230.82.124:8983/solr/nestedpackage/select?q=[QUERYTERM]
 ```
@@ -72,8 +73,8 @@ http://35.230.82.124:8983/solr/nestedpackage/select?q=[QUERYTERM]
 ```
 \"hello+world\"
 ```
-- Git packge info who has stackoverflow content containg [QUERYTERM] <br />
-Note that this only contains git info, no stackoverflow info
+- Git packge info who has stackoverflow content containg [QUERYTERM] (case 2 in google doc) <br />
+Note that this only contains git info, no stackoverflow info 
 ```
 http://35.230.82.124:8983/solr/nestedpackage/select?
        q={!parent%20which=%22path:1.git%22}body_markdown:[QUERYTERM]
@@ -86,6 +87,17 @@ http://35.230.82.124:8983/solr/nestedpackage/select?q=
        (path:1.git%20AND%20(name:[QUERYTERM]%20OR%20readMe:[QUERYTERM]%20or%20repo_keywords:[QUERYTERM]%20OR%20
        repo_description:[QUERYTERM]%20OR%20pm_name:[QUERYTERM]%20OR%20pm_description:[QUERYTERM]))
 ```
-- 
+- Return a inner structure (case 3 in google doc) <br />
+&ensp; There are two parts in this query, `q=...` is the regular query condition, `fl=...` is the filter of fields that we want to ouput. In this example we output `id,name,readMe,repo_url` of the outter most level (git package), then childs with the path `2.stack`. If you want to output all fields of outter most level, replace the first several term with `*`. <br />
+&ensp; Nore that there are some limitations:<br />
+&ensp; &ensp; 1. The descending structure is flattened, meaning that for any descendent (3.stack.answer), it is considered a direct child of level 1, instead of a grandchild. Replacing `childFilter=path:3.stack.answer` will return level 1 + level 3. <br />
+&ensp; &ensp; 2. The field filter on child documents doesn't seem to work properly. Here I put `fl=title` in the filter but it is not doing anything.
+
+```
+http://35.230.82.124:8983/solr/nestedpackage/select?
+fl=id,name,readMe,repo_url,%20
+[child%20parentFilter=path:1.git%20childFilter=path:2.stack%20fl=title%20limit=2]
+&q=path:1.git%20AND%20name:[QUERYTERM]
+```
 ### Shutdown all Nodes
 `bin/solr stop -all`
