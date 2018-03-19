@@ -64,7 +64,10 @@ curl -X POST -H 'Content-type:application/json' --data-binary '{"add-copy-field"
 - LTR query: `curl "http://localhost:8983/solr/nestedpackage/query?q=desc:python interface&rq={!ltr model=brew_formula_model efi.text_a=python efi.text_b=interface efi.text='python interface'}&fl=id,score,[features]"`
 ### List of query for Avery
 - Sample result checkout: https://docs.google.com/document/d/1as7AEXQVZipIXmikV_0v6_66JLHpMZ2nWOvD6g4dWi0/edit?usp=sharing
-- Query everything:
+- Return a list of mixed information, that is both github package info and stackoverflow page/answer will returned as separate object
+```
+http://35.230.82.124:8983/solr/nestedpackage/select?q=[QUERYTERM]
+```
 - In the following command, if you want to query a string multiple terms like "hello world", the [QUERYTERM] should be 
 ```
 \"hello+world\"
