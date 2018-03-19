@@ -1,7 +1,9 @@
 {
 	"packages": [
-		"git",
-		"angular",
-		"django"
+		"django",
+		"browserify",
+		"grunt-cli",
+		"bower",
+		"gulp"
 	]
 }

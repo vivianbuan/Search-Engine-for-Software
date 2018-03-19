@@ -24,6 +24,9 @@
 # TO RUN THIS FILE
 # python stackoverflow_extraction.py ./package_list_small.json ./so_json_small ./so_output/
 
+# TO run with github stuff
+# python stackoverflow_extraction.py ./package_list_small.json ./so_json_small ./so_output/
+
 import sys
 import json
 import os
@@ -58,6 +61,7 @@ def main():
 
 		with open(os.path.join(so_objects, page)) as json_file:
 			source = {}
+			# print(page)
 			source = json.load(json_file)
 
 		# Parse the JSON object using BeautifulSoup
@@ -84,7 +88,8 @@ def main():
 					current["view_count"] = source["view_count"]
 					current["answer_count"] = source["answer_count"]
 					current["creation_date"] = source["creation_date"]
-					current["last_edit_date"] = source["last_edit_date"]
+					if 'last_edit_date' in source:
+						current["last_edit_date"] = source["last_edit_date"]
 					current["body_markdown"] = source["body_markdown"]
 					current["code_snippet"] = source["code_snippet"]
 					current["path"] = "stack." + package 

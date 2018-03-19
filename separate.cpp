@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 
-	ifstream infile("SOJsonOneLine.txt");
+	ifstream infile("githubJsonOneLine.txt");
 	string myLine;
 	int count = 0;
 
