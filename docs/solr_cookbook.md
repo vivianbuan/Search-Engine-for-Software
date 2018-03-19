@@ -48,6 +48,11 @@ $ bin/post -c demo ./data/example-data-solr.json -format solr
 curl 'http://localhost:8983/solr/test_nested/update?commit=true' --data-binary \
        @data/test_more_document_3.json -H 'Content-type:application/json'
 ```
+- View the result from admin page: <br />
+&ensp; 1. go to "http://35.230.82.124:8983/solr/#/" <br />
+&ensp; 2. select "nestedpackage" from the drop-down box on left
+&ensp; 3. choose "query" on left. This will bring up the search user interface.
+&ensp; 4. Enter query term and click on "execute query"
 ### Sample query
 - Simple query: `curl "http://localhost:8983/solr/nestedpackage/select?q=YOURQUERY"`
 - Query child field: `q=_childDocuments_.title:python`
