@@ -65,6 +65,10 @@ curl -X POST -H 'Content-type:application/json' --data-binary '{"add-copy-field"
 ### List of query for Avery
 - Sample result checkout: https://docs.google.com/document/d/1as7AEXQVZipIXmikV_0v6_66JLHpMZ2nWOvD6g4dWi0/edit?usp=sharing
 - Query everything:
+- In the following command, if you want to query a string multiple terms like "hello world", the [QUERYTERM] should be 
+```
+\"hello+world\"
+```
 - Git packge info who has stackoverflow content containg [QUERYTERM] <br />
 Note that this only contains git info, no stackoverflow info
 ```
