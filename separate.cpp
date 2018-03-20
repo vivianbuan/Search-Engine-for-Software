@@ -16,6 +16,7 @@ int main() {
 		count++;
 		outfile << myLine << endl;
 		outfile.close();
+		
 	}
 
 	infile.close();

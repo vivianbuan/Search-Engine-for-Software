@@ -25,7 +25,7 @@
 # python stackoverflow_extraction.py ./package_list_small.json ./so_json_small ./so_output/
 
 # TO run with github stuff
-# python git_and_so.py ./gh_json_dir ./so_json_small ./gh_output/
+# python git_and_so.py ./gh_json_dir ./so_json_dir ./gh_output/
 
 import sys
 import json
@@ -67,7 +67,7 @@ def main():
 
 			curt_pkg_name = present['name']
 
-			present["path"] = "1." + curt_pkg_name
+			present["path"] = "1.git"
 			present["id"] = str(present["github_id"])
 
 			# results[curt_pkg_name] = present
@@ -100,6 +100,8 @@ def main():
 			results[curt_pkg_name]["readMe"] = str(present["readMe"])
 			results[curt_pkg_name]["homepage_url"] = str(present["homepage_url"])
 			results[curt_pkg_name]["homepage_content"] = str(present["homepage_content"])
+			results[curt_pkg_name]["path"] = str(present["path"])
+			results[curt_pkg_name]["id"] = str(present["id"])
 
 			# results[curt_pkg_name]
 			results[curt_pkg_name]['_childDocuments_'] = []
@@ -125,12 +127,13 @@ def main():
 				count = count + 1
 				# current["_childDocuments_"] = source["answers"]
 
-				answers = []
-				for ans in source["answers"]:
-					ans["path"] = "3." + curt_pkg_name + ".stack.answer"
-					ans["id"] = str(ans["answer_id"])
-					answers.append(ans)
-				current["_childDocuments_"] = answers
+				if 'answers' in source:
+					answers = []
+					for ans in source["answers"]:
+						ans["path"] = "3.stack.answer"
+						ans["id"] = str(ans["answer_id"])
+						answers.append(ans)
+					current["_childDocuments_"] = answers
 
 				current["up_vote_count"] = str(source["up_vote_count"])
 				current["view_count"] = str(source["view_count"])
@@ -140,7 +143,7 @@ def main():
 					current["last_edit_date"] = str(source["last_edit_date"])
 				current["body_markdown"] = str(source["body_markdown"])
 				current["code_snippet"] = str(source["code_snippet"])
-				current["path"] = "2." + curt_pkg_name + ".stack"
+				current["path"] = "2.stack"
 				results[curt_pkg_name]["_childDocuments_"].append(current)
 
 
