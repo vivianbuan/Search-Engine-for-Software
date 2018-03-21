@@ -40,22 +40,27 @@ If there is already an existing model, you have to delete the existing model fir
 $ ./bin/solr start -c -p 8983 -s example/cloud/node1/solr
 $ ./bin/solr start -c -p 7574 -s example/cloud/node2/solr -z localhost:9983
 ```
-- Create collection and index<br />
-**important**: `-format solr` is needed to make the child documents work properly
+- Create collection<br />
 ```
 $ bin/solr create -c nestedpackage
-$ bin/post -c nestedpackage ./data/git.json -format solr
-```
-- Add new files to be indexed
-```
-curl 'http://localhost:8983/solr/test_nested/update?commit=true' --data-binary \
-       @data/test_more_document_3.json -H 'Content-type:application/json'
 ```
 - Add copy field
 ```
 curl -X POST -H 'Content-type:application/json' --data-binary '{"add-copy-field" : {"source":"*","dest":"_text_"}}'\
         http://localhost:8983/solr/nestedpackage/schema
 ```
+- Index files <br />
+**important**: `-format solr` is needed to make the child documents work properly<br />
+Right now the "real" data is in SOLR/solr-7.2.0/data/real
+```
+$ bin/post -c nestedpackage ./data/real/* -format solr
+```
+- Add new files to be indexed
+```
+curl 'http://localhost:8983/solr/test_nested/update?commit=true' --data-binary \
+       @data/test_more_document_3.json -H 'Content-type:application/json'
+```
+
 - View the result from admin page: <br />
 &ensp; 1. go to "http://35.230.82.124:8983/solr/#/" <br />
 &ensp; 2. select "nestedpackage" from the drop-down box on left <br />
