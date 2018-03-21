@@ -1,8 +1,0 @@
-[
-	{
-		"store" : "test_store",
-		"name": "originalScore",
-		"class" : "org.apache.solr.ltr.feature.OriginalScoreFeature",
-		"params" : {}
-	}
-]

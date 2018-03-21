@@ -1,14 +1,12 @@
-2018-03-18 22:48:27.417 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
-2018-03-18 22:48:27.626 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
-2018-03-18 22:48:27.626 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2018-03-18 22:48:27.626 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
-2018-03-18 22:48:27.638 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-18T22:48:27.628Z
-2018-03-18 22:48:27.638 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
-Mar 18, 2018 10:48:35 PM org.restlet.Application start
+2018-03-21 06:28:18.503 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-03-21 06:28:18.740 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
+2018-03-21 06:28:18.740 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-03-21 06:28:18.741 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
+2018-03-21 06:28:18.753 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-21T06:28:18.741Z
+2018-03-21 06:28:18.753 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+Mar 21, 2018 7:38:47 AM org.restlet.Application start
 INFO: Starting org.apache.solr.rest.SolrSchemaRestApi application
-Mar 18, 2018 10:48:35 PM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-18	22:48:35	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/feature-store	-	403	-	0	13	http://localhost:8983	curl/7.55.1	-
-Mar 18, 2018 10:53:11 PM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-18	22:53:11	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/feature-store/brew_formula_feature_store	-	200	-	0	2	http://localhost:8983	curl/7.55.1	-
-Mar 18, 2018 10:53:18 PM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-18	22:53:18	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	200	-	1147	2	http://localhost:8983	curl/7.55.1	-
+Mar 21, 2018 7:38:47 AM org.restlet.engine.log.LogFilter afterHandle
+INFO: 2018-03-21	07:38:47	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	500	-	0	16	http://localhost:8983	curl/7.55.1	-
+Mar 21, 2018 7:38:55 AM org.restlet.engine.log.LogFilter afterHandle
+INFO: 2018-03-21	07:38:55	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	200	-	974	10	http://localhost:8983	curl/7.55.1	-

@@ -1,0 +1,32 @@
+[
+  {
+    "store" : "nestedpackage_feature_store",
+    "name" : "bm25_sim_repo_desc",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!dismax qf=repo_description}${text}" }
+  },
+  {
+    "store" : "nestedpackage_feature_store",
+    "name" : "bm25_sim_readme",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!dismax qf=readMe}${text}" }
+  },
+  {
+    "store" : "nestedpackage_feature_store",
+    "name" : "bm25_sim_name",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!dismax qf=name}${text}" }
+  },
+    {
+    "store" : "nestedpackage_feature_store",
+    "name" : "bm25_sim_language",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { "q" : "{!dismax qf=language}${text}" }
+  },
+  {
+    "store" : "nestedpackage_feature_store",
+    "name" : "original_score",
+    "class" : "org.apache.solr.ltr.feature.OriginalScoreFeature",
+    "params" : {}
+  }
+]

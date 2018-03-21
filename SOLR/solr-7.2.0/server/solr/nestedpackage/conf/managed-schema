@@ -394,15 +394,6 @@
       <filter class="solr.SnowballPorterFilterFactory" language="Swedish"/>
     </analyzer>
   </fieldType>
-  <fieldType name="text_tfidf" class="solr.TextField" positionIncrementGap="100">
-    <analyzer type="index">
-      <tokenizer class="solr.StandardTokenizerFactory"/>
-    </analyzer>
-    <analyzer type="query">
-      <tokenizer class="solr.StandardTokenizerFactory"/>
-    </analyzer>
-    <similarity class="solr.ClassicSimilarityFactory"/>
-  </fieldType>
   <fieldType name="text_th" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
       <tokenizer class="solr.ThaiTokenizerFactory"/>
@@ -423,36 +414,53 @@
       <tokenizer class="solr.WhitespaceTokenizerFactory"/>
     </analyzer>
   </fieldType>
-  <field name="_childDocuments_.answer" type="text_general"/>
-  <field name="_childDocuments_.title" type="text_general"/>
-  <field name="_childDocuments_.url" type="text_general"/>
-  <field name="_revision" type="text_general"/>
   <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
-  <field name="_shallow" type="text_general"/>
-  <field name="_tag" type="text_general"/>
   <field name="_text_" type="text_general" multiValued="true" indexed="true" stored="false"/>
-  <field name="_using" type="text_general"/>
   <field name="_version_" type="plong" indexed="false" stored="false"/>
-  <field name="class" type="text_general"/>
-  <field name="conflicts_with" type="text_general"/>
-  <field name="depends_on" type="text_general"/>
-  <field name="desc" type="text_general" multiValued="true" indexed="true" stored="true"/>
-  <field name="fatal" type="booleans"/>
-  <field name="head" type="text_general"/>
-  <field name="homepage" type="text_general"/>
+  <field name="answer_count" type="text_general"/>
+  <field name="answer_id" type="plongs"/>
+  <field name="body_markdown" type="text_general"/>
+  <field name="code_snippet" type="text_general"/>
+  <field name="collaborators_cnt" type="plongs"/>
+  <field name="created_time" type="text_general"/>
+  <field name="creation_date" type="text_general"/>
+  <field name="down_vote_count" type="plongs"/>
+  <field name="fork_cnt" type="plongs"/>
+  <field name="github_id" type="plongs"/>
+  <field name="homepage_content" type="text_general"/>
+  <field name="homepage_url" type="text_general"/>
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
-  <field name="include" type="text_general"/>
-  <field name="mirror" type="text_general"/>
+  <field name="is_accepted" type="booleans"/>
+  <field name="language" type="text_general"/>
+  <field name="last_activity_date" type="plongs"/>
+  <field name="last_edit_date" type="text_general"/>
+  <field name="last_push" type="text_general"/>
+  <field name="last_update" type="text_general"/>
+  <field name="license" type="text_general"/>
+  <field name="link" type="text_general"/>
   <field name="name" type="text_general"/>
-  <field name="require" type="text_general"/>
-  <field name="revision" type="plongs"/>
-  <field name="satisfy" type="text_general"/>
-  <field name="satisfy__build_env" type="text_general"/>
-  <field name="sha256" type="text_general"/>
-  <field name="text_tfidf" type="text_tfidf" multiValued="true" indexed="true" stored="false"/>
-  <field name="url" type="text_general"/>
-  <field name="version" type="text_general"/>
-  <field name="version_scheme" type="plongs"/>
+  <field name="owner" type="text_general"/>
+  <field name="path" type="text_general"/>
+  <field name="pm_dependency_cnt" type="plongs"/>
+  <field name="pm_description" type="text_general"/>
+  <field name="pm_keywords" type="text_general"/>
+  <field name="pm_name" type="text_general"/>
+  <field name="private" type="booleans"/>
+  <field name="readMe" type="text_general"/>
+  <field name="repo_dependency_cnt" type="plongs"/>
+  <field name="repo_description" type="text_general"/>
+  <field name="repo_keywords" type="text_general"/>
+  <field name="repo_status" type="text_general"/>
+  <field name="repo_url" type="text_general"/>
+  <field name="score" type="plongs"/>
+  <field name="size" type="plongs"/>
+  <field name="star_cnt" type="plongs"/>
+  <field name="tags" type="text_general"/>
+  <field name="title" type="text_general"/>
+  <field name="up_vote_count" type="text_general"/>
+  <field name="version_cnt" type="plongs"/>
+  <field name="view_count" type="text_general"/>
+  <field name="watcher_cnt" type="plongs"/>
   <dynamicField name="*_txt_en_split_tight" type="text_en_splitting_tight" indexed="true" stored="true"/>
   <dynamicField name="*_descendent_path" type="descendent_path" indexed="true" stored="true"/>
   <dynamicField name="*_ancestor_path" type="ancestor_path" indexed="true" stored="true"/>
@@ -515,26 +523,33 @@
   <dynamicField name="*_f" type="pfloat" indexed="true" stored="true"/>
   <dynamicField name="*_d" type="pdouble" indexed="true" stored="true"/>
   <dynamicField name="*_p" type="location" indexed="true" stored="true"/>
-  <copyField source="desc" dest="text_tfidf"/>
-  <copyField source="_childDocuments_.answer" dest="_childDocuments_.answer_str" maxChars="256"/>
-  <copyField source="mirror" dest="mirror_str" maxChars="256"/>
-  <copyField source="sha256" dest="sha256_str" maxChars="256"/>
+  <copyField source="*" dest="_text_"/>
+  <copyField source="homepage_url" dest="homepage_url_str" maxChars="256"/>
+  <copyField source="link" dest="link_str" maxChars="256"/>
+  <copyField source="pm_description" dest="pm_description_str" maxChars="256"/>
+  <copyField source="language" dest="language_str" maxChars="256"/>
+  <copyField source="readMe" dest="readMe_str" maxChars="256"/>
+  <copyField source="answer_count" dest="answer_count_str" maxChars="256"/>
+  <copyField source="title" dest="title_str" maxChars="256"/>
+  <copyField source="repo_description" dest="repo_description_str" maxChars="256"/>
+  <copyField source="homepage_content" dest="homepage_content_str" maxChars="256"/>
+  <copyField source="path" dest="path_str" maxChars="256"/>
+  <copyField source="last_update" dest="last_update_str" maxChars="256"/>
+  <copyField source="last_push" dest="last_push_str" maxChars="256"/>
+  <copyField source="owner" dest="owner_str" maxChars="256"/>
+  <copyField source="repo_url" dest="repo_url_str" maxChars="256"/>
+  <copyField source="created_time" dest="created_time_str" maxChars="256"/>
+  <copyField source="pm_name" dest="pm_name_str" maxChars="256"/>
+  <copyField source="creation_date" dest="creation_date_str" maxChars="256"/>
+  <copyField source="tags" dest="tags_str" maxChars="256"/>
+  <copyField source="license" dest="license_str" maxChars="256"/>
+  <copyField source="code_snippet" dest="code_snippet_str" maxChars="256"/>
+  <copyField source="body_markdown" dest="body_markdown_str" maxChars="256"/>
   <copyField source="name" dest="name_str" maxChars="256"/>
-  <copyField source="url" dest="url_str" maxChars="256"/>
-  <copyField source="_childDocuments_.url" dest="_childDocuments_.url_str" maxChars="256"/>
-  <copyField source="_childDocuments_.title" dest="_childDocuments_.title_str" maxChars="256"/>
-  <copyField source="homepage" dest="homepage_str" maxChars="256"/>
-  <copyField source="head" dest="head_str" maxChars="256"/>
-  <copyField source="_revision" dest="_revision_str" maxChars="256"/>
-  <copyField source="_tag" dest="_tag_str" maxChars="256"/>
-  <copyField source="class" dest="class_str" maxChars="256"/>
-  <copyField source="include" dest="include_str" maxChars="256"/>
-  <copyField source="_using" dest="_using_str" maxChars="256"/>
-  <copyField source="_shallow" dest="_shallow_str" maxChars="256"/>
-  <copyField source="satisfy__build_env" dest="satisfy__build_env_str" maxChars="256"/>
-  <copyField source="depends_on" dest="depends_on_str" maxChars="256"/>
-  <copyField source="satisfy" dest="satisfy_str" maxChars="256"/>
-  <copyField source="require" dest="require_str" maxChars="256"/>
-  <copyField source="conflicts_with" dest="conflicts_with_str" maxChars="256"/>
-  <copyField source="desc" dest="desc_str" maxChars="256"/>
+  <copyField source="up_vote_count" dest="up_vote_count_str" maxChars="256"/>
+  <copyField source="view_count" dest="view_count_str" maxChars="256"/>
+  <copyField source="last_edit_date" dest="last_edit_date_str" maxChars="256"/>
+  <copyField source="pm_keywords" dest="pm_keywords_str" maxChars="256"/>
+  <copyField source="repo_status" dest="repo_status_str" maxChars="256"/>
+  <copyField source="repo_keywords" dest="repo_keywords_str" maxChars="256"/>
 </schema>

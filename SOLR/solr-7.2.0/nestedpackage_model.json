@@ -1,0 +1,21 @@
+{
+  "store" : "nestedpackage_feature_store",
+  "name" : "nestedpackage_model",
+  "class" : "org.apache.solr.ltr.model.LinearModel",
+  "features" : [
+    { "name" : "bm25_sim_repo_desc" },
+    { "name" : "bm25_sim_readme" },
+    { "name" : "bm25_sim_name" },
+    { "name" : "bm25_sim_language" },
+    { "name" : "original_score" }
+  ],
+  "params" : {
+    "weights" : {
+      "bm25_sim_repo_desc" : 0.25,
+      "bm25_sim_readme" : 0.25,
+      "bm25_sim_name" : 0.25,
+      "bm25_sim_language" : 0.25,
+      "original_score" : 0.0
+    }
+  }
+}
