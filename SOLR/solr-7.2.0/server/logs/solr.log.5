@@ -1,0 +1,301 @@
+2018-03-21 05:01:34.963 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-03-21 05:01:35.196 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
+2018-03-21 05:01:35.196 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-03-21 05:01:35.196 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
+2018-03-21 05:01:35.206 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-21T05:01:35.197Z
+2018-03-21 05:01:35.206 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-03-21 05:01:35.216 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-21 05:01:35.220 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/solr.xml
+2018-03-21 05:01:35.573 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-21 05:01:35.574 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [nestedpackage]
+2018-03-21 05:01:35.578 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-03-21 05:01:35.613 INFO  (main) [   ] o.e.j.s.Server Started @954ms
+2018-03-21 05:01:35.631 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrResourceLoader [nestedpackage] Added 53 libs to classloader, from paths: [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
+2018-03-21 05:01:35.739 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
+2018-03-21 05:01:35.887 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
+2018-03-21 05:01:36.267 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-03-21 05:01:36.297 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
+2018-03-21 05:01:36.323 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-03-21 05:01:36.326 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
+2018-03-21 05:01:36.349 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-03-21 05:01:36.573 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-03-21 05:01:36.573 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-03-21 05:01:36.587 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-03-21 05:01:36.587 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-03-21 05:01:36.674 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@40176c7b[nestedpackage] main]
+2018-03-21 05:01:36.683 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-21 05:01:36.694 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-03-21 05:01:36.699 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-03-21 05:01:36.708 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-03-21 05:01:36.750 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@40176c7b[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.2.0):C213)))}
+2018-03-21 05:01:36.751 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-03-21 05:01:36.751 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-03-21 05:01:36.753 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@40176c7b[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.2.0):C213)))}
+2018-03-21 05:39:49.419 INFO  (qtp1929600551-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=12
+2018-03-21 05:39:49.453 INFO  (qtp1929600551-15) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=null
+2018-03-21 05:39:49.453 INFO  (qtp1929600551-15) [   ] o.a.s.c.SolrCore [nestedpackage]  CLOSING SolrCore org.apache.solr.core.SolrCore@4d11bace
+2018-03-21 05:39:49.453 INFO  (qtp1929600551-15) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=1293007566
+2018-03-21 05:39:49.463 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={deleteInstanceDir=true&core=nestedpackage&deleteDataDir=true&action=UNLOAD&wt=json&deleteIndex=true} status=0 QTime=11
+2018-03-21 05:40:00.538 INFO  (qtp1929600551-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521608014937} status=0 QTime=1
+2018-03-21 05:40:00.548 INFO  (qtp1929600551-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521608014937} status=0 QTime=9
+2018-03-21 05:40:00.588 INFO  (qtp1929600551-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521608014937} status=0 QTime=11
+2018-03-21 05:40:24.291 INFO  (qtp1929600551-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=4
+2018-03-21 05:40:24.311 INFO  (qtp1929600551-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=4
+2018-03-21 05:40:24.317 INFO  (qtp1929600551-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=nestedpackage&action=STATUS&wt=json} status=0 QTime=0
+2018-03-21 05:40:24.334 INFO  (qtp1929600551-14) [   ] o.a.s.h.a.CoreAdminOperation core create command name=nestedpackage&action=CREATE&instanceDir=nestedpackage&wt=json
+2018-03-21 05:40:24.351 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.SolrResourceLoader [nestedpackage] Added 53 libs to classloader, from paths: [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
+2018-03-21 05:40:24.369 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
+2018-03-21 05:40:24.400 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
+2018-03-21 05:40:24.518 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-03-21 05:40:24.529 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
+2018-03-21 05:40:24.529 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-03-21 05:40:24.530 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
+2018-03-21 05:40:24.548 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-03-21 05:40:24.568 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-03-21 05:40:24.568 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-03-21 05:40:24.569 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-03-21 05:40:24.569 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-03-21 05:40:24.570 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@27e2fbfe[nestedpackage] main]
+2018-03-21 05:40:24.571 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-21 05:40:24.571 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-03-21 05:40:24.571 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-03-21 05:40:24.572 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-03-21 05:40:24.572 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@27e2fbfe[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-03-21 05:40:24.572 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-03-21 05:40:24.572 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-03-21 05:40:24.573 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@27e2fbfe[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-03-21 05:40:24.573 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1595524591987458048
+2018-03-21 05:40:24.575 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=nestedpackage&action=CREATE&instanceDir=nestedpackage&wt=json} status=0 QTime=241
+2018-03-21 05:40:34.106 INFO  (qtp1929600551-37) [   x:nestedpackage] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf/managed-schema
+2018-03-21 05:40:34.135 INFO  (qtp1929600551-37) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/schema params={} status=0 QTime=60
+2018-03-21 05:40:53.925 INFO  (qtp1929600551-39) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{} 0 10
+2018-03-21 05:40:53.926 ERROR (qtp1929600551-39) [   x:nestedpackage] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Unknown command '_childDocuments_' at [22]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.processUpdate(JsonLoader.java:175)
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.load(JsonLoader.java:121)
+	at org.apache.solr.handler.loader.JsonLoader.load(JsonLoader.java:84)
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:97)
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:68)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2503)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:710)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:516)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:382)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:283)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:108)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-03-21 05:40:54.075 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{} 0 0
+2018-03-21 05:40:54.075 ERROR (qtp1929600551-19) [   x:nestedpackage] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Unknown command '_childDocuments_' at [19]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.processUpdate(JsonLoader.java:175)
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.load(JsonLoader.java:121)
+	at org.apache.solr.handler.loader.JsonLoader.load(JsonLoader.java:84)
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:97)
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:68)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2503)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:710)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:516)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:382)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:283)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:108)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-03-21 05:40:54.123 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{} 0 0
+2018-03-21 05:40:54.123 ERROR (qtp1929600551-16) [   x:nestedpackage] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Unknown command '_childDocuments_' at [19]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.processUpdate(JsonLoader.java:175)
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.load(JsonLoader.java:121)
+	at org.apache.solr.handler.loader.JsonLoader.load(JsonLoader.java:84)
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:97)
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:68)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2503)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:710)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:516)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:382)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:283)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:108)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-03-21 05:40:54.445 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{} 0 0
+2018-03-21 05:40:54.446 ERROR (qtp1929600551-20) [   x:nestedpackage] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Unknown command '_childDocuments_' at [19]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.processUpdate(JsonLoader.java:175)
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.load(JsonLoader.java:121)
+	at org.apache.solr.handler.loader.JsonLoader.load(JsonLoader.java:84)
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:97)
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:68)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2503)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:710)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:516)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:382)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:283)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:108)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-03-21 05:40:54.459 INFO  (qtp1929600551-37) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{} 0 0
+2018-03-21 05:40:54.460 ERROR (qtp1929600551-37) [   x:nestedpackage] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Unknown command '_childDocuments_' at [19]
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.processUpdate(JsonLoader.java:175)
+	at org.apache.solr.handler.loader.JsonLoader$SingleThreadedJsonLoader.load(JsonLoader.java:121)
+	at org.apache.solr.handler.loader.JsonLoader.load(JsonLoader.java:84)
+	at org.apache.solr.handler.UpdateRequestHandler$1.load(UpdateRequestHandler.java:97)
+	at org.apache.solr.handler.ContentStreamHandlerBase.handleRequestBody(ContentStreamHandlerBase.java:68)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2503)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:710)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:516)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:382)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:283)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:108)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-03-21 05:40:54.619 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1595524623492972544,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-03-21 05:40:54.619 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.u.DirectUpdateHandler2 No uncommitted changes. Skipping IW.commit.
+2018-03-21 05:40:54.620 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@1652f38b[nestedpackage] main]
+2018-03-21 05:40:54.621 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-03-21 05:40:54.621 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@1652f38b[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-03-21 05:40:54.621 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-03-21 05:40:54.622 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@1652f38b[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-03-21 05:40:54.622 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={commit=true}{commit=} 0 3
+2018-03-21 05:41:36.746 INFO  (qtp1929600551-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521610896621} status=0 QTime=0
+2018-03-21 05:41:36.754 INFO  (qtp1929600551-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521610896622} status=0 QTime=8
+2018-03-21 05:41:36.766 INFO  (qtp1929600551-37) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521610896622} status=0 QTime=7
+2018-03-21 05:41:39.294 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521610896621} status=0 QTime=0
+2018-03-21 05:41:39.297 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1521610899259} status=0 QTime=2
+2018-03-21 05:41:39.298 INFO  (qtp1929600551-38) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/replication params={wt=json&command=details&_=1521610899259} status=0 QTime=3
+2018-03-21 05:41:39.306 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1521610896622&ts=1521610896622} status=503 QTime=9
+2018-03-21 05:41:39.321 INFO  (qtp1929600551-22) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/system params={wt=json&_=1521610899259} status=0 QTime=25
+2018-03-21 05:41:39.321 INFO  (qtp1929600551-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521610896622} status=0 QTime=26
+2018-03-21 05:41:40.913 INFO  (qtp1929600551-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521610896621} status=0 QTime=0
+2018-03-21 05:41:40.917 INFO  (qtp1929600551-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521610896622} status=0 QTime=4
+2018-03-21 05:41:42.615 INFO  (qtp1929600551-22) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=*:*&_=1521610900883} hits=0 status=0 QTime=15
+2018-03-21 05:42:04.181 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1233990028
+2018-03-21 05:42:04.181 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2018-03-21 05:42:04.181 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2018-03-21 05:42:04.182 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
+2018-03-21 05:42:04.182 INFO  (coreCloseExecutor-17-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage]  CLOSING SolrCore org.apache.solr.core.SolrCore@5b4e215f
+2018-03-21 05:42:04.182 INFO  (coreCloseExecutor-17-thread-1) [   x:nestedpackage] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=1531847007

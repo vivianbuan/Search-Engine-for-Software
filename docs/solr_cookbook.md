@@ -97,7 +97,7 @@ http://35.230.82.124:8983/solr/nestedpackage/select?q=
 ```
 - Git package info for LTR query (essentially add a few parameters to the normal query, such as rq, the rerank parameter, and fl)
 ```
-http://localhost:8983/solr/nestedpackage/select?q=%20({!parent%20which=%20path:1.git}body_markdown:python%20interface)%20OR%20%20(path:1.git%20AND%20(name:python%20interface%20OR%20readMe:python%20interface%20or%20repo_keywords:python%20interface%20OR%20%20repo_description:python%20interface%20OR%20pm_name:python%20interface%20OR%20pm_description:python%20interface))&rq={!ltr model=nestedpackage_model efi.text='python interface'}&fl=name,repo_description,score,[features]
+http://localhost:8983/solr/nestedpackage/select?q=%20({!parent%20which=%20path:1.git}body_markdown:python%20machine%20learning)%20OR%20(path:1.git%20AND%20(name:python%20machine%20learning%20OR%20readMe:python%20machine%20learning%20OR%20repo_keywords:python%20machine%20learning%20OR%20repo_description:python%20machine%20learning%20OR%20pm_name:python%20machine%20learning%20OR%20pm_description:python%20machine%20learning))&rq={!ltr model=nestedpackage_model efi.text='python machine learning'}&fl=name,repo_description,score,[features]
 ```
 - Return a inner structure (case 3 in google doc) <br />
 &ensp; There are two parts in this query, `q=...` is the regular query condition, `fl=...` is the filter of fields that we want to ouput. In this example we output `id,name,readMe,repo_url` of the outter most level (git package), then childs with the path `2.stack`. If you want to output all fields of outter most level, replace the first several term with `*`. <br />

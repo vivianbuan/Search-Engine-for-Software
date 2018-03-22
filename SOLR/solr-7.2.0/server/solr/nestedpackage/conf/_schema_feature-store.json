@@ -1,6 +1,7 @@
 {
   "initArgs":{},
-  "initializedOn":"2018-03-21T06:28:19.969Z",
+  "initializedOn":"2018-03-22T05:12:53.178Z",
+  "updatedSinceInit":"2018-03-22T07:15:16.676Z",
   "managedList":[
     {
       "name":"bm25_sim_repo_desc",

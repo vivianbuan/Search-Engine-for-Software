@@ -1,7 +1,7 @@
 {
   "initArgs":{},
-  "initializedOn":"2018-03-21T08:21:12.013Z",
-  "updatedSinceInit":"2018-03-21T08:28:15.998Z",
+  "initializedOn":"2018-03-22T05:12:53.191Z",
+  "updatedSinceInit":"2018-03-22T07:15:53.968Z",
   "managedList":[{
       "name":"nestedpackage_model",
       "class":"org.apache.solr.ltr.model.LinearModel",

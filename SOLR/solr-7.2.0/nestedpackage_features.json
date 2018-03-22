@@ -17,7 +17,7 @@
     "class" : "org.apache.solr.ltr.feature.SolrFeature",
     "params" : { "q" : "{!dismax qf=name}${text}" }
   },
-    {
+  {
     "store" : "nestedpackage_feature_store",
     "name" : "bm25_sim_language",
     "class" : "org.apache.solr.ltr.feature.SolrFeature",

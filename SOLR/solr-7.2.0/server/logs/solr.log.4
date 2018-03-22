@@ -1,92 +1,107 @@
-2018-03-21 04:42:16.697 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
-2018-03-21 04:42:16.914 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
-2018-03-21 04:42:16.914 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2018-03-21 04:42:16.914 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
-2018-03-21 04:42:16.925 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-21T04:42:16.915Z
-2018-03-21 04:42:16.925 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
-2018-03-21 04:42:16.934 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
-2018-03-21 04:42:16.938 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/solr.xml
-2018-03-21 04:42:17.263 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 0 core definitions underneath /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
-2018-03-21 04:42:17.291 INFO  (main) [   ] o.e.j.s.Server Started @891ms
-2018-03-21 04:42:51.693 INFO  (qtp1929600551-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=23
-2018-03-21 04:42:51.724 INFO  (qtp1929600551-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=5
-2018-03-21 04:42:51.733 INFO  (qtp1929600551-20) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
-2018-03-21 04:42:51.733 INFO  (qtp1929600551-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=nestedpackage&action=STATUS&wt=json} status=0 QTime=1
-2018-03-21 04:42:51.750 INFO  (qtp1929600551-19) [   ] o.a.s.h.a.CoreAdminOperation core create command name=nestedpackage&action=CREATE&instanceDir=nestedpackage&wt=json
-2018-03-21 04:42:51.790 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.SolrResourceLoader [nestedpackage] Added 53 libs to classloader, from paths: [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
-2018-03-21 04:42:51.893 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
-2018-03-21 04:42:51.999 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
-2018-03-21 04:42:52.300 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2018-03-21 04:42:52.318 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
-2018-03-21 04:42:52.329 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
-2018-03-21 04:42:52.333 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
-2018-03-21 04:42:52.393 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
-2018-03-21 04:42:52.588 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2018-03-21 04:42:52.588 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2018-03-21 04:42:52.594 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
-2018-03-21 04:42:52.594 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2018-03-21 04:42:52.606 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@5079b757[nestedpackage] main]
-2018-03-21 04:42:52.612 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-21 04:42:52.623 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2018-03-21 04:42:52.627 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2018-03-21 04:42:52.635 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
-2018-03-21 04:42:52.670 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@5079b757[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
-2018-03-21 04:42:52.670 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2018-03-21 04:42:52.670 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2018-03-21 04:42:52.672 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1595520972406915072
-2018-03-21 04:42:52.674 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@5079b757[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
-2018-03-21 04:42:52.677 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=nestedpackage&action=CREATE&instanceDir=nestedpackage&wt=json} status=0 QTime=926
-2018-03-21 04:46:17.085 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf/managed-schema
-2018-03-21 04:46:17.222 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{add=[8587033 (1595521186755772416)]} 0 445
-2018-03-21 04:46:17.226 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1595521186897330176,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-2018-03-21 04:46:17.226 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@48deb97f commitCommandVersion:1595521186897330176
-2018-03-21 04:46:17.418 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@5e8931de[nestedpackage] main]
-2018-03-21 04:46:17.420 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.DirectUpdateHandler2 end_commit_flush
-2018-03-21 04:46:17.420 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@5e8931de[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C213)))}
-2018-03-21 04:46:17.420 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2018-03-21 04:46:17.420 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@5e8931de[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C213)))}
-2018-03-21 04:46:17.420 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={commit=true}{commit=} 0 194
-2018-03-21 04:48:35.643 INFO  (qtp1929600551-36) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521607715475} status=0 QTime=0
-2018-03-21 04:48:35.655 INFO  (qtp1929600551-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521607715475} status=0 QTime=11
-2018-03-21 04:48:35.683 INFO  (qtp1929600551-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521607715475} status=0 QTime=22
-2018-03-21 04:48:37.893 INFO  (qtp1929600551-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521607715475} status=0 QTime=0
-2018-03-21 04:48:37.896 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1521607717884} status=0 QTime=2
-2018-03-21 04:48:37.908 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1521607715475&ts=1521607715475} status=503 QTime=5
-2018-03-21 04:48:37.911 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/replication params={wt=json&command=details&_=1521607717885} status=0 QTime=2
-2018-03-21 04:48:37.916 INFO  (qtp1929600551-36) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521607715475} status=0 QTime=22
-2018-03-21 04:48:37.919 INFO  (qtp1929600551-22) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/system params={wt=json&_=1521607717885} status=0 QTime=20
-2018-03-21 04:48:39.397 INFO  (qtp1929600551-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521607715475} status=0 QTime=0
-2018-03-21 04:48:39.401 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521607719383} status=0 QTime=0
-2018-03-21 04:48:39.404 INFO  (qtp1929600551-38) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521607715475} status=0 QTime=7
-2018-03-21 04:48:39.411 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521607719383} status=0 QTime=0
-2018-03-21 04:48:41.661 INFO  (qtp1929600551-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521607715475} status=0 QTime=0
-2018-03-21 04:48:41.668 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521607719383} status=0 QTime=0
-2018-03-21 04:48:41.670 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=managed-schema&contentType=text/plain;charset%3Dutf-8&wt=json&_=1521607719383} status=0 QTime=0
-2018-03-21 04:48:41.680 INFO  (qtp1929600551-22) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521607719383} status=0 QTime=0
-2018-03-21 04:48:41.684 INFO  (qtp1929600551-36) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521607715475} status=0 QTime=16
-2018-03-21 04:52:43.394 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf/managed-schema
-2018-03-21 04:52:43.422 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/schema params={} status=0 QTime=69
-2018-03-21 04:53:35.032 INFO  (qtp1929600551-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521608014937} status=0 QTime=0
-2018-03-21 04:53:35.033 INFO  (qtp1929600551-37) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521608015025} status=0 QTime=0
-2018-03-21 04:53:35.035 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=managed-schema&contentType=text/plain;charset%3Dutf-8&wt=json&_=1521608015025} status=0 QTime=0
-2018-03-21 04:53:35.038 INFO  (qtp1929600551-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521608014937} status=0 QTime=5
-2018-03-21 04:53:35.072 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521608015025} status=0 QTime=0
-2018-03-21 04:56:25.625 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{add=[8587033 (1595521824779665408)]} 0 73
-2018-03-21 04:56:25.628 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1595521824853065728,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
-2018-03-21 04:56:25.628 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@48deb97f commitCommandVersion:1595521824853065728
-2018-03-21 04:56:25.754 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@45429a2c[nestedpackage] main]
-2018-03-21 04:56:25.755 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@45429a2c[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.2.0):C213)))}
-2018-03-21 04:56:25.755 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.u.DirectUpdateHandler2 end_commit_flush
-2018-03-21 04:56:25.755 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2018-03-21 04:56:25.755 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@45429a2c[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_1(7.2.0):C213)))}
-2018-03-21 04:56:25.757 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={commit=true}{commit=} 0 129
-2018-03-21 04:58:22.646 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521608014937} status=0 QTime=0
-2018-03-21 04:58:22.653 INFO  (qtp1929600551-43) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521608014937} status=0 QTime=7
-2018-03-21 04:58:24.345 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=*:*&_=1521608302622} hits=213 status=0 QTime=31
-2018-03-21 04:59:30.322 INFO  (qtp1929600551-43) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=python&_=1521608302622} hits=1 status=0 QTime=39
-2018-03-21 05:01:19.936 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1233990028
-2018-03-21 05:01:19.936 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
-2018-03-21 05:01:19.937 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
-2018-03-21 05:01:19.937 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
-2018-03-21 05:01:19.938 INFO  (coreCloseExecutor-12-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage]  CLOSING SolrCore org.apache.solr.core.SolrCore@333974b
-2018-03-21 05:01:19.938 INFO  (coreCloseExecutor-12-thread-1) [   x:nestedpackage] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=53712715
+2018-03-21 05:44:59.992 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-03-21 05:45:00.224 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
+2018-03-21 05:45:00.225 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-03-21 05:45:00.225 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
+2018-03-21 05:45:00.237 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-21T05:45:00.226Z
+2018-03-21 05:45:00.238 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-03-21 05:45:00.247 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-21 05:45:00.250 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/solr.xml
+2018-03-21 05:45:00.570 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-21 05:45:00.571 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [nestedpackage]
+2018-03-21 05:45:00.574 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-03-21 05:45:00.610 INFO  (main) [   ] o.e.j.s.Server Started @938ms
+2018-03-21 05:45:00.620 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrResourceLoader [nestedpackage] Added 53 libs to classloader, from paths: [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
+2018-03-21 05:45:00.718 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
+2018-03-21 05:45:00.852 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
+2018-03-21 05:45:01.126 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-03-21 05:45:01.144 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
+2018-03-21 05:45:01.164 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-03-21 05:45:01.167 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
+2018-03-21 05:45:01.186 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-03-21 05:45:01.368 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-03-21 05:45:01.368 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-03-21 05:45:01.373 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-03-21 05:45:01.374 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-03-21 05:45:01.411 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@3392b3bc[nestedpackage] main]
+2018-03-21 05:45:01.418 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-21 05:45:01.429 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-03-21 05:45:01.432 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-03-21 05:45:01.440 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-03-21 05:45:01.472 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@3392b3bc[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-03-21 05:45:01.472 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-03-21 05:45:01.472 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-03-21 05:45:01.474 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1595524882339201024
+2018-03-21 05:45:01.474 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@3392b3bc[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-03-21 05:45:08.621 INFO  (qtp1929600551-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=10
+2018-03-21 05:45:08.647 INFO  (qtp1929600551-15) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=null
+2018-03-21 05:45:08.648 INFO  (qtp1929600551-15) [   ] o.a.s.c.SolrCore [nestedpackage]  CLOSING SolrCore org.apache.solr.core.SolrCore@7d86f12e
+2018-03-21 05:45:08.648 INFO  (qtp1929600551-15) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=2105995566
+2018-03-21 05:45:08.660 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={deleteInstanceDir=true&core=nestedpackage&deleteDataDir=true&action=UNLOAD&wt=json&deleteIndex=true} status=0 QTime=13
+2018-03-21 05:45:14.003 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=6
+2018-03-21 05:45:14.024 INFO  (qtp1929600551-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=4
+2018-03-21 05:45:14.030 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={core=nestedpackage&action=STATUS&wt=json} status=0 QTime=0
+2018-03-21 05:45:14.044 INFO  (qtp1929600551-19) [   ] o.a.s.h.a.CoreAdminOperation core create command name=nestedpackage&action=CREATE&instanceDir=nestedpackage&wt=json
+2018-03-21 05:45:14.062 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.SolrResourceLoader [nestedpackage] Added 53 libs to classloader, from paths: [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
+2018-03-21 05:45:14.092 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
+2018-03-21 05:45:14.121 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
+2018-03-21 05:45:14.235 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-03-21 05:45:14.247 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
+2018-03-21 05:45:14.248 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-03-21 05:45:14.248 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
+2018-03-21 05:45:14.276 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-03-21 05:45:14.301 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-03-21 05:45:14.301 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-03-21 05:45:14.302 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-03-21 05:45:14.303 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-03-21 05:45:14.304 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@56582f66[nestedpackage] main]
+2018-03-21 05:45:14.304 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-21 05:45:14.305 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-03-21 05:45:14.305 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-03-21 05:45:14.306 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-03-21 05:45:14.306 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@56582f66[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-03-21 05:45:14.306 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-03-21 05:45:14.306 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-03-21 05:45:14.307 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@56582f66[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader())}
+2018-03-21 05:45:14.307 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1595524895795576832
+2018-03-21 05:45:14.309 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={name=nestedpackage&action=CREATE&instanceDir=nestedpackage&wt=json} status=0 QTime=264
+2018-03-21 05:45:29.687 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf/managed-schema
+2018-03-21 05:45:29.716 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/schema params={} status=0 QTime=60
+2018-03-21 05:45:40.606 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf/managed-schema
+2018-03-21 05:45:42.124 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{add=[24195339 (1595524923377319936)]} 0 1995
+2018-03-21 05:45:42.167 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf/managed-schema
+2018-03-21 05:45:42.242 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{add=[17949339 (1595524925013098496)]} 0 114
+2018-03-21 05:45:42.696 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{add=[4164482 (1595524925135781888)]} 0 451
+2018-03-21 05:45:43.174 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{add=[908607 (1595524925594009600)]} 0 475
+2018-03-21 05:45:43.379 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{add=[858127 (1595524926080548864)]} 0 202
+2018-03-21 05:45:53.424 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{add=[1283503 (1595524926752686080)]} 0 10042
+2018-03-21 05:45:53.430 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={}{add=[21914226 (1595524936816918528)]} 0 2
+2018-03-21 05:45:53.431 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.u.DirectUpdateHandler2 start commit{_version_=1595524936820064256,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+2018-03-21 05:45:53.432 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.u.SolrIndexWriter Calling setCommitData with IW:org.apache.solr.update.SolrIndexWriter@29a5ca9 commitCommandVersion:1595524936820064256
+2018-03-21 05:45:53.782 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@274cb22[nestedpackage] main]
+2018-03-21 05:45:53.786 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.u.DirectUpdateHandler2 end_commit_flush
+2018-03-21 05:45:53.786 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@274cb22[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C52669) Uninverting(_1(7.2.0):C1)))}
+2018-03-21 05:45:53.786 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-03-21 05:45:53.787 INFO  (searcherExecutor-12-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@274cb22[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C52669) Uninverting(_1(7.2.0):C1)))}
+2018-03-21 05:45:53.788 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.u.p.LogUpdateProcessorFactory [nestedpackage]  webapp=/solr path=/update params={commit=true}{commit=} 0 356
+2018-03-21 05:46:03.884 INFO  (qtp1929600551-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521610896621} status=0 QTime=0
+2018-03-21 05:46:03.893 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521610896622} status=0 QTime=5
+2018-03-21 05:46:03.901 INFO  (qtp1929600551-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521610896622} status=0 QTime=5
+2018-03-21 05:46:05.627 INFO  (qtp1929600551-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521610896621} status=0 QTime=0
+2018-03-21 05:46:05.631 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1521610899259} status=0 QTime=3
+2018-03-21 05:46:05.632 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1521610896622&ts=1521610896622} status=503 QTime=1
+2018-03-21 05:46:05.636 INFO  (qtp1929600551-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521610896622} status=0 QTime=9
+2018-03-21 05:46:05.643 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/replication params={wt=json&command=details&_=1521610899259} status=0 QTime=15
+2018-03-21 05:46:05.646 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/system params={wt=json&_=1521610899259} status=0 QTime=16
+2018-03-21 05:46:07.088 INFO  (qtp1929600551-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521610896621} status=0 QTime=0
+2018-03-21 05:46:07.101 INFO  (qtp1929600551-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521610896622} status=0 QTime=13
+2018-03-21 05:46:09.213 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=*:*&_=1521610900883} hits=52670 status=0 QTime=19
+2018-03-21 05:47:08.448 INFO  (qtp1929600551-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521610896621} status=0 QTime=0
+2018-03-21 05:47:08.450 INFO  (qtp1929600551-21) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521611228443} status=0 QTime=0
+2018-03-21 05:47:08.455 INFO  (qtp1929600551-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521610896622} status=0 QTime=5
+2018-03-21 05:47:08.469 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521611228443} status=0 QTime=1
+2018-03-21 06:28:01.654 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1233990028
+2018-03-21 06:28:01.654 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2018-03-21 06:28:01.654 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2018-03-21 06:28:01.654 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
+2018-03-21 06:28:01.655 INFO  (coreCloseExecutor-17-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage]  CLOSING SolrCore org.apache.solr.core.SolrCore@68a2621e
+2018-03-21 06:28:01.655 INFO  (coreCloseExecutor-17-thread-1) [   x:nestedpackage] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=1755472414
