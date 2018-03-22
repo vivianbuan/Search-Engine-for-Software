@@ -1,7 +1,7 @@
 {
   "initArgs":{},
-  "initializedOn":"2018-03-22T05:12:53.178Z",
-  "updatedSinceInit":"2018-03-22T07:15:16.676Z",
+  "initializedOn":"2018-03-22T22:34:11.156Z",
+  "updatedSinceInit":"2018-03-22T22:36:47.583Z",
   "managedList":[
     {
       "name":"bm25_sim_repo_desc",
@@ -22,6 +22,27 @@
       "name":"bm25_sim_language",
       "class":"org.apache.solr.ltr.feature.SolrFeature",
       "params":{"q":"{!dismax qf=language}${text}"},
+      "store":"nestedpackage_feature_store"},
+    {
+      "name":"bm25_sim_SO_markdown",
+      "class":"org.apache.solr.ltr.feature.SolrFeature",
+      "params":{
+        "df":"body_markdown",
+        "q":"{!parent which='path:1.git' score=avg}${text}"},
+      "store":"nestedpackage_feature_store"},
+    {
+      "name":"bm25_sim_SO_tags",
+      "class":"org.apache.solr.ltr.feature.SolrFeature",
+      "params":{
+        "df":"tags",
+        "q":"{!parent which='path:1.git' score=avg}${text}"},
+      "store":"nestedpackage_feature_store"},
+    {
+      "name":"bm25_sim_SO_code",
+      "class":"org.apache.solr.ltr.feature.SolrFeature",
+      "params":{
+        "df":"code_snippet",
+        "q":"{!parent which='path:1.git' score=avg}${text}"},
       "store":"nestedpackage_feature_store"},
     {
       "name":"original_score",

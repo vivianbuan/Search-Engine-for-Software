@@ -1,38 +1,12 @@
-2018-03-21 22:31:30.657 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
-2018-03-21 22:31:30.890 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
-2018-03-21 22:31:30.890 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2018-03-21 22:31:30.890 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
-2018-03-21 22:31:30.901 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-21T22:31:30.891Z
-2018-03-21 22:31:30.902 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
-Mar 22, 2018 3:54:02 AM org.restlet.Application start
+2018-03-22 22:34:09.672 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-03-22 22:34:09.886 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
+2018-03-22 22:34:09.887 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-03-22 22:34:09.887 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
+2018-03-22 22:34:09.899 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-22T22:34:09.888Z
+2018-03-22 22:34:09.900 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+Mar 22, 2018 10:36:47 PM org.restlet.Application start
 INFO: Starting org.apache.solr.rest.SolrSchemaRestApi application
-Mar 22, 2018 3:54:02 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	03:54:02	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/feature-store/nestedpackage_feature_store	-	200	-	0	15	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 3:54:12 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	03:54:12	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	500	-	1209	2	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 3:56:21 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	03:56:21	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	200	-	1213	1	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 3:56:39 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	03:56:39	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/model-store/nestedpackage_model	-	200	-	0	1	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 3:56:45 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	03:56:45	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/model-store	-	200	-	612	1	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 3:59:09 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	03:59:09	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/feature-store/nestedpackage_feature_store	-	200	-	0	1	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 3:59:14 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	03:59:14	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	200	-	1207	1	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 4:29:15 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	04:29:15	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/feature-store/nestedpackage_feature_store	-	200	-	0	0	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 4:29:18 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	04:29:18	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	200	-	1200	2	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 4:38:57 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	04:38:57	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/feature-store/nestedpackage_feature_store	-	200	-	0	0	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 4:39:00 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	04:39:00	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	200	-	1199	2	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 4:46:09 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	04:46:09	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/feature-store/nestedpackage_feature_store	-	200	-	0	0	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 4:46:12 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	04:46:12	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	200	-	1197	1	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 4:52:59 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	04:52:59	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/feature-store/nestedpackage_feature_store	-	200	-	0	3	http://localhost:8983	curl/7.55.1	-
-Mar 22, 2018 4:53:01 AM org.restlet.engine.log.LogFilter afterHandle
-INFO: 2018-03-22	04:53:01	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	200	-	1181	2	http://localhost:8983	curl/7.55.1	-
+Mar 22, 2018 10:36:47 PM org.restlet.engine.log.LogFilter afterHandle
+INFO: 2018-03-22	22:36:47	127.0.0.1	-	127.0.0.1	8983	DELETE	/solr/schema/feature-store/nestedpackage_feature_store	-	200	-	0	15	http://localhost:8983	curl/7.55.1	-
+Mar 22, 2018 10:36:51 PM org.restlet.engine.log.LogFilter afterHandle
+INFO: 2018-03-22	22:36:51	127.0.0.1	-	127.0.0.1	8983	PUT	/solr/schema/feature-store	-	200	-	1740	3	http://localhost:8983	curl/7.55.1	-

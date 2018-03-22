@@ -25,6 +25,33 @@
   },
   {
     "store" : "nestedpackage_feature_store",
+    "name" : "bm25_sim_SO_markdown",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { 
+      "q" : "{!parent which='path:1.git' score=avg}${text}",
+      "df" : "body_markdown"
+    }
+  },
+  {
+    "store" : "nestedpackage_feature_store",
+    "name" : "bm25_sim_SO_tags",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { 
+      "q" : "{!parent which='path:1.git' score=avg}${text}",
+      "df" : "tags"
+    }
+  },
+  {
+    "store" : "nestedpackage_feature_store",
+    "name" : "bm25_sim_SO_code",
+    "class" : "org.apache.solr.ltr.feature.SolrFeature",
+    "params" : { 
+      "q" : "{!parent which='path:1.git' score=avg}${text}",
+      "df" : "code_snippet"
+    }
+  },
+  {
+    "store" : "nestedpackage_feature_store",
     "name" : "original_score",
     "class" : "org.apache.solr.ltr.feature.OriginalScoreFeature",
     "params" : {}

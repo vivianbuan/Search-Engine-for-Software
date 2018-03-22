@@ -95,9 +95,13 @@ http://35.230.82.124:8983/solr/nestedpackage/select?q=
        (path:1.git%20AND%20(name:[QUERYTERM]%20OR%20readMe:[QUERYTERM]%20or%20repo_keywords:[QUERYTERM]%20OR%20
        repo_description:[QUERYTERM]%20OR%20pm_name:[QUERYTERM]%20OR%20pm_description:[QUERYTERM]))
 ```
-- Git package info for LTR query (essentially add a few parameters to the normal query, such as rq, the rerank parameter, and fl)
+- Git package info for LTR query (essentially add a few parameters to the normal query, such as rq, the rerank parameter, and fl, shows you relevant details)
 ```
-http://localhost:8983/solr/nestedpackage/select?q=%20({!parent%20which=%20path:1.git}body_markdown:python%20machine%20learning)%20OR%20(path:1.git%20AND%20(name:python%20machine%20learning%20OR%20readMe:python%20machine%20learning%20OR%20repo_keywords:python%20machine%20learning%20OR%20repo_description:python%20machine%20learning%20OR%20pm_name:python%20machine%20learning%20OR%20pm_description:python%20machine%20learning))&rq={!ltr model=nestedpackage_model efi.text='python machine learning'}&fl=name,repo_description,score,[features]
+http://35.230.82.124:8983/solr/nestedpackage/select?q=
+       ({!parent%20which=%20path:1.git}body_markdown:[QUERYTERM])%20OR%20
+       (path:1.git%20AND%20(name:[QUERYTERM]%20OR%20readMe:[QUERYTERM]%20or%20repo_keywords:[QUERYTERM]%20OR%20
+       repo_description:[QUERYTERM]%20OR%20pm_name:[QUERYTERM]%20OR%20pm_description:[QUERYTERM]))
+       &rq={!ltr%20model=nestedpackage_model%20efi.text=[QUERYTERM]]}&fl=name,repo_description,score,[features]
 ```
 - Return a inner structure (case 3 in google doc) <br />
 &ensp; There are two parts in this query, `q=...` is the regular query condition, `fl=...` is the filter of fields that we want to ouput. In this example we output `id,name,readMe,repo_url` of the outter most level (git package), then childs with the path `2.stack`. If you want to output all fields of outter most level, replace the first several term with `*`. <br />

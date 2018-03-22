@@ -1,126 +1,147 @@
-2018-03-22 05:12:50.885 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
-2018-03-22 05:12:51.135 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
-2018-03-22 05:12:51.135 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2018-03-22 05:12:51.136 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
-2018-03-22 05:12:51.148 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-22T05:12:51.136Z
-2018-03-22 05:12:51.148 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
-2018-03-22 05:12:51.163 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
-2018-03-22 05:12:51.168 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/solr.xml
-2018-03-22 05:12:51.610 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
-2018-03-22 05:12:51.611 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [nestedpackage]
-2018-03-22 05:12:51.614 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
-2018-03-22 05:12:51.648 INFO  (main) [   ] o.e.j.s.Server Started @1120ms
-2018-03-22 05:12:51.657 WARN  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrConfig Couldn't add files from /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/ltr/lib filtered by .*\.jar to classpath: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/ltr/lib
-2018-03-22 05:12:51.664 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrResourceLoader [nestedpackage] Added 54 libs to classloader, from paths: [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
-2018-03-22 05:12:51.803 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
-2018-03-22 05:12:51.972 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
-2018-03-22 05:12:52.321 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2018-03-22 05:12:52.349 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
-2018-03-22 05:12:52.376 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
-2018-03-22 05:12:52.382 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
-2018-03-22 05:12:52.410 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
-2018-03-22 05:12:52.866 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2018-03-22 05:12:52.866 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2018-03-22 05:12:52.901 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
-2018-03-22 05:12:52.901 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2018-03-22 05:12:53.122 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@3917d413[nestedpackage] main]
-2018-03-22 05:12:53.151 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 05:12:53.160 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.ltr.store.rest.ManagedFeatureStore for path /schema/feature-store
-2018-03-22 05:12:53.161 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_feature-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 05:12:53.161 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResource Loaded initArgs {} for /schema/feature-store
-2018-03-22 05:12:53.162 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore ------ managed feature ~ loading ------
-2018-03-22 05:12:53.162 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_repo_desc, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=repo_description}${text}}, store=nestedpackage_feature_store}
-2018-03-22 05:12:53.175 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_readme, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=readMe}${text}}, store=nestedpackage_feature_store}
-2018-03-22 05:12:53.175 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_name, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=name}${text}}, store=nestedpackage_feature_store}
-2018-03-22 05:12:53.175 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_language, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=language}${text}}, store=nestedpackage_feature_store}
-2018-03-22 05:12:53.175 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_SO_markdown, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=body_markdown}${text}}, store=nestedpackage_feature_store}
-2018-03-22 05:12:53.175 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=original_score, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params=null, store=nestedpackage_feature_store}
-2018-03-22 05:12:53.178 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResource Notified 1 observers of /schema/feature-store
-2018-03-22 05:12:53.178 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.RestManager Registered new managed resource /schema/feature-store
-2018-03-22 05:12:53.179 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.ltr.store.rest.ManagedModelStore for path /schema/model-store
-2018-03-22 05:12:53.184 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_model-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 05:12:53.184 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResource Loaded initArgs {} for /schema/model-store
-2018-03-22 05:12:53.185 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedModelStore INIT model store
-2018-03-22 05:12:53.185 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedModelStore ------ managed models ~ loading ------
-2018-03-22 05:12:53.191 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedModelStore adding model nestedpackage_model
-2018-03-22 05:12:53.191 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResource Notified 1 observers of /schema/model-store
-2018-03-22 05:12:53.191 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.RestManager Registered new managed resource /schema/model-store
-2018-03-22 05:12:53.197 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2018-03-22 05:12:53.202 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2018-03-22 05:12:53.217 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
-2018-03-22 05:12:53.278 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@3917d413[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C52669) Uninverting(_1(7.2.0):C1)))}
-2018-03-22 05:12:53.278 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2018-03-22 05:12:53.278 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2018-03-22 05:12:53.281 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@3917d413[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C52669) Uninverting(_1(7.2.0):C1)))}
-2018-03-22 05:13:05.115 INFO  (qtp1929600551-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521695582269} status=0 QTime=17
-2018-03-22 05:13:05.135 INFO  (qtp1929600551-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521695582269} status=0 QTime=38
-2018-03-22 05:13:05.238 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521695584930} status=0 QTime=4
-2018-03-22 05:13:05.259 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=_schema_feature-store.json&contentType=application/json;charset%3Dutf-8&wt=json&_=1521695584930} status=0 QTime=0
-2018-03-22 05:13:05.334 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521695584930} status=0 QTime=1
-2018-03-22 05:25:22.906 INFO  (qtp1929600551-18) [   x:nestedpackage] /solr SolrRestApi: [Restlet] ServerServlet: component class is null
-2018-03-22 05:25:22.975 INFO  (qtp1929600551-18) [   x:nestedpackage] /solr SolrRestApi: [Restlet] Attaching application: org.apache.solr.rest.SolrSchemaRestApi@137daafa to URI: /solr/schema
-2018-03-22 05:25:22.989 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.SolrSchemaRestApi createInboundRoot started for /schema
-2018-03-22 05:25:22.991 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.RestManager Attached managed resource at path: /feature-store
-2018-03-22 05:25:22.991 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.RestManager Attached managed resource at path: /managed
-2018-03-22 05:25:22.991 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.RestManager Attached managed resource at path: /model-store
-2018-03-22 05:25:22.991 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.RestManager Attached 3 ManagedResource endpoints to Restlet router: /schema
-2018-03-22 05:25:22.991 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.SolrSchemaRestApi createInboundRoot complete for /schema
-2018-03-22 05:25:22.995 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.RestManager Resource not found for /schema/feature-store/nestedpackage_feature_store, looking for parent: /schema/feature-store
-2018-03-22 05:25:22.995 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.RestManager Found parent resource /schema/feature-store for child: nestedpackage_feature_store
-2018-03-22 05:25:22.995 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.RestManager Found ManagedResource [org.apache.solr.ltr.store.rest.ManagedFeatureStore@6c9d7bf1] for /schema/feature-store/nestedpackage_feature_store
-2018-03-22 05:25:22.996 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Saved JSON object to path _schema_feature-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 05:25:22.996 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/feature-store/nestedpackage_feature_store params={} status=0 QTime=95
-2018-03-22 05:25:30.244 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.r.RestManager Found ManagedResource [org.apache.solr.ltr.store.rest.ManagedFeatureStore@6c9d7bf1] for /schema/feature-store
-2018-03-22 05:25:30.246 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.r.ManagedResource Processing update to /schema/feature-store: [{store=nestedpackage_feature_store, name=bm25_sim_repo_desc, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=repo_description}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_readme, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=readMe}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_name, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=name}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_language, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=language}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_SO_markdown, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=path:2.stack AND body_markdown}${text}}}, {store=nestedpackage_feature_store, name=original_score, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params={}}] is a java.util.ArrayList
-2018-03-22 05:25:30.246 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_repo_desc, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=repo_description}${text}}}
-2018-03-22 05:25:30.247 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_readme, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=readMe}${text}}}
-2018-03-22 05:25:30.247 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_name, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=name}${text}}}
-2018-03-22 05:25:30.247 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_language, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=language}${text}}}
-2018-03-22 05:25:30.247 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_SO_markdown, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=path:2.stack AND body_markdown}${text}}}
-2018-03-22 05:25:30.247 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=original_score, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params={}}
-2018-03-22 05:25:30.249 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Saved JSON object to path _schema_feature-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 05:25:30.249 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/feature-store params={} status=0 QTime=9
-2018-03-22 05:25:36.386 INFO  (qtp1929600551-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521696336301} status=0 QTime=0
-2018-03-22 05:25:36.388 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:25:36.391 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=_schema_feature-store.json&contentType=application/json;charset%3Dutf-8&wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:25:36.395 INFO  (qtp1929600551-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521696336301} status=0 QTime=7
-2018-03-22 05:25:36.419 INFO  (qtp1929600551-22) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:25:40.307 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=+({!parent+which%3Dpath:1.git}body_markdown:python+machine+learning)+OR+(path:1.git+AND+(name:python+machine+learning+OR+readMe:python+machine+learning+OR+repo_keywords:python+machine+learning+OR+repo_description:python+machine+learning+OR+pm_name:python+machine+learning+OR+pm_description:python+machine+learning))&fl=name,repo_description,score,[features]&rows=7&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=1044 status=0 QTime=135
-2018-03-22 05:26:06.967 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=+({!parent+which%3Dpath:1.git}body_markdown:python+machine+learning)+OR+(path:1.git+AND+(name:python+machine+learning+OR+readMe:python+machine+learning+OR+repo_keywords:python+machine+learning+OR+repo_description:python+machine+learning+OR+pm_name:python+machine+learning+OR+pm_description:python+machine+learning))&fl=name,repo_description,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=1044 status=0 QTime=24
-2018-03-22 05:27:00.829 INFO  (qtp1929600551-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521696336301} status=0 QTime=0
-2018-03-22 05:27:00.835 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521696336301} status=0 QTime=5
-2018-03-22 05:27:19.067 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=*:*&_=1521696420800} hits=52670 status=0 QTime=3
-2018-03-22 05:28:04.954 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=+({!parent+which%3Dpath:1.git}body_markdown:python+machine+learning)+OR+(path:1.git+AND+(name:python+machine+learning+OR+readMe:python+machine+learning+OR+repo_keywords:python+machine+learning+OR+repo_description:python+machine+learning+OR+pm_name:python+machine+learning+OR+pm_description:python+machine+learning))&fl=name,repo_description,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=1044 status=0 QTime=16
-2018-03-22 05:31:48.657 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=+({!parent+which%3Dpath:1.git}body_markdown:python+machine+learning)+OR+(path:1.git+AND+(name:python+machine+learning+OR+readMe:python+machine+learning+OR+repo_keywords:python+machine+learning+OR+repo_description:python+machine+learning+OR+pm_name:python+machine+learning+OR+pm_description:python+machine+learning))&fl=name,repo_description,score,[features],+[child+parentFilter%3Dpath:1.git+childFilter%3Dpath:2.stack+fl%3Dtitle+limit%3D2]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=1044 status=0 QTime=13
-2018-03-22 05:31:48.674 ERROR (qtp1929600551-19) [   x:nestedpackage] o.a.s.s.HttpSolrCall null:java.lang.IllegalStateException: Parent query must not match any docs besides parent filter. Combine them as must (+) and must-not (-) clauses to find a problem doc. docID=12355
-	at org.apache.lucene.search.join.ToChildBlockJoinQuery$ToChildBlockJoinScorer.validateParentDoc(ToChildBlockJoinQuery.java:269)
-	at org.apache.lucene.search.join.ToChildBlockJoinQuery$ToChildBlockJoinScorer.access$300(ToChildBlockJoinQuery.java:125)
-	at org.apache.lucene.search.join.ToChildBlockJoinQuery$ToChildBlockJoinScorer$1.nextDoc(ToChildBlockJoinQuery.java:171)
-	at org.apache.lucene.search.ConjunctionDISI.nextDoc(ConjunctionDISI.java:240)
-	at org.apache.lucene.search.Weight$DefaultBulkScorer.scoreAll(Weight.java:231)
-	at org.apache.lucene.search.Weight$DefaultBulkScorer.score(Weight.java:184)
-	at org.apache.lucene.search.BulkScorer.score(BulkScorer.java:39)
-	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:660)
-	at org.apache.lucene.search.IndexSearcher.search(IndexSearcher.java:462)
-	at org.apache.solr.search.SolrIndexSearcher.buildAndRunCollectorChain(SolrIndexSearcher.java:215)
-	at org.apache.solr.search.SolrIndexSearcher.getDocListNC(SolrIndexSearcher.java:1600)
-	at org.apache.solr.search.SolrIndexSearcher.getDocListC(SolrIndexSearcher.java:1417)
-	at org.apache.solr.search.SolrIndexSearcher.search(SolrIndexSearcher.java:584)
-	at org.apache.solr.search.SolrIndexSearcher.getDocList(SolrIndexSearcher.java:1249)
-	at org.apache.solr.response.transform.ChildDocTransformer.transform(ChildDocTransformerFactory.java:138)
-	at org.apache.solr.response.transform.DocTransformer.transform(DocTransformer.java:85)
-	at org.apache.solr.response.transform.DocTransformers.transform(DocTransformers.java:76)
-	at org.apache.solr.response.DocsStreamer.next(DocsStreamer.java:118)
-	at org.apache.solr.response.DocsStreamer.next(DocsStreamer.java:57)
-	at org.apache.solr.response.TextResponseWriter.writeDocuments(TextResponseWriter.java:275)
-	at org.apache.solr.response.TextResponseWriter.writeVal(TextResponseWriter.java:161)
-	at org.apache.solr.response.JSONWriter.writeNamedListAsMapWithDups(JSONResponseWriter.java:209)
-	at org.apache.solr.response.JSONWriter.writeNamedList(JSONResponseWriter.java:325)
-	at org.apache.solr.response.JSONWriter.writeResponse(JSONResponseWriter.java:120)
-	at org.apache.solr.response.JSONResponseWriter.write(JSONResponseWriter.java:71)
-	at org.apache.solr.response.QueryResponseWriterUtil.writeQueryResponse(QueryResponseWriterUtil.java:65)
-	at org.apache.solr.servlet.HttpSolrCall.writeResponse(HttpSolrCall.java:788)
-	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:525)
+2018-03-22 22:37:02.424 INFO  (main) [   ] o.e.j.s.Server jetty-9.3.20.v20170531
+2018-03-22 22:37:02.666 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 7.2.0
+2018-03-22 22:37:02.666 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2018-03-22 22:37:02.666 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0
+2018-03-22 22:37:02.676 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2018-03-22T22:37:02.667Z
+2018-03-22 22:37:02.676 INFO  (main) [   ] o.a.s.u.StartupLoggingUtils Property solr.log.muteconsole given. Muting ConsoleAppender named CONSOLE
+2018-03-22 22:37:02.685 INFO  (main) [   ] o.a.s.c.SolrResourceLoader Using system property solr.solr.home: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-22 22:37:02.689 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/solr.xml
+2018-03-22 22:37:03.017 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr
+2018-03-22 22:37:03.018 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [nestedpackage]
+2018-03-22 22:37:03.021 INFO  (coreLoadExecutor-6-thread-1) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2018-03-22 22:37:03.054 INFO  (main) [   ] o.e.j.s.Server Started @950ms
+2018-03-22 22:37:03.068 WARN  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrConfig Couldn't add files from /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/ltr/lib filtered by .*\.jar to classpath: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/ltr/lib
+2018-03-22 22:37:03.074 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrResourceLoader [nestedpackage] Added 54 libs to classloader, from paths: [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/clustering/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/extraction/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/langid/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/contrib/velocity/lib, /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/dist]
+2018-03-22 22:37:03.165 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrConfig Using Lucene MatchVersion: 7.2.0
+2018-03-22 22:37:03.285 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.IndexSchema [nestedpackage] Schema name=default-config
+2018-03-22 22:37:03.585 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2018-03-22 22:37:03.603 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.CoreContainer Creating SolrCore 'nestedpackage' using configuration from instancedir /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage, trusted=true
+2018-03-22 22:37:03.624 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore solr.RecoveryStrategy.Builder
+2018-03-22 22:37:03.627 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore [[nestedpackage] ] Opening new SolrCore at [/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage], dataDir=[/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/]
+2018-03-22 22:37:03.648 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2018-03-22 22:37:03.835 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2018-03-22 22:37:03.835 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2018-03-22 22:37:03.847 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.CommitTracker Hard AutoCommit: if uncommited for 15000ms; 
+2018-03-22 22:37:03.847 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2018-03-22 22:37:03.932 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.SolrIndexSearcher Opening [Searcher@1b0c00f3[nestedpackage] main]
+2018-03-22 22:37:03.942 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-22 22:37:03.953 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.ltr.store.rest.ManagedFeatureStore for path /schema/feature-store
+2018-03-22 22:37:03.954 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_feature-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-22 22:37:03.954 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResource Loaded initArgs {} for /schema/feature-store
+2018-03-22 22:37:03.954 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore ------ managed feature ~ loading ------
+2018-03-22 22:37:03.954 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_repo_desc, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=repo_description}${text}}, store=nestedpackage_feature_store}
+2018-03-22 22:37:03.964 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_readme, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=readMe}${text}}, store=nestedpackage_feature_store}
+2018-03-22 22:37:03.964 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_name, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=name}${text}}, store=nestedpackage_feature_store}
+2018-03-22 22:37:03.964 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_language, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=language}${text}}, store=nestedpackage_feature_store}
+2018-03-22 22:37:03.964 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_SO_markdown, class=org.apache.solr.ltr.feature.SolrFeature, params={df=body_markdown, q={!parent which='path:1.git' score=avg}${text}}, store=nestedpackage_feature_store}
+2018-03-22 22:37:03.964 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_SO_tags, class=org.apache.solr.ltr.feature.SolrFeature, params={df=tags, q={!parent which='path:1.git' score=avg}${text}}, store=nestedpackage_feature_store}
+2018-03-22 22:37:03.964 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=bm25_sim_SO_code, class=org.apache.solr.ltr.feature.SolrFeature, params={df=code_snippet, q={!parent which='path:1.git' score=avg}${text}}, store=nestedpackage_feature_store}
+2018-03-22 22:37:03.964 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {name=original_score, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params=null, store=nestedpackage_feature_store}
+2018-03-22 22:37:03.966 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResource Notified 1 observers of /schema/feature-store
+2018-03-22 22:37:03.966 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.RestManager Registered new managed resource /schema/feature-store
+2018-03-22 22:37:03.967 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.RestManager Registered ManagedResource impl org.apache.solr.ltr.store.rest.ManagedModelStore for path /schema/model-store
+2018-03-22 22:37:03.968 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Loaded LinkedHashMap at path _schema_model-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
+2018-03-22 22:37:03.968 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResource Loaded initArgs {} for /schema/model-store
+2018-03-22 22:37:03.968 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedModelStore INIT model store
+2018-03-22 22:37:03.968 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedModelStore ------ managed models ~ loading ------
+2018-03-22 22:37:03.973 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.l.s.r.ManagedModelStore adding model nestedpackage_model
+2018-03-22 22:37:03.973 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.ManagedResource Notified 1 observers of /schema/model-store
+2018-03-22 22:37:03.973 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.r.RestManager Registered new managed resource /schema/model-store
+2018-03-22 22:37:03.977 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2018-03-22 22:37:03.980 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2018-03-22 22:37:03.986 INFO  (coreLoadExecutor-6-thread-1) [   x:nestedpackage] o.a.s.h.ReplicationHandler Commits will be reserved for 10000ms.
+2018-03-22 22:37:04.020 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener sending requests to Searcher@1b0c00f3[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C52669) Uninverting(_1(7.2.0):C1)))}
+2018-03-22 22:37:04.020 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2018-03-22 22:37:04.020 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2018-03-22 22:37:04.024 INFO  (searcherExecutor-7-thread-1-processing-x:nestedpackage) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage] Registered new searcher Searcher@1b0c00f3[nestedpackage] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_0(7.2.0):C52669) Uninverting(_1(7.2.0):C1)))}
+2018-03-22 22:37:06.808 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=+({!parent+which%3D+path:1.git}body_markdown:python+machine+learning)+OR+(path:1.git+AND+(name:python+machine+learning+OR+readMe:python+machine+learning+OR+repo_keywords:python+machine+learning+OR+repo_description:python+machine+learning+OR+pm_name:python+machine+learning+OR+pm_description:python+machine+learning))&fl=name,repo_description,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=1044 status=0 QTime=133
+2018-03-22 22:39:36.822 ERROR (qtp1929600551-20) [   x:nestedpackage] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'path:1.git AND name:[QUERYTERM]': Encountered " "]" "] "" at line 1, column 30.
+Was expecting:
+    "TO" ...
+    
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:218)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:269)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2503)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:710)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:516)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:382)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:582)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1180)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:512)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1112)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:213)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:119)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:335)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134)
+	at org.eclipse.jetty.server.Server.handle(Server.java:534)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:320)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:251)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:283)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:108)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.solr.search.SyntaxError: Cannot parse 'path:1.git AND name:[QUERYTERM]': Encountered " "]" "] "" at line 1, column 30.
+Was expecting:
+    "TO" ...
+    
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:258)
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49)
+	at org.apache.solr.search.QParser.getQuery(QParser.java:169)
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:160)
+	... 34 more
+Caused by: org.apache.solr.parser.ParseException: Encountered " "]" "] "" at line 1, column 30.
+Was expecting:
+    "TO" ...
+    
+	at org.apache.solr.parser.QueryParser.generateParseException(QueryParser.java:885)
+	at org.apache.solr.parser.QueryParser.jj_consume_token(QueryParser.java:767)
+	at org.apache.solr.parser.QueryParser.Term(QueryParser.java:453)
+	at org.apache.solr.parser.QueryParser.Clause(QueryParser.java:278)
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:222)
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:131)
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:254)
+	... 37 more
+
+2018-03-22 22:39:36.822 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=path:1.git+AND+name:[QUERYTERM]&fl=id,name,readMe,repo_url,+[child+parentFilter%3Dpath:1.git+childFilter%3Dpath:2.stack+fl%3Dtitle+limit%3D2]} status=400 QTime=3
+2018-03-22 22:39:44.486 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=path:1.git+AND+name:python+machine+learning&fl=id,name,readMe,repo_url,+[child+parentFilter%3Dpath:1.git+childFilter%3Dpath:2.stack+fl%3Dtitle+limit%3D2]} hits=0 status=0 QTime=2
+2018-03-22 22:40:19.411 ERROR (qtp1929600551-16) [   x:nestedpackage] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: undefined field *
+	at org.apache.solr.schema.IndexSchema.getDynamicFieldType(IndexSchema.java:1292)
+	at org.apache.solr.schema.IndexSchema$SolrQueryAnalyzer.getWrappedAnalyzer(IndexSchema.java:434)
+	at org.apache.lucene.analysis.DelegatingAnalyzerWrapper$DelegatingReuseStrategy.getReusableComponents(DelegatingAnalyzerWrapper.java:84)
+	at org.apache.lucene.analysis.Analyzer.tokenStream(Analyzer.java:191)
+	at org.apache.lucene.util.QueryBuilder.createFieldQuery(QueryBuilder.java:240)
+	at org.apache.solr.parser.SolrQueryParserBase.newFieldQuery(SolrQueryParserBase.java:518)
+	at org.apache.solr.parser.QueryParser.newFieldQuery(QueryParser.java:62)
+	at org.apache.solr.parser.SolrQueryParserBase.getFieldQuery(SolrQueryParserBase.java:1077)
+	at org.apache.solr.parser.SolrQueryParserBase.getFieldQuery(SolrQueryParserBase.java:535)
+	at org.apache.solr.parser.SolrQueryParserBase.handleQuotedTerm(SolrQueryParserBase.java:816)
+	at org.apache.solr.parser.QueryParser.Term(QueryParser.java:549)
+	at org.apache.solr.parser.QueryParser.Clause(QueryParser.java:278)
+	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:222)
+	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:131)
+	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:254)
+	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49)
+	at org.apache.solr.search.QParser.getQuery(QParser.java:169)
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:160)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:269)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:177)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2503)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:710)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:516)
 	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:382)
 	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:326)
 	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1751)
@@ -151,110 +172,23 @@
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589)
 	at java.lang.Thread.run(Thread.java:748)
 
-2018-03-22 05:39:51.231 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=+({!parent+which%3D+path:1.git}body_markdown:python+matrix)+OR++(path:1.git+AND+(name:python+matrix+OR+readMe:python+matrix+or+repo_keywords:python+matrix+OR++repo_description:python+matrix+OR+pm_name:python+matrix+OR+pm_description:python+matrix))&fl=name,score} hits=202 status=0 QTime=11
-2018-03-22 05:40:43.069 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=+({!parent+which%3D+path:1.git}body_markdown:python+machine+learning)+OR+(path:1.git+AND+(name:python+machine+learning+OR+readMe:python+machine+learning+OR+repo_keywords:python+machine+learning+OR+repo_description:python+machine+learning+OR+pm_name:python+machine+learning+OR+pm_description:python+machine+learning))&fl=name,repo_description,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=1044 status=0 QTime=11
-2018-03-22 05:41:28.168 INFO  (qtp1929600551-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521696336301} status=0 QTime=0
-2018-03-22 05:41:28.169 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:41:28.176 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521696336301} status=0 QTime=7
-2018-03-22 05:41:28.178 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521696336380} status=0 QTime=1
-2018-03-22 05:41:29.772 INFO  (qtp1929600551-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521696336301} status=0 QTime=0
-2018-03-22 05:41:29.773 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:41:29.781 INFO  (qtp1929600551-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521696336301} status=0 QTime=8
-2018-03-22 05:41:29.787 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=_schema_feature-store.json&contentType=application/json;charset%3Dutf-8&wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:41:29.802 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:41:40.561 INFO  (qtp1929600551-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521696336301} status=0 QTime=0
-2018-03-22 05:41:40.562 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:41:40.564 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=_schema_model-store.json&contentType=application/json;charset%3Dutf-8&wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:41:40.567 INFO  (qtp1929600551-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521696336301} status=0 QTime=5
-2018-03-22 05:41:40.571 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:41:47.436 INFO  (qtp1929600551-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521696336301} status=0 QTime=0
-2018-03-22 05:41:47.446 INFO  (qtp1929600551-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521696336301} status=0 QTime=6
-2018-03-22 05:41:47.453 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=_schema_feature-store.json&contentType=application/json;charset%3Dutf-8&wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:41:47.453 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:41:47.469 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521696336380} status=0 QTime=0
-2018-03-22 05:45:51.593 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=*:*&fl=name,repo_description,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=52670 status=0 QTime=9
-2018-03-22 05:46:41.089 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=*:*&fl=name,repo_description,body_markdown,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=52670 status=0 QTime=0
-2018-03-22 05:48:01.854 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=*:*&fl=name,repo_description,title,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=52670 status=0 QTime=0
-2018-03-22 05:58:45.194 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.r.RestManager Resource not found for /schema/feature-store/nestedpackage_feature_store, looking for parent: /schema/feature-store
-2018-03-22 05:58:45.194 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.r.RestManager Found parent resource /schema/feature-store for child: nestedpackage_feature_store
-2018-03-22 05:58:45.194 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.r.RestManager Found ManagedResource [org.apache.solr.ltr.store.rest.ManagedFeatureStore@6c9d7bf1] for /schema/feature-store/nestedpackage_feature_store
-2018-03-22 05:58:45.194 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Saved JSON object to path _schema_feature-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 05:58:45.194 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/feature-store/nestedpackage_feature_store params={} status=0 QTime=1
-2018-03-22 05:58:47.623 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.r.RestManager Found ManagedResource [org.apache.solr.ltr.store.rest.ManagedFeatureStore@6c9d7bf1] for /schema/feature-store
-2018-03-22 05:58:47.624 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.r.ManagedResource Processing update to /schema/feature-store: [{store=nestedpackage_feature_store, name=bm25_sim_repo_desc, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=repo_description}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_readme, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=readMe}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_name, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=name}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_language, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=language}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_SO_markdown, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf={!parent which=path:1.git}path:2.stack AND body_markdown}${text}}}, {store=nestedpackage_feature_store, name=original_score, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params={}}] is a java.util.ArrayList
-2018-03-22 05:58:47.624 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_repo_desc, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=repo_description}${text}}}
-2018-03-22 05:58:47.624 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_readme, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=readMe}${text}}}
-2018-03-22 05:58:47.625 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_name, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=name}${text}}}
-2018-03-22 05:58:47.625 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_language, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=language}${text}}}
-2018-03-22 05:58:47.625 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_SO_markdown, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf={!parent which=path:1.git}path:2.stack AND body_markdown}${text}}}
-2018-03-22 05:58:47.625 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=original_score, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params={}}
-2018-03-22 05:58:47.626 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Saved JSON object to path _schema_feature-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 05:58:47.626 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/feature-store params={} status=0 QTime=5
-2018-03-22 05:58:54.729 INFO  (qtp1929600551-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521698334620} status=0 QTime=0
-2018-03-22 05:58:54.733 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=_schema_feature-store.json&contentType=application/json;charset%3Dutf-8&wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 05:58:54.734 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521698334723} status=0 QTime=1
-2018-03-22 05:58:54.744 INFO  (qtp1929600551-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521698334621} status=0 QTime=12
-2018-03-22 05:58:54.775 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 05:59:06.511 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=*:*&fl=name,repo_description,title,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=52670 status=0 QTime=0
-2018-03-22 06:20:51.922 INFO  (qtp1929600551-17) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=repo_description:*&fl=name,repo_description,title,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=7 status=0 QTime=13
-2018-03-22 06:22:07.535 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=repo_description:*&fl=name,repo_description,language,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=7 status=0 QTime=3
-2018-03-22 06:22:19.159 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=repo_description:*&fl=name,repo_description,readMe,language,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=7 status=0 QTime=8
-2018-03-22 06:22:45.008 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=repo_description:*&fl=name,repo_description,language,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=7 status=0 QTime=3
-2018-03-22 06:32:41.691 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=repo_description:*&stats=true&fl=name,repo_description,language,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=7 status=0 QTime=9
-2018-03-22 06:33:30.668 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=repo_description:*&stats=true&fl=name,repo_description,language,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}&stats.field=score} hits=7 status=0 QTime=10
-2018-03-22 07:15:16.676 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.RestManager Resource not found for /schema/feature-store/nestedpackage_feature_store, looking for parent: /schema/feature-store
-2018-03-22 07:15:16.676 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.RestManager Found parent resource /schema/feature-store for child: nestedpackage_feature_store
-2018-03-22 07:15:16.676 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.RestManager Found ManagedResource [org.apache.solr.ltr.store.rest.ManagedFeatureStore@6c9d7bf1] for /schema/feature-store/nestedpackage_feature_store
-2018-03-22 07:15:16.676 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Saved JSON object to path _schema_feature-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 07:15:16.676 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/feature-store/nestedpackage_feature_store params={} status=0 QTime=0
-2018-03-22 07:15:19.630 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.r.RestManager Found ManagedResource [org.apache.solr.ltr.store.rest.ManagedFeatureStore@6c9d7bf1] for /schema/feature-store
-2018-03-22 07:15:19.631 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.r.ManagedResource Processing update to /schema/feature-store: [{store=nestedpackage_feature_store, name=bm25_sim_repo_desc, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=repo_description}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_readme, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=readMe}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_name, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=name}${text}}}, {store=nestedpackage_feature_store, name=bm25_sim_language, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=language}${text}}}, {store=nestedpackage_feature_store, name=original_score, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params={}}] is a java.util.ArrayList
-2018-03-22 07:15:19.631 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_repo_desc, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=repo_description}${text}}}
-2018-03-22 07:15:19.631 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_readme, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=readMe}${text}}}
-2018-03-22 07:15:19.631 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_name, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=name}${text}}}
-2018-03-22 07:15:19.631 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=bm25_sim_language, class=org.apache.solr.ltr.feature.SolrFeature, params={q={!dismax qf=language}${text}}}
-2018-03-22 07:15:19.632 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.l.s.r.ManagedFeatureStore register feature based on {store=nestedpackage_feature_store, name=original_score, class=org.apache.solr.ltr.feature.OriginalScoreFeature, params={}}
-2018-03-22 07:15:19.632 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Saved JSON object to path _schema_feature-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 07:15:19.632 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/feature-store params={} status=0 QTime=2
-2018-03-22 07:15:53.967 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.RestManager Resource not found for /schema/model-store/nestedpackage_model, looking for parent: /schema/model-store
-2018-03-22 07:15:53.967 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.RestManager Found parent resource /schema/model-store for child: nestedpackage_model
-2018-03-22 07:15:53.967 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.RestManager Found ManagedResource [ManagedModelStore [store=ModelStore [availableModels=[nestedpackage_model]], featureStores=org.apache.solr.ltr.store.rest.ManagedFeatureStore@6c9d7bf1]] for /schema/model-store/nestedpackage_model
-2018-03-22 07:15:53.968 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Saved JSON object to path _schema_model-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 07:15:53.968 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/model-store/nestedpackage_model params={} status=0 QTime=1
-2018-03-22 07:16:00.790 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.r.RestManager Found ManagedResource [ManagedModelStore [store=ModelStore [availableModels=[]], featureStores=org.apache.solr.ltr.store.rest.ManagedFeatureStore@6c9d7bf1]] for /schema/model-store
-2018-03-22 07:16:00.791 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.r.ManagedResource Processing update to /schema/model-store: {store=nestedpackage_feature_store, name=nestedpackage_model, class=org.apache.solr.ltr.model.LinearModel, features=[{name=bm25_sim_repo_desc}, {name=bm25_sim_readme}, {name=bm25_sim_name}, {name=bm25_sim_language}, {name=original_score}], params={weights={bm25_sim_repo_desc=0.25, bm25_sim_readme=0.25, bm25_sim_name=0.25, bm25_sim_language=0.25, original_score=0.0}}} is a java.util.LinkedHashMap
-2018-03-22 07:16:00.791 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.l.s.r.ManagedModelStore adding model nestedpackage_model
-2018-03-22 07:16:00.791 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.r.ManagedResourceStorage Saved JSON object to path _schema_model-store.json using file:dir=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/conf
-2018-03-22 07:16:00.791 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.r.RestManager [nestedpackage]  webapp=/solr path=/schema/model-store params={} status=0 QTime=1
-2018-03-22 07:16:07.355 INFO  (qtp1929600551-14) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521698334620} status=0 QTime=0
-2018-03-22 07:16:07.368 INFO  (qtp1929600551-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521698334621} status=0 QTime=12
-2018-03-22 07:16:07.373 INFO  (qtp1929600551-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521698334621} status=0 QTime=4
-2018-03-22 07:16:09.481 INFO  (qtp1929600551-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521698334620} status=0 QTime=0
-2018-03-22 07:16:09.485 INFO  (qtp1929600551-41) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1521702969461} status=0 QTime=2
-2018-03-22 07:16:09.487 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/replication params={wt=json&command=details&_=1521702969461} status=0 QTime=2
-2018-03-22 07:16:09.489 INFO  (qtp1929600551-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521698334621} status=0 QTime=7
-2018-03-22 07:16:09.490 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1521698334621&ts=1521698334621} status=503 QTime=1
-2018-03-22 07:16:09.494 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/system params={wt=json&_=1521702969461} status=0 QTime=5
-2018-03-22 07:16:10.484 INFO  (qtp1929600551-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521698334620} status=0 QTime=0
-2018-03-22 07:16:10.486 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 07:16:10.497 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 07:16:10.500 INFO  (qtp1929600551-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521698334621} status=0 QTime=14
-2018-03-22 07:16:11.904 INFO  (qtp1929600551-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521698334620} status=0 QTime=0
-2018-03-22 07:16:11.911 INFO  (qtp1929600551-42) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521698334621} status=0 QTime=5
-2018-03-22 07:16:11.920 INFO  (qtp1929600551-14) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 07:16:11.929 INFO  (qtp1929600551-22) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=_schema_model-store.json&contentType=application/json;charset%3Dutf-8&wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 07:16:11.936 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 07:16:14.719 INFO  (qtp1929600551-13) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1521698334620} status=0 QTime=0
-2018-03-22 07:16:14.720 INFO  (qtp1929600551-18) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=_schema_feature-store.json&contentType=application/json;charset%3Dutf-8&wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 07:16:14.722 INFO  (qtp1929600551-15) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 07:16:14.724 INFO  (qtp1929600551-16) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1521698334621} status=0 QTime=5
-2018-03-22 07:16:14.734 INFO  (qtp1929600551-41) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1521698334723} status=0 QTime=0
-2018-03-22 07:16:28.995 INFO  (qtp1929600551-22) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=repo_description:*&fl=name,repo_description,language,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=7 status=0 QTime=2
-2018-03-22 07:17:06.365 INFO  (qtp1929600551-19) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=python+machine+learning&fl=name,repo_description,language,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=4245 status=0 QTime=21
-2018-03-22 07:17:31.656 INFO  (qtp1929600551-13) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=+({!parent+which%3D+path:1.git}body_markdown:python+machine+learning)+OR+(path:1.git+AND+(name:python+machine+learning+OR+readMe:python+machine+learning+OR+repo_keywords:python+machine+learning+OR+repo_description:python+machine+learning+OR+pm_name:python+machine+learning+OR+pm_description:python+machine+learning))&fl=name,repo_description,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=1044 status=0 QTime=4
-2018-03-22 07:18:25.251 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1233990028
-2018-03-22 07:18:25.252 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
-2018-03-22 07:18:25.252 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
-2018-03-22 07:18:25.252 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
-2018-03-22 07:18:25.252 INFO  (coreCloseExecutor-12-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage]  CLOSING SolrCore org.apache.solr.core.SolrCore@269343b3
-2018-03-22 07:18:25.253 INFO  (coreCloseExecutor-12-thread-1) [   x:nestedpackage] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=647185331
+2018-03-22 22:40:19.411 INFO  (qtp1929600551-16) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=path:1.git+AND+*:"python+machine+learning"&fl=id,name,readMe,repo_url,+[child+parentFilter%3Dpath:1.git+childFilter%3Dpath:2.stack+fl%3Dtitle+limit%3D2]} status=400 QTime=1
+2018-03-22 22:40:30.538 INFO  (qtp1929600551-22) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=path:1.git+AND+repo_description:"python+machine+learning"&fl=id,name,readMe,repo_url,+[child+parentFilter%3Dpath:1.git+childFilter%3Dpath:2.stack+fl%3Dtitle+limit%3D2]} hits=0 status=0 QTime=5
+2018-03-22 22:41:44.641 INFO  (qtp1929600551-20) [   x:nestedpackage] o.a.s.c.S.Request [nestedpackage]  webapp=/solr path=/select params={q=+({!parent+which%3D+path:1.git}body_markdown:python+machine+learning)+OR+(path:1.git+AND+(name:python+machine+learning+OR+readMe:python+machine+learning+OR+repo_keywords:python+machine+learning+OR+repo_description:python+machine+learning+OR+pm_name:python+machine+learning+OR+pm_description:python+machine+learning))&fl=name,repo_description,score,[features]&rq={!ltr+model%3Dnestedpackage_model+efi.text%3D'python+machine+learning'}} hits=1044 status=0 QTime=18
+2018-03-22 22:43:57.034 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1233990028
+2018-03-22 22:43:57.034 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node, tag=null
+2018-03-22 22:43:57.034 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm, tag=null
+2018-03-22 22:43:57.034 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty, tag=null
+2018-03-22 22:43:57.035 INFO  (coreCloseExecutor-12-thread-1) [   x:nestedpackage] o.a.s.c.SolrCore [nestedpackage]  CLOSING SolrCore org.apache.solr.core.SolrCore@ae5a02c
+2018-03-22 22:43:57.035 INFO  (coreCloseExecutor-12-thread-1) [   x:nestedpackage] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.nestedpackage, tag=182820908
+2018-03-22 22:44:09.162 ERROR (coreCloseExecutor-12-thread-1) [   x:nestedpackage] o.a.s.c.CachingDirectoryFactory Timeout waiting for all directory ref counts to be released - gave up waiting on CachedDir<<refCount=1;path=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/index;done=false>>
+2018-03-22 22:44:09.163 ERROR (coreCloseExecutor-12-thread-1) [   x:nestedpackage] o.a.s.c.CachingDirectoryFactory Error closing directory:org.apache.solr.common.SolrException: Timeout waiting for all directory ref counts to be released - gave up waiting on CachedDir<<refCount=1;path=/home/joshua/Search-Engine-for-Software/SOLR/solr-7.2.0/server/solr/nestedpackage/data/index;done=false>>
+	at org.apache.solr.core.CachingDirectoryFactory.close(CachingDirectoryFactory.java:178)
+	at org.apache.solr.core.SolrCore.close(SolrCore.java:1633)
+	at org.apache.solr.core.SolrCores.lambda$close$0(SolrCores.java:141)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:188)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+

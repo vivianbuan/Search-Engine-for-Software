@@ -1,7 +1,7 @@
 {
   "initArgs":{},
-  "initializedOn":"2018-03-22T05:12:53.191Z",
-  "updatedSinceInit":"2018-03-22T07:15:53.968Z",
+  "initializedOn":"2018-03-22T22:24:34.792Z",
+  "updatedSinceInit":"2018-03-22T22:33:34.056Z",
   "managedList":[{
       "name":"nestedpackage_model",
       "class":"org.apache.solr.ltr.model.LinearModel",
@@ -20,11 +20,23 @@
           "name":"bm25_sim_language",
           "norm":{"class":"org.apache.solr.ltr.norm.IdentityNormalizer"}},
         {
+          "name":"bm25_sim_SO_markdown",
+          "norm":{"class":"org.apache.solr.ltr.norm.IdentityNormalizer"}},
+        {
+          "name":"bm25_sim_SO_tags",
+          "norm":{"class":"org.apache.solr.ltr.norm.IdentityNormalizer"}},
+        {
+          "name":"bm25_sim_SO_code",
+          "norm":{"class":"org.apache.solr.ltr.norm.IdentityNormalizer"}},
+        {
           "name":"original_score",
           "norm":{"class":"org.apache.solr.ltr.norm.IdentityNormalizer"}}],
       "params":{"weights":{
-          "bm25_sim_repo_desc":0.25,
-          "bm25_sim_readme":0.25,
-          "bm25_sim_name":0.25,
-          "bm25_sim_language":0.25,
+          "bm25_sim_repo_desc":0.2,
+          "bm25_sim_readme":0.2,
+          "bm25_sim_name":0.2,
+          "bm25_sim_language":0.2,
+          "bm25_sim_SO_markdown":0.2,
+          "bm25_sim_SO_tags":0.2,
+          "bm25_sim_SO_code":0.2,
           "original_score":0.0}}}]}
