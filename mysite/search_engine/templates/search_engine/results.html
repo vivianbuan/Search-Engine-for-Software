@@ -1,0 +1,63 @@
+{% extends "search_engine/header.html" %}
+
+{% block styles %}
+{% load staticfiles %}
+<link rel='stylesheet' href="{% static 'search_engine/results.css'%}" type='text/css' />
+
+<script src="{% static 'search_engine/results.js' %}"></script>
+
+{% endblock %}
+
+{% block content %}
+
+{% for package in indexer %}
+{% for key, value in package.items %}
+	{{key}}
+	<!-- {{indexer_result}} -->
+{% endfor %}
+<div/>
+{% endfor %}
+
+{% for package_name in indexer_packages_for_table.name.values %}
+ {{package_name}}
+{%endfor%}
+<div class="container-fluid entire-page">
+
+	<div class="input-group">
+		<form action="/results/" method="get" class="full-width">
+			<div class="row" class="margin-med">
+
+				<div class="col-sm-9">
+			    	<div class="input-group">
+						<input type="text" class="form-control query-bar" name="searchInput" id="query-bar" placeholder="Search for..." value="{{user_query}}"> 
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit">Search</button>
+						</span>
+					</div>
+		  		</div>
+
+		  	</div>
+		</form>
+	</div>
+
+
+	<!-- <button id="test-btn">  Click To Test Whether JS Page Is Compiling - (Alert should show up)</button> -->
+
+	<div class="row margin-top">
+		<div class="col-sm-9">
+
+			{% include "search_engine/_package_carousel.html" %}
+
+			{% include "search_engine/_package_table.html" %}
+
+			{% include "search_engine/_standard_results.html" %}
+		</div>
+
+		<div class="col-sm-3">
+			{% include "search_engine/_filter_bar.html" %}
+		</div>
+
+	</div>
+</div>
+
+{% endblock %}

@@ -8,8 +8,15 @@
 .full-width {
 	width: 100%;
 }*/
-
-
+.filter{
+	padding: 6px;
+}
+.filter-header{
+	font-size: 20px;
+}
+.filter-name{
+	font-size: 16px;
+}
 .margin-top {
 	padding-top: 10px;
 }

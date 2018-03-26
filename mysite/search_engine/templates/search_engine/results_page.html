@@ -10,10 +10,17 @@
 
 {% block content %}
 
-{% for indexer_result in indexer.docs %}
-
-	{{indexer_result.homepage}}
+{% for package in indexer %}
+{% for key, value in package.items %}
+	{{key}}
+	<!-- {{indexer_result}} -->
 {% endfor %}
+<div/>
+{% endfor %}
+
+{% for package_name in indexer_packages_for_table.name.values %}
+ {{package_name}}
+{%endfor%}
 <div class="container-fluid entire-page">
 
 	<div class="input-group">
@@ -36,16 +43,26 @@
 
 			<div class="panel panel-default package-panel">
 			 	<div class="panel-body">
-			
-					{% for p in packages %}
-						<div class="col-sm-2 package-card">
-							<img src="{% static 'search_engine/default.png' %}" alt="Card image cap">
-							{{ p.name}}
-							<button class="btn btn-default package-button" id="{{p.name}}">See More</button>
-						</div>
-					{% endfor %}
+					{% if indexer == "No_response"%}
+					
+						{% for p in packages %}
+							<div class="col-sm-2 package-card">
+								<img src="{% static 'search_engine/default.png' %}" alt="Card image cap">
+								{{p.name}}
+								<button class="btn btn-default package-button" id="{{p.name}}">See More</button>
+							</div>
+						{% endfor %}
+					{% else %}
+						{% for iter, indexer_result in indexer.items %}
 
-			
+							<div class="col-sm-2 package-card">
+							<img src="{% static 'search_engine/default.png' %}" alt="Card image cap">
+							{{ indexer_result.name }}
+							<button class="btn btn-default package-button" id="{{iter}}">See More</button>
+						</div>
+						{% endfor %}
+
+					{% endif %}					
 				</div>
 			</div>
 
@@ -64,25 +81,51 @@
 
 				<!-- <div class="panel-body "> Comparing Packages - currently assuming that 3 are selected</div> -->
 				<table class="table table-responsive package-table">
+					{% if indexer == "No_response"%}
 					<thead>
 						<tr>
 							<th class="package-table-header"> </th>
-							{% for package_name in packages_for_table.name.values %}
-								<th class="{{package_name}}-table package-table-header"> {{package_name}} </th>
+							{% for iter, package_name in indexer_packages_for_table.name.items %}
+								<th class="{{iter}}-table package-table-header"> {{package_name}} </th>
 							{% endfor %}
 						</tr>
 					</thead>
 					<tbody>
 						{% for quality, package_vals in packages_for_table.items %}
 							<tr>
-								<td class="{{quality}}-table-column package-table-row"> {{quality}} </td>
-								{% for package_name, val in package_vals.items %}
-							 	<td class="{{package_name}}-table {{package_name}}-table-value package-table-row"> {{val}} </td>
+								<td class="{{quality}}-table-column"> {{quality}} </td>
+								{% for iter, val in package_vals.items %}
+							 	<td class="{{iter}}-table {{iter}}-table-value package-table-row"> {{val}} </td>
 							 	{% endfor %}
 							</tr>
 
 						{% endfor %}
 					</tbody>
+
+					{% else %}
+
+					<thead>
+						<tr>
+							<th class="package-table-header"> </th>
+
+							{% for iter, package_name in indexer_packages_for_table.name.items %}
+								<th class="{{iter}}-table package-table-header"> {{package_name}} </th>
+							{% endfor %}
+						</tr>
+					</thead>
+					<tbody>
+						{% for quality, package_vals in indexer_packages_for_table.items %}
+							<tr>
+								<td class="{{quality}}-table-column"> {{quality}} </td>
+
+								{% for iter, val  in package_vals.items %}
+							 	<td class="{{iter}}-table {{iter}}-table-value package-table-row"> {{val}} </td>
+							 	{% endfor %}
+							</tr>
+
+						{% endfor %}
+					</tbody>
+					{% endif %}
 				</table>
 
 				{% for r in results %}

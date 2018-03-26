@@ -1,0 +1,17 @@
+{% load staticfiles %}
+
+
+<div class="panel panel-default package-panel">
+ 	<div class="panel-body">
+		
+		{% for iter, package in package_data.items %}
+
+			<div class="col-sm-2 package-card">
+				<img src="{% static 'search_engine/default.png' %}" alt="Card image cap">
+				{{ package.Name }}
+				<button class="btn btn-default package-button" id="{{iter}}">See More</button>
+			</div>
+		{% endfor %}
+
+	</div>
+</div>

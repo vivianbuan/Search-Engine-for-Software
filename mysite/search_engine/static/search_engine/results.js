@@ -9,25 +9,36 @@ $(document).ready(function() {
 
 
 	$('.package-button').click(function(e){
-		var package_name = $(this).attr('id');
+		var package_num = $(this).attr('id');
 		var all_none = false;
 
 
 
-	    $('.'+package_name+'-table').each(function() {
-	    	$(this).toggle();
-	    });
-
-		var count = 0;
+		var pre_count = 0;
 		$('.package-table-header').each(function() {
 	    	if ($(this).css('display') != 'none') {
-	    		count++;
+	    		pre_count++;
 	    	}
 	    	// if ($(this).find('td:empty')) { alert('one empty')}
 	    });
-        alert(count);
 
-	    if (count <= 1){
+	    $('.'+package_num+'-table').each(function() {
+	    	$(this).toggle();
+	    });
+
+
+		var post_count = 0;
+		$('.package-table-header').each(function() {
+	    	if ($(this).css('display') != 'none') {
+	    		post_count++;
+	    	}
+	    	// if ($(this).find('td:empty')) { alert('one empty')}
+	    });
+
+	    // alert(pre_count + ' ' + post_count);
+
+
+	    if ((pre_count == 0 && post_count == 1) || (pre_count == 1 && post_count == 0) ){
 	    	$('.package-table').toggle();
 	    }
     });

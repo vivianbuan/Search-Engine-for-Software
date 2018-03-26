@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+ 	<div class="panel-body">
+		<div class="filter-header"> Filter Packages By:</div>
+
+		{% for fil_name, fil_vals in filter_data.items %}
+		<div class="filter">
+			<div class="filter-name"> {{fil_name}} </div>
+			{% for op in fil_vals %}
+					<div class="option option-{{op}}">
+				<div class="row">
+
+						<div class="col-sm-9">
+
+							<input class="checkbox-{{op}}" type="checkbox" > {{op.0}} 
+						</div>
+						<div class="col-sm-3">
+							{{op.1}}
+						</div>
+
+					</div>
+				</div>
+
+			{% endfor %}
+		</div>
+		{% endfor %}
+	</div>
+</div>

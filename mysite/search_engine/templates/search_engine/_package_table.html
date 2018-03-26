@@ -1,0 +1,24 @@
+
+<table class="table table-responsive package-table">
+	<thead>
+		<tr>
+			<th class="table-header"> </th>
+
+			{% for iter,package_name in table_data.Name.items %}
+				<th class="{{iter}}-table package-table-header"> {{package_name}} </th>
+			{% endfor %}
+		</tr>
+	</thead>
+	<tbody>
+		{% for quality, values in table_data.items %}
+			<tr>
+				<td class="{{quality}}-table-column"> {{quality}} </td>
+
+				{% for iter, val  in values.items %}
+			 	<td class="{{iter}}-table {{iter}}-table-value package-table-row"> {{val}} </td>
+			 	{% endfor %}
+			</tr>
+
+		{% endfor %}
+	</tbody>
+</table>
