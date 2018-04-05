@@ -76,8 +76,8 @@ def results(request):
 
 		indexer_url = '35.230.82.124'
 		''' breaks when it returns 0 results? 500 error: Child query must not match same docs with parent filter'''
-		query_string_base = 'http://' + indexer_url + ':8983/solr/nestedpackage/select?%20q={!parent%20which=%22path:1.git%22}body_markdown:'
-		# query_string_base = 'http://' + indexer_url + ':8983/solr/nestedpackage/select?q=name:'
+		# query_string_base = 'http://' + indexer_url + ':8983/solr/nestedpackage/select?%20q={!parent%20which=%22path:1.git%22}body_markdown:'
+		query_string_base = 'http://' + indexer_url + ':8983/solr/nestedpackage/select?q=name:'
 		#need to have a proper query builder
 
 		query = query_string_base + '*'#user_query
@@ -94,8 +94,10 @@ def results(request):
 
 		for key,_ in package_details_needed.items():
 			query += key + ','
-			# pass
+
 		query += 'score'
+		query += '&rows=10'
+
 		# query += '[features]'
 		# query = query[0:len(query)-1]
 
@@ -151,11 +153,47 @@ def results(request):
 			new_index = package_details_needed[filter_name]
 			filter_data[new_index] = single_filter_data
 
-		serialized_indexer_response = simplejson.dumps([user_query])
+		# serialized_indexer_response = simplejson.dumps([response])
 		# return HttpResponse(serialized_indexer_response, content_type='application/json')
 
 
-		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'filter_data': filter_data, 'user_query': raw_user_query})
+
+
+
+
+
+
+
+		'''
+		Get all stackoverflow pages related to these packages.
+		'''
+
+		indexer_url = '35.230.82.124'
+		query_string_base = 'http://' + indexer_url + ':8983/solr/nestedpackage/select?q='
+		#need to have a proper query builder
+
+		query = query_string_base + user_query
+		# query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=' + user_query + '}' #&fl='
+		# query += '&rows=10'
+		query += '&fl=title,link'
+
+
+		connection = urlopen(query)
+		stackoverflow_response = simplejson.load(connection);
+		stackoverflow_response = stackoverflow_response['response']['docs']#[5]['link']
+
+		# serialized_indexer_response = simplejson.dumps([stackoverflow_response])
+		# return HttpResponse(serialized_indexer_response, content_type='application/json')
+
+
+
+
+
+
+	
+
+
+		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'filter_data': filter_data, 'user_query': raw_user_query, 'results': stackoverflow_response})
 
 	# except:
 		#make this a 404

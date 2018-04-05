@@ -48,7 +48,8 @@
 
 
 
-.result{line-height: 1.3}
+.result{line-height: 1.3;
+padding: 10px;}
 .result-title {
 	padding-top: 10px;
 	padding-bottom: 4px;
