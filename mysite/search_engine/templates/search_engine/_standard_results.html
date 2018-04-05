@@ -2,10 +2,10 @@
 	{% if r.title %}
 
 	<div class="result">
-		<div class="result-title "> <a class="result-title" href={{r.link}}> {{r.title.0}} </a></div>
-		<div class="result-url ">  {{r.link.0}}  </div>
+		<div class="result-title "> <a class="result-title" href="{{r.link}}"}> {{r.title}} </a></div>
+		<div class="result-url ">  {{r.link}}  </div>
 		<div class="result-description"> {{r.desc}} </div>
 	</div>
 	{% endif %}
-	
+
 {% endfor %}

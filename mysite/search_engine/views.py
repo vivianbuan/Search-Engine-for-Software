@@ -181,6 +181,11 @@ def results(request):
 		connection = urlopen(query)
 		stackoverflow_response = simplejson.load(connection);
 		stackoverflow_response = stackoverflow_response['response']['docs']#[5]['link']
+		for post in stackoverflow_response:
+			if 'link' in post.keys():
+				post['link'][0].replace('https://', 'https://www.')
+			for key in post.keys():
+				post[key] = post[key][0]
 
 		# serialized_indexer_response = simplejson.dumps([stackoverflow_response])
 		# return HttpResponse(serialized_indexer_response, content_type='application/json')
