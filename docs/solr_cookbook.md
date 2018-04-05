@@ -87,6 +87,14 @@ Note that this only contains git info, no stackoverflow info
 http://35.230.82.124:8983/solr/nestedpackage/select?
        q={!parent%20which=%22path:1.git%22}body_markdown:[QUERYTERM]
 ```
+- [NEW] Query stackoverflow answer and return stackoverflow pages: <br />
+This would also resolve the issue you encountered before that is caused by parent and child has same field (body_markdown)
+```
+http://35.230.82.124:8983/solr/nestedpackage/select?
+       fq={!parent%20which=%20path:2.stack}
+       (+body_markdown:graphics-geek)
+       &q=*:*
+```
 - Git packge info who has stackoverflow content containg [QUERYTERM] or itself contains [QUERYTERM]<br />
 **This is probably the one you want to use**
 ```
