@@ -2,7 +2,7 @@
 	/*background: black;*/
 	border-style: solid;
 	border-width: 2px;
-	border-color: #eeeeee;
+	border-color: #C4820E;
 
 /*	min-height: 100px;
 	min-width: 100px;*/
@@ -31,13 +31,13 @@
 
 .package-carousel {
 	flex: 1;
-	background: #eeeeee;
+	/*background: #eeeeee;*/
 }
 
 .package-selected {
 	border-style: solid;
 	border-width: 2px;
-	border-color: black;
+	border-color: #003262;
 }
 .package-text {
 	position: absolute;
