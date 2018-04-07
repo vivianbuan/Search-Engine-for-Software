@@ -1,7 +1,7 @@
 .package-card {
 	/*background: black;*/
 	border-style: solid;
-	border-width: 2px;
+	border-width: 5px;
 	border-color: #C4820E;
 
 /*	min-height: 100px;
@@ -36,7 +36,7 @@
 
 .package-selected {
 	border-style: solid;
-	border-width: 2px;
+	border-width: 5px;
 	border-color: #003262;
 }
 .package-text {
