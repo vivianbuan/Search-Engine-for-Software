@@ -175,11 +175,17 @@ def results(request):
 		query = query_string_base + user_query
 		# query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=' + user_query + '}' #&fl='
 		# query += '&rows=10'
-		query += '&fl=title,link'
+		query += '&fl=title_str,link'
+		query += '&rows=20'
 
 
 		connection = urlopen(query)
 		stackoverflow_response = simplejson.load(connection);
+
+		# serialized_indexer_response = simplejson.dumps([stackoverflow_response])
+		# return HttpResponse(serialized_indexer_response, content_type='application/json')
+
+
 		stackoverflow_response = stackoverflow_response['response']['docs']#[5]['link']
 		for post in stackoverflow_response:
 			if 'link' in post.keys():
@@ -187,15 +193,7 @@ def results(request):
 			for key in post.keys():
 				post[key] = post[key][0]
 
-		# serialized_indexer_response = simplejson.dumps([stackoverflow_response])
-		# return HttpResponse(serialized_indexer_response, content_type='application/json')
 
-
-
-
-
-
-	
 
 
 		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'filter_data': filter_data, 'user_query': raw_user_query, 'results': stackoverflow_response})

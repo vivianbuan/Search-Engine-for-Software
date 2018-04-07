@@ -7,11 +7,25 @@
 <head>
 	<title> Search Engine for Software Packages</title>
 	{% load staticfiles %}
+
+	<!-- utility -->
+	<link rel='stylesheet' href="{% static 'search_engine/util.css'%}" type='text/css' />
+
+	<!-- boostrap -->
 	<link rel='stylesheet' href="{% static 'bootstrap/css/bootstrap.min.css'%}" type='text/css' />
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
 
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<!-- slick -->
+	<link rel="stylesheet" type="text/css" href="{% static 'slick-1.8.0/slick/slick.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'slick-1.8.0/slick/slick-theme.css' %}"/>
+	<script type="text/javascript" src="{% static 'slick-1.8.0/slick/slick.min.js' %}"></script>
 
 	{% block styles %}
 	{% endblock %}

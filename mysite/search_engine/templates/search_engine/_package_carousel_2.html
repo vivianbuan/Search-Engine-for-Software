@@ -1,0 +1,23 @@
+{% block styles %}
+{% load staticfiles %}
+<link rel='stylesheet' href="{% static 'search_engine/_package_carousel.css'%}" type='text/css' />
+{% endblock %}
+
+
+<div class="package-carousel carousel-height">
+	{% for iter, package in package_data.items %}
+
+	<!-- <div class="col-sm-2 package-card"> -->
+	<div class="package-card" id="{{iter}}">
+		<div>
+			<img src="{% static 'search_engine/default_blank.png' %}" alt="Card image cap">
+		</div>
+		<div class="package-text">
+			{{ package.Name }}
+		</div>
+	<!-- 	<div>
+			<button class="btn btn-default package-button" id="{{iter}}">See More</button>
+		</div> -->
+	</div>
+	{% endfor %}
+</div>

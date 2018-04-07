@@ -8,13 +8,18 @@
 {% block content %}
 
 <div class="container max-height align-middle">
-	<div class="center-block text-center vertical-align">
-		<h1 class="home-welcome">Search Engine for Software Packages</h1>
+	<div class="center-block text-center vertical-align image_fit">
+		<!-- <h1 class="home-welcome">Search Engine for Software Packages</h1> -->
+		<div class="row">
+			<div class="col-sm-12">
+				<img class="logo image_fit" src="{% static 'search_engine/swago_logo_mini.png'%}" alt="Card image cap">
+			</div>
+		</div>
 
-		<form action="/results/" method="get">
-		  <input type="text" class="form-control" name="searchInput" placeholder="Search for..."><br>
-		  <button type="submit" class="btn btn-default">Search</button>
-		</form>
+			<form action="/results/" method="get">
+			  <input type="text" class="form-control" name="searchInput" placeholder="Search for..."><br>
+			  <button type="submit" class="btn btn-default">Search</button>
+			</form>
 	</div>	
 </div>
 

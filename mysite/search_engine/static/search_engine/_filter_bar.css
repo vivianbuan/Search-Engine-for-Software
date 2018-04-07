@@ -1,0 +1,14 @@
+
+.filter-panel {
+	max-height: 175px;
+	overflow: hidden;
+}
+.filter {
+	padding: 6px;
+}
+.filter-header {
+	font-size: 20px;
+}
+.filter-name {
+	font-size: 16px;
+}

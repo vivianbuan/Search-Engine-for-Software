@@ -1,4 +1,9 @@
-<div class="panel panel-default">
+{% block styles %}
+{% load staticfiles %}
+<link rel='stylesheet' href="{% static 'search_engine/_filter_bar.css'%}" type='text/css' />
+{% endblock %}
+
+<div class="panel panel-default filter-panel">
  	<div class="panel-body">
 		<div class="filter-header"> Filter Packages By:</div>
 
@@ -6,8 +11,8 @@
 		<div class="filter">
 			<div class="filter-name"> {{fil_name}} </div>
 			{% for op in fil_vals %}
-					<div class="option option-{{op}}">
-				<div class="row">
+				<div class="option option-{{op}}" id"{{fil_name}}-{{op}}">
+					<div class="row">
 
 						<div class="col-sm-9">
 
