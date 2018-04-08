@@ -49,6 +49,16 @@ $ bin/solr create -c nestedpackage
 curl -X POST -H 'Content-type:application/json' --data-binary '{"add-copy-field" : {"source":"*","dest":"_text_"}}'\
         http://localhost:8983/solr/nestedpackage/schema
 ```
+- Changing field type to make facet work<br />
+Fields need to be changed to string: license, language, link <br />
+If you have already indexed the file, use:
+```
+curl -X POST -H 'Content-type:application/json' --data-binary '{  "replace-field":{"name":"license","type":"string"}}' http://localhost:8983/solr/nestedpackage/schema
+```
+If you have not indexed the file, use 
+```
+curl -X POST -H 'Content-type:application/json' --data-binary '{"add-field": {"name":"license", "type":"string", "multiValued":false, "stored":true}}' http://localhost:8983/solr/films/schema
+```
 - Index files <br />
 **important**: `-format solr` is needed to make the child documents work properly<br />
 Right now the "real" data is in SOLR/solr-7.2.0/data/real
