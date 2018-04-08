@@ -67,7 +67,7 @@ $ bin/post -c nestedpackage ./data/real/* -format solr
 ```
 - Add new files to be indexed
 ```
-curl 'http://localhost:8983/solr/test_nested/update?commit=true' --data-binary \
+curl 'http://localhost:8983/solr/nestedpackage/update?commit=true' --data-binary \
        @data/test_more_document_3.json -H 'Content-type:application/json'
 ```
 
