@@ -1,5 +1,6 @@
 .package-table {
 	display: none;
+	table-layout: fixed;
 }
 .package-table-header{
 	display: none;

@@ -46,18 +46,32 @@ $(document).ready(function() {
 			    });
 
 			    // alert(pre_count + ' ' + post_count);
+			    if ((pre_count == 5 && post_count == 6)){
+    				$(this).toggleClass('package-selected')
 
+					$('.'+package_num+'-table').each(function() {
+						$(this).toggle();
+					});
+			    }
 
 			    if ((pre_count == 0 && post_count == 1) || (pre_count == 1 && post_count == 0) ){
 			    	$('.package-table').toggle();
 			    }
+
     		}
 
     		// else {}
     	});
     })
-
-
+	
+	// $('.package-carousel').scroll(function(e) {
+	// 	alert('hello')
+	// });
+	// $('.package-carousel').mousedown(function(e) {
+	
+	// 	// $('.package-carousel').slick('slickNext');
+	// 	alert(e.which);
+	// });
 
 	$('.package-carousel').slick({
 		arrows:true,

@@ -96,7 +96,7 @@ def results(request):
 			query += key + ','
 
 		query += 'score'
-		query += '&rows=10'
+		query += '&rows=50'
 
 		# query += '[features]'
 		# query = query[0:len(query)-1]
@@ -169,31 +169,41 @@ def results(request):
 		'''
 
 		indexer_url = '35.230.82.124'
-		query_string_base = 'http://' + indexer_url + ':8983/solr/nestedpackage/select?q='
+		query_string_base = 'http://' + indexer_url + ':8983/solr/nestedpackage/select?fq={!parent%20which=%20path:2.stack}&q='
 		#need to have a proper query builder
-
 		query = query_string_base + user_query
+
 		# query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=' + user_query + '}' #&fl='
 		# query += '&rows=10'
 		query += '&fl=title_str,link'
 		query += '&rows=20'
 
 
-		connection = urlopen(query)
-		stackoverflow_response = simplejson.load(connection);
-
-		# serialized_indexer_response = simplejson.dumps([stackoverflow_response])
+		# serialized_indexer_response = simplejson.dumps([query])
 		# return HttpResponse(serialized_indexer_response, content_type='application/json')
 
 
+		connection = urlopen(query)
+		stackoverflow_response = simplejson.load(connection);
+
+
+
 		stackoverflow_response = stackoverflow_response['response']['docs']#[5]['link']
+
+
+
+
 		for post in stackoverflow_response:
 			if 'link' in post.keys():
-				post['link'][0].replace('https://', 'https://www.')
+				post['link'].replace('https://', 'https://www.')
 			for key in post.keys():
-				post[key] = post[key][0]
+				if key != 'link':
+					post[key] = post[key][0].replace('&#39;', "'")
 
 
+
+		# serialized_indexer_response = simplejson.dumps(stackoverflow_response)
+		# return HttpResponse(serialized_indexer_response, content_type='application/json')
 
 
 		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'filter_data': filter_data, 'user_query': raw_user_query, 'results': stackoverflow_response})
