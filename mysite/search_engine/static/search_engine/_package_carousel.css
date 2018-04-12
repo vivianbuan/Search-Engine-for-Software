@@ -44,6 +44,10 @@
 	letter-spacing: 1px;
 	font-weight: 500;
 	font-size: 1.4em;
+	max-width: 145px;
+	max-height: 145px;
+	overflow: hidden;
+	word-wrap: break-word;
 	top: 50%;
 	left: 50%;
     transform: translate(-50%, -50%);
