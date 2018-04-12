@@ -2,19 +2,25 @@
 	height: 150px;
 	overflow: visible;
 }*/
+.container-fluid{
+	padding-left:70px;
+	padding-right: 300px;
+}
+.carousel-container{
+	padding-left:70px;
+	padding-right: 70px;
+	background-color: #444444;
+	color: #eeeeee;
+}
 .row {
 	display: flex;
 }
 .search-header{
 	padding-top: 70px;
-	padding-left: 150px;
-	padding-right: 150px;
 	/*background: #eeeeee;*/
 }
 .main-body {
 	padding-top: 70px;
-	padding-left: 150px;
-	padding-right: 300px;
 	/*width: 80%;*/
 }
 

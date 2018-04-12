@@ -63,21 +63,16 @@ $(document).ready(function() {
     		// else {}
     	});
     })
-	
-	// $('.package-carousel').scroll(function(e) {
-	// 	alert('hello')
-	// });
-	// $('.package-carousel').mousedown(function(e) {
-	
-	// 	// $('.package-carousel').slick('slickNext');
-	// 	alert(e.which);
-	// });
+
 
 	$('.package-carousel').slick({
 		arrows:true,
 		infinite: false,
-		slidesToShow: 3,
+		slidesToShow: 5,
+		variableWidth: true,
 		// swipe: false,
+		swipeToSlide: true,
+		touchThreshold: 10,
 		slidesToScroll: 1
   	});	
 	// $('')

@@ -96,7 +96,7 @@ def results(request):
 			query += key + ','
 
 		query += 'score'
-		query += '&rows=50'
+		query += '&rows=20'
 
 		# query += '[features]'
 		# query = query[0:len(query)-1]

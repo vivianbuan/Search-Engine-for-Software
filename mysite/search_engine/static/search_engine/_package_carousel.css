@@ -2,7 +2,7 @@
 	/*background: black;*/
 	border-style: solid;
 	border-width: 5px;
-	border-color: #C4820E;
+	border-color: #444444;
 
 /*	min-height: 100px;
 	min-width: 100px;*/
@@ -41,6 +41,9 @@
 }
 .package-text {
 	position: absolute;
+	letter-spacing: 1px;
+	font-weight: 500;
+	font-size: 1.4em;
 	top: 50%;
 	left: 50%;
     transform: translate(-50%, -50%);

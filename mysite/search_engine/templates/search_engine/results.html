@@ -22,11 +22,11 @@
  {{package_name}}
 {%endfor%}
 
-<div class="container-fluid search-header background-berkeley-gold">
+<div class="container-fluid search-header background-berkeley-gold padding-medium">
 
 	<div class="input-group">
 		<form action="/results/" method="get" class="full-width">
-			<div class="row" class="margin-med">
+			<div class="row">
 
 				<div class="col-sm-9">
 			    	<div class="input-group">
@@ -40,9 +40,13 @@
 		  	</div>
 		</form>
 	</div>
-
-	<div class="row  padding-none">
-		<div class="col-sm-9 padding-medium ">
+</div>
+<div class="container-fluid carousel-container">
+	<div class="row">
+		
+	</div>
+	<div class="row">
+		<div class="col-sm-12 padding-medium ">
 			{% include "search_engine/_package_carousel_2.html" %}
 		</div>
 	</div>
