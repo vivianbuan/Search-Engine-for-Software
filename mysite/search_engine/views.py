@@ -198,7 +198,7 @@ def results(request):
 				post['link'].replace('https://', 'https://www.')
 			for key in post.keys():
 				if key != 'link':
-					post[key] = post[key][0].replace('&#39;', "'")
+					post[key] = post[key][0].replace('&#39;', "'").replace("&quot;", '"').replace("&amp;", "&")
 
 
 
