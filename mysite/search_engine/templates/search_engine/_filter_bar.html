@@ -1,13 +1,57 @@
 {% block styles %}
 {% load staticfiles %}
 <link rel='stylesheet' href="{% static 'search_engine/_filter_bar.css'%}" type='text/css' />
-{% endblock %}	
+{% endblock %}
+
+{% for fil_name, fil_vals in filter_data.items %}
+
+<!-- note the data-toggle="dropdown" is what's causing it to close on any selection ... I need to change that -->
+<div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle btn-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{fil_name}}
+  </a>
+
+  <div class="dropdown-menu" >
+	{% for op in fil_vals %}
+    <a class="dropdown-item">
+		<input type="checkbox" id="{{op}}"> 
+		<label  for="{{op}}">
+		{{op.0}}        {{op.1}}
+		</label>
+    </a>
 
 
+	{% endfor %}
+  </div>
+</div>
+{% endfor %}
 
-TEST: random selectpicker should show up here
-<select class="selectpicker" multiple>
-  <option>Mustard</option>
-  <option>Ketchup</option>
-  <option>Relish</option>
-</select>
+
+<!-- 
+<div class="panel panel-default filter-panel">
+ 	<div class="panel-body">
+		<div class="filter-header"> Filter Packages By:</div>
+
+		{% for fil_name, fil_vals in filter_data.items %}
+		<div class="filter">
+			<div class="filter-name"> {{fil_name}} </div>
+			{% for op in fil_vals %}
+				<div class="option option-{{op}}" id"{{fil_name}}-{{op}}">
+					<div class="row">
+
+						<div class="col-sm-9">
+
+							<input class="checkbox-{{op}}" type="checkbox" > {{op.0}} 
+						</div>
+						<div class="col-sm-3">
+							{{op.1}}
+						</div>
+
+					</div>
+				</div>
+
+			{% endfor %}
+		</div>
+		{% endfor %}
+	</div>
+</div> -->

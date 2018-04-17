@@ -26,24 +26,19 @@
 
 	<div class="input-group">
 		<form action="/results/" method="get" class="full-width">
-			<div class="row">
-
-				<div class="col-sm-9">
-			    	<div class="input-group">
-						<input type="text" class="form-control query-bar" name="searchInput" id="query-bar" placeholder="Search for..." value="{{user_query}}"> 
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="submit">Search</button>
-						</span>
-					</div>
-		  		</div>
-
-		  	</div>
+	    	<div class="input-group query-bar-input-group">
+				<input type="text" class="form-control query-bar" name="searchInput" id="query-bar" placeholder="Search for..." value="{{user_query}}"> 
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="submit">Search</button>
+				</span>
+			</div>
 		</form>
 	</div>
 </div>
 <div class="container-fluid carousel-container">
-	<div class="row">
+	<div class="row padding-top-medium filter-bar">
 		<!-- {{filter_data}} -->
+		{% include "search_engine/_filter_bar.html" %}
 
 
 	</div>
@@ -53,7 +48,6 @@
 		</div>
 	</div>
 </div>
-		{% include "search_engine/_filter_bar.html" %}
 
 
 

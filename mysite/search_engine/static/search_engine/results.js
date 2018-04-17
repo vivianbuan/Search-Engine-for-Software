@@ -64,6 +64,7 @@ $(document).ready(function() {
     	});
     })
 
+
 	$('.package-carousel').slick({
 		arrows:true,
 		infinite: false,
@@ -74,5 +75,4 @@ $(document).ready(function() {
 		touchThreshold: 10,
 		slidesToScroll: 1
   	});	
-	// $('')
 });

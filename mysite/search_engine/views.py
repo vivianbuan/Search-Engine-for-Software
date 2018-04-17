@@ -49,7 +49,7 @@ PACKAGE_TABLE_ORDER = [
 ]
 
 FILTERS = [
-	'collaborators_cnt',
+	# 'collaborators_cnt',
 	# 'version_cnt',	
 	# 'last_update',
 	# 'star_cnt',
