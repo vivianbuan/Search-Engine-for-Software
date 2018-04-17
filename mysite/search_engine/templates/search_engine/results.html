@@ -43,7 +43,9 @@
 </div>
 <div class="container-fluid carousel-container">
 	<div class="row">
-		
+		<!-- {{filter_data}} -->
+
+
 	</div>
 	<div class="row">
 		<div class="col-sm-12 padding-medium ">
@@ -51,6 +53,10 @@
 		</div>
 	</div>
 </div>
+		{% include "search_engine/_filter_bar.html" %}
+
+
+
 <div class="container-fluid main-body" >
 	{% include "search_engine/_package_table.html" %}
 

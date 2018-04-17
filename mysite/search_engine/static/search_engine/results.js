@@ -64,7 +64,6 @@ $(document).ready(function() {
     	});
     })
 
-
 	$('.package-carousel').slick({
 		arrows:true,
 		infinite: false,
