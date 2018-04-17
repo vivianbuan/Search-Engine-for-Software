@@ -67,7 +67,7 @@ def index(request):
 	return render(request, 'search_engine/index.html')
 
 def results(request):
-	# try:
+	try:
 
 		raw_user_query = request.GET['searchInput']
 		user_query = raw_user_query.replace(' ', '%20')
@@ -76,34 +76,34 @@ def results(request):
 		# serialized_indexer_response = simplejson.dumps([user_query])
 		# return HttpResponse(serialized_indexer_response, content_type='application/json')
 		searchInput = request.GET.get('searchInput')
-
-
-		package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, test=0 )
-		# return get_package_response(INDEXER_URL, user_query, test=0 )
-
-		# user_query = re.sub('[^A-Za-z0-9]', '+', raw_user_query)
-		# if user_query.replace(' ', '') == '':
-		# 	return render(request, 'search_engine/index.html')
-
-		# serialized_indexer_response = simplejson.dumps([user_query])
-		# return HttpResponse(serialized_indexer_response, content_type='application/json')
+		test = request.GET.get('test')
+		if (not test):
+			test = 0
+		else:
+			test = int(test)
 
 
 
-
-
+		if (test > 0 and test <= 4):
+			return get_package_response(INDEXER_URL, user_query, test=test)
+		else:
+			package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, test=0)
 
 
 		'''
 		Get all stackoverflow pages related to these packages.
 		'''
-		stackoverflow_response = get_stackoverflow_response(INDEXER_URL, user_query, test=0)
+		if (test > 4 and test <= 5):
+			return get_stackoverflow_response(INDEXER_URL, user_query, test=test)
+		else:
+			stackoverflow_response = get_stackoverflow_response(INDEXER_URL, user_query, test=test)
+
 
 		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'filter_data': filter_data, 'user_query': raw_user_query, 'results': stackoverflow_response})
 
-	# except:
+	except:
 		#make this a 404
-		# return render(request, 'search_engine/results.html', {'indexer': indexer_response })
+		return render(request, 'search_engine/index.html')#, {'indexer': indexer_response })
 
 
 def get_package_response(url, user_query, filter_results_by = [], test=0):
@@ -129,9 +129,9 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 		'''
 		Test 1: Get the query
 		'''
-		# if test == 1:
-		# serialized_indexer_response = simplejson.dumps([query])
-		# return HttpResponse(serialized_indexer_response, content_type='application/json')
+		if test == 1:
+			serialized_indexer_response = simplejson.dumps(["Query for Package Info", query])
+			return HttpResponse(serialized_indexer_response, content_type='application/json')
 
 		connection = urlopen(query)
 		indexer_response = simplejson.load(connection);
@@ -181,10 +181,24 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 			filter_data[new_index] = single_filter_data
 
 		'''
-		Test 2: Get the total response
+		Test 2: Get the package data
 		'''
-		# serialized_indexer_response = simplejson.dumps([package_data])
-		# return HttpResponse(serialized_indexer_response, content_type='application/json')
+		if test == 2:
+			serialized_indexer_response = simplejson.dumps(["Package Data", package_data])
+			return HttpResponse(serialized_indexer_response, content_type='application/json')
+		'''
+		Test 3: Get the table_data
+		'''
+		if test == 3:
+			serialized_indexer_response = simplejson.dumps(["Filter Data", table_data])
+			return HttpResponse(serialized_indexer_response, content_type='application/json')
+		'''
+		Test 4: Get the package data
+		'''
+		if test == 4:
+			serialized_indexer_response = simplejson.dumps(["Filter Data", filter_data])
+			return HttpResponse(serialized_indexer_response, content_type='application/json')
+
 		return package_data, table_data, filter_data
 
 
@@ -198,8 +212,8 @@ def get_stackoverflow_response(url, user_query, filter_results_by = [], test=0):
 		query += '&fl=title_str,link'
 		query += '&rows=20'
 
-		if test == 1:
-			serialized_indexer_response = simplejson.dumps([query])
+		if test == 5:
+			serialized_indexer_response = simplejson.dumps(["Query for Stackoverflow Response", query])
 			return HttpResponse(serialized_indexer_response, content_type='application/json')
 
 		connection = urlopen(query)
@@ -215,3 +229,13 @@ def get_stackoverflow_response(url, user_query, filter_results_by = [], test=0):
 					post[key] = post[key][0].replace('&#39;', "'").replace("&quot;", '"').replace("&amp;", "&")
 
 		return response
+
+
+
+
+		# user_query = re.sub('[^A-Za-z0-9]', '+', raw_user_query)
+		# if user_query.replace(' ', '') == '':
+		# 	return render(request, 'search_engine/index.html')
+
+		# serialized_indexer_response = simplejson.dumps([user_query])
+		# return HttpResponse(serialized_indexer_response, content_type='application/json')
