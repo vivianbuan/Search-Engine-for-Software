@@ -25,7 +25,7 @@
 # python stackoverflow_extraction.py ./package_list_small.json ./so_json_small ./so_output/
 
 # TO run with github stuff
-# python git_and_so.py ./gh_json_dir ./so_json_dir ./gh_output/
+# python git_and_so.py ./gh_json_dir ./so_json_small ./gh_output/
 
 import sys
 import json
