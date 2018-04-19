@@ -116,7 +116,7 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 		query += '&facet=true'
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
 			query += '&facet.field=' + key
-		query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=' + user_query + '}&fl='
+		query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=' + user_query + '%20reRankDocs=100000}&fl='
 		# query += 'name,repo_description,score,[features]'
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
 			query += key + ','
