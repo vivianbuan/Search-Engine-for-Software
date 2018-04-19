@@ -62,7 +62,7 @@ for package in packagelist:
     if num_iter % 1000 == 0:
         print("Done with labeling {} packages".format(num_iter))
 
-    # Backupp data every 50000 packages
+    # Backup data every 50000 packages
     if num_iter % 50000 == 0:
         with open('SOlabel.json', 'w') as f:
             json.dump(label_dict, f)
@@ -89,3 +89,7 @@ for package in packagelist:
             cur_list.extend(doc['question_id'])
 
         label_dict[package] = cur_list
+
+# Final save of all data
+with open('SOlabel.json', 'w') as f:
+    json.dump(label_dict, f)
