@@ -17,6 +17,7 @@ $(document).ready(function() {
     		if (!isDragging){
     			$(this).toggleClass('package-selected')
 
+    			// var colors = {'red', 'orange', 'yellow', 'green', 'blue', 'violet'}
     			/**
 				 * Handle the table
     			 */
@@ -25,38 +26,39 @@ $(document).ready(function() {
 
 				var pre_count = 0;
 
-				$('.package-table-header').each(function() {
-			    	if ($(this).css('display') != 'none') {
-			    		pre_count++;
-			    	}
-			    	// if ($(this).find('td:empty')) { alert('one empty')}
-			    });
+				// $('.package-table-header').each(function() {
+			 //    	if ($(this).css('display') != 'none') {
+			 //    		pre_count++;
+			 //    	}
+			 //    	// if ($(this).find('td:empty')) { alert('one empty')}
+			 //    });
 
-			    $('.'+package_num+'-table').each(function() {
-			    	$(this).toggle();
-			    });
+			 //    $('.'+package_num+'-table').each(function() {
+			 //    	$(this).toggle();
+			 //    });
 
 
-				var post_count = 0;
-				$('.package-table-header').each(function() {
-			    	if ($(this).css('display') != 'none') {
-			    		post_count++;
-			    	}
-			    	// if ($(this).find('td:empty')) { alert('one empty')}
-			    });
+				// var post_count = 0;
+				// $('.package-table-header').each(function() {
+			 //    	if ($(this).css('display') != 'none') {
+			 //    		post_count++;
+			 //    	}
+			 //    	// if ($(this).find('td:empty')) { alert('one empty')}
+			 //    });
 
-			    // alert(pre_count + ' ' + post_count);
-			    if ((pre_count == 5 && post_count == 6)){
-    				$(this).toggleClass('package-selected')
+			 //    // alert(pre_count + ' ' + post_count);
+			 //    if ((pre_count == 5 && post_count == 6)){
+    // 				$(this).toggleClass('package-selected')
 
-					$('.'+package_num+'-table').each(function() {
-						$(this).toggle();
-					});
-			    }
+				// 	$('.'+package_num+'-table').each(function() {
+				// 		$(this).toggle();
+				// 	});
+			 //    }
+			    $('.'+package_num+'-information-card').toggle();
 
-			    if ((pre_count == 0 && post_count == 1) || (pre_count == 1 && post_count == 0) ){
-			    	$('.package-table').toggle();
-			    }
+			    // if ((pre_count == 0 && post_count == 1) || (pre_count == 1 && post_count == 0) ){
+			    // 	$('.package-table').toggle();
+			    // }
 
     		}
 

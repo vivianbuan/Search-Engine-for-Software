@@ -2,13 +2,14 @@
 {% load staticfiles %}
 {% load info_pane_extras %}
 <link rel='stylesheet' href="{% static 'search_engine/_information_pane.css'%}" type='text/css' />
+<script src="{% static 'search_engine/_information_pane.js' %}"></script>
 {% endblock %}
 
 <div class="information-panel">
     {% for iter, package in package_data.items %}
 
 	<!-- <div class="col-sm-2 package-card"> -->
-	<div class="information-card" id="{{iter}}">
+	<div class="information-card {{iter}}-information-card" id="{{iter}}">
 		<div class="row">
             <div class="col-sm-8">
                 <div class="package-title">

@@ -40,7 +40,9 @@
 	height: 100%;
 	opacity: .5;
 }
-
+.information-card{
+	display: none;
+}
 .package-title {
 }
 
