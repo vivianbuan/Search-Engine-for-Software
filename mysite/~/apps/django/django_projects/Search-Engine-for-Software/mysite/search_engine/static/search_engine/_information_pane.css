@@ -79,7 +79,7 @@
 
 .package-info .long-content{
     font-size: 12px;
-    max-height: 300px;
-    overflow-y: scroll;
+    max-height: 150px;
+    overflow: hidden;
     word-wrap: break-word;
 }

@@ -1,0 +1,107 @@
+/**
+ * ######################################################################################################
+ *
+ *                                        Coloration
+ *
+ * ######################################################################################################
+ */
+
+
+/**
+ *  Colors
+ */
+.color-berkeley-blue {
+	color: #003262;
+}
+.color-berkeley-gold {
+	color: #C4820E;
+}
+
+
+/**
+ *  backgrounds
+ */
+.background-berkeley-blue {
+	background: #003262;
+}
+.background-berkeley-gold {
+	background: #C4820E;
+}
+
+
+/**
+ *  Colors and backgrounds
+ */
+.berkeley-blue {
+	color: #003262;
+	background: #003262;
+}
+.berkeley-gold {
+	color: #C4820E;
+	background: #C4820E;
+}
+
+
+
+/**
+ * ######################################################################################################
+ *
+ *                                        Positioning
+ *
+ * ######################################################################################################
+ */
+
+
+/**
+ *  DEPRECATED: Margin;
+ */
+.margin-top {
+	padding-top: 10px;
+}
+
+
+/**
+ * Padding:
+ */
+
+.padding-none {
+	padding: 0px;
+	margin: 0px;
+}
+.padding-small {
+	padding: 5px;
+}
+.padding-medium {
+	padding: 15px;
+}
+.padding-large {
+	padding: 25px;
+}
+
+
+
+.padding-left-none {
+	padding-left: 0px;
+}
+.padding-right-none {
+	padding-right: 0px;
+}
+.padding-top-none {
+	padding-top: 0px;
+}
+.padding-bottom-none {
+	padding-bottom: 0px;
+}
+
+.padding-left-medium {
+	padding-left: 15px;
+}
+.padding-right-medium {
+	padding-right: 15px;
+}
+.padding-top-medium {
+	padding-top: 15px;
+}
+.padding-bottom-medium {
+	padding-bottom: 15px;
+}

@@ -22,4 +22,5 @@ urlpatterns = [
     # url(r'^search/', include('search_engine.urls')),
     path('admin/', admin.site.urls),
     path('', include('search_engine.urls')),
+    url(r'^markdownx/', include('markdownx.urls')),
 ]

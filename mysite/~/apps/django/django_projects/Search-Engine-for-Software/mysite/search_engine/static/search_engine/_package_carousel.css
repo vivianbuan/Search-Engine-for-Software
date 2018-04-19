@@ -1,0 +1,56 @@
+.package-card {
+	/*background: black;*/
+	border-style: solid;
+	border-width: 5px;
+	border-color: #444444;
+
+/*	min-height: 100px;
+	min-width: 100px;*/
+	max-height: 200px;
+	max-width: 200px;
+
+
+	margin-left: 5px;
+	margin-right: 5px;
+	position: relative;
+	padding: 0px;
+}
+
+.package-card img {
+	max-height: 170px;
+	max-width: 170px;
+/*	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	margin*/
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	opacity: .5;
+}
+
+.package-carousel {
+	flex: 1;
+	/*background: #eeeeee;*/
+}
+
+.package-selected {
+	border-style: solid;
+	border-width: 5px;
+	border-color: #003262;
+}
+.package-text {
+	position: absolute;
+	letter-spacing: 1px;
+	font-weight: 500;
+	font-size: 1.4em;
+	max-width: 145px;
+	max-height: 145px;
+	overflow: hidden;
+	word-wrap: break-word;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+

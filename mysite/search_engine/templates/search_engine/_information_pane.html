@@ -1,8 +1,50 @@
 {% block styles %}
 {% load staticfiles %}
+{% load info_pane_extras %}
 <link rel='stylesheet' href="{% static 'search_engine/_information_pane.css'%}" type='text/css' />
 {% endblock %}
 
-<div class="card">
-	{{package_data.0}}
+<div class="information-panel">
+    {% for iter, package in package_data.items %}
+
+	<!-- <div class="col-sm-2 package-card"> -->
+	<div class="information-card" id="{{iter}}">
+		<div class="row">
+            <div class="col-sm-8">
+                <div class="package-title">
+                    <div class="package-title-content">
+                        <div class="package-title-title" >{{ package.Name }}</div>
+                        {{ package.Description }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <img src="{% static 'search_engine/default_blank.png' %}" alt="Card image cap">
+            </div>
+		</div>
+        <div class="line-separator"></div>
+        <div class="package-info">
+            <div class="short-content"><b>Homepage:</b>
+                <a href="{% dictKeyLookup package "Homepage" %}">{% dictKeyLookup package "Homepage" %}</a>
+            </div>
+            <div class="short-content"><b>License:</b> {% dictKeyLookup package "License" %}</div>
+            <div class="short-content"><b>Language:</b> {% dictKeyLookup package "Language" %}</div>
+            <div class="short-content"><b>Collaborators:</b> {% dictKeyLookup package "Collaborators" %}</div>
+            <div class="short-content"><b>Fork Count:</b> {% dictKeyLookup package "Fork Count" %}</div>
+            <div class="short-content"><b>Last Updated:</b> {% dictKeyLookup package "Last Updated" %}</div>
+            <div class="short-content"><b>Repo URL:</b>
+                <a href="{% dictKeyLookup package "Repo URL" %}">{% dictKeyLookup package "Repo URL" %}</a>
+            </div>
+            <div class="short-content"><b>Owned By:</b> {% dictKeyLookup package "Owned By" %}</div>
+            <div class="short-content"><b>Starred in Github by:</b> {% dictKeyLookup package "Starred in Github by" %}</div>
+            <div class="short-content"><b>Version:</b> {% dictKeyLookup package "Version" %}</div>
+            <div class="short-content"><b>Size:</b> {% dictKeyLookup package "Size" %}</div>
+
+            <div class="short-content"><b>Readme:</b></div>
+            <div class="long-content">{{ package.Readme|show_markdown|safe }}</div>
+        </div>
+	</div>
+	{% endfor %}
+{#	{{package_data.0}}#}
 </div>
+
