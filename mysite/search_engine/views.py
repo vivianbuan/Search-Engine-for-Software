@@ -67,7 +67,7 @@ def index(request):
 	return render(request, 'search_engine/index.html')
 
 def results(request):
-	try:
+	# try:
 
 		raw_user_query = request.GET['searchInput']
 		user_query = raw_user_query.replace(' ', '%20')
@@ -101,9 +101,9 @@ def results(request):
 
 		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'filter_data': filter_data, 'user_query': raw_user_query, 'results': stackoverflow_response})
 
-	except:
+	# except:
 		#make this a 404
-		return render(request, 'search_engine/index.html')#, {'indexer': indexer_response })
+		# return render(request, 'search_engine/index.html')#, {'indexer': indexer_response })
 
 
 def get_package_response(url, user_query, filter_results_by = [], test=0):

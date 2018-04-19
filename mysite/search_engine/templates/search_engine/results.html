@@ -50,11 +50,19 @@
 </div>
 
 
-
 <div class="container-fluid main-body" >
-	{% include "search_engine/_package_table.html" %}
+	<div class="row">
+		<div class="col-sm-9">
 
-	{% include "search_engine/_standard_results.html" %}
+			{% include "search_engine/_package_table.html" %}
+
+			{% include "search_engine/_standard_results.html" %}
+		</div>
+		<div class="col-sm-3">
+
+			{% include "search_engine/_information_pane.html" %}
+		</div>
+	</div>
 
 </div>
 

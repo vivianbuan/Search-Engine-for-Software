@@ -13,13 +13,28 @@
 
   <div class="dropdown-menu" >
 	{% for op in fil_vals %}
+
     <a class="dropdown-item">
-		<input type="checkbox" id="{{op}}"> 
+		<input class="{{fil_name}}-checkbox" type="checkbox" id="{{op}}"> 
 		<label  for="{{op}}">
-		{{op.0}}        {{op.1}}
+
+			<!-- <div class="row annoying"> -->
+				<!-- <div class="col-sm-9"> -->
+					{{op.0}}
+				<!-- </div> -->
+				<!-- <div class="col-sm-3"> -->
+					{{op.1}}
+				<!-- </div> -->
+			<!-- </div> -->
+<!-- 
+			<p class="split-para" id="{{op.0}}">
+				{{op.0}}  
+				<span> {{op.1}} </span>
+			</p> -->
+<!-- 			<div class="option-left {{fil_name}}-option" id="{{op.0}}"> {{op.0}} </div> 
+			<div class="option-right">{{op.1}}</div> -->
 		</label>
     </a>
-
 
 	{% endfor %}
   </div>

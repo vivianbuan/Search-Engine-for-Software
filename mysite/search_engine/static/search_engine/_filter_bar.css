@@ -13,5 +13,26 @@
 	font-size: 16px;
 }
 
+.option-left {
+	float: left;
+}
 
+.option-right {
+	float: right;
+}
+/*
+.annoying {
+	min-width: 100%;
+	word-wrap: break-word;
+}
 
+.col-sm-9 {
+	max-width: 70%;
+	word-wrap: break-word;
+}
+
+.col-sm-3 {
+	max-width: 30%;
+}
+
+*/
