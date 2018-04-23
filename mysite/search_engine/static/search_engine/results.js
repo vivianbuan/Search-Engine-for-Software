@@ -66,6 +66,34 @@ $(document).ready(function() {
     	});
     })
 
+	$('.option-checkbox').change(function(){
+		alert('checked');
+		// alert(JSON.stringify(this));
+		// $.ajax({
+			
+		// })
+	});
+
+
+	/*/
+	 *  Get the dropdowns for the options to behave the way I want
+	 *  That means: Don't close dropdown after click, but close on outside click
+	 */
+	$('.dropdown-toggle').mousedown(function(){
+		$(this).dropdown();
+	});
+	$(document).mouseup(function(e){
+		$('.dropdown-menu').each(function(){
+			if ($(this).hasClass('show')){
+				$(this).removeClass('show');
+			}
+		});
+	
+	});
+	$('.dropdown-menu').mouseup(function(e){
+		e.stopPropagation();
+	});
+
 
 	$('.package-carousel').slick({
 		arrows:true,

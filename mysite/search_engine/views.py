@@ -73,8 +73,6 @@ def results(request):
 		user_query = raw_user_query.replace(' ', '%20')
 		user_query = urlparse(user_query).path
 
-		# serialized_indexer_response = simplejson.dumps([user_query])
-		# return HttpResponse(serialized_indexer_response, content_type='application/json')
 		searchInput = request.GET.get('searchInput')
 		test = request.GET.get('test')
 		if (not test):
@@ -97,7 +95,6 @@ def results(request):
 			return get_stackoverflow_response(INDEXER_URL, user_query, test=test)
 		else:
 			stackoverflow_response = get_stackoverflow_response(INDEXER_URL, user_query, test=test)
-
 
 		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'filter_data': filter_data, 'user_query': raw_user_query, 'results': stackoverflow_response})
 
