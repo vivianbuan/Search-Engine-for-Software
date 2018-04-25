@@ -1,10 +1,37 @@
 .package-table {
 	display: none;
 	table-layout: fixed;
+	/*text-align: center;*/
 }
 .package-table-header{
 	display: none;
+	text-transform: uppercase;
+	background-color: #dee2e6;
 }
 .package-table-row{
 	display: none;
 }
+
+.table-header {
+	background-color: #dee2e6;
+}
+
+.package-table td { 
+	overflow: scroll;
+	white-space: normal;  
+	vertical-align: middle;
+}
+
+caption {
+	caption-side: top;
+}
+
+.package-table-td {
+	max-height: 250px;
+}
+
+.metadata {
+	font-weight: bold;
+}
+
+

@@ -5,6 +5,7 @@ from urllib.request import *
 import simplejson
 import re 
 from urllib.parse import urlparse
+from collections import OrderedDict
 
 
 '''
@@ -45,7 +46,9 @@ PACKAGE_TABLE_ORDER = [
 	'Homepage',
 	'Language',
 	'Starred in Github by',
-	'Size'
+	'Size',
+	'Private',
+	'Readme'
 ]
 
 FILTERS = [
@@ -199,7 +202,9 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 			serialized_indexer_response = simplejson.dumps(["Filter Data", filter_data])
 			return HttpResponse(serialized_indexer_response, content_type='application/json')
 
-		return package_data, table_data, filter_data
+		# temp = sorted(table_data.items(), key=lambda i:PACKAGE_TABLE_ORDER.index(i[0]))
+		ordered_table = OrderedDict(sorted(table_data.items(), key=lambda i:PACKAGE_TABLE_ORDER.index(i[0])))
+		return package_data, ordered_table, filter_data
 
 
 def get_stackoverflow_response(url, user_query, filter_results_by = [], test=0):

@@ -46,7 +46,7 @@ $(document).ready(function() {
 			    });
 
 			    // alert(pre_count + ' ' + post_count);
-			    if ((pre_count == 5 && post_count == 6)){
+			    if ((pre_count == 3 && post_count == 4)){
     				$(this).toggleClass('package-selected')
 
 					$('.'+package_num+'-table').each(function() {

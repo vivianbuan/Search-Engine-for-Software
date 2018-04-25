@@ -3,7 +3,12 @@
 <link rel='stylesheet' href="{% static 'search_engine/_package_table.css'%}" type='text/css' />
 {% endblock %}
 
-<table class="table table-responsive package-table">
+<table class="table table-hover table-responsive package-table">
+	<caption>
+		Select up to 3 packages to compare. Click again to deselect.
+
+		{{table_data.private}}
+	</caption>
 	<thead>
 		<tr>
 			<th class="table-header"> </th>
@@ -16,10 +21,10 @@
 	<tbody>
 		{% for quality, values in table_data.items %}
 			<tr>
-				<td class="{{quality}}-table-column"> {{quality}} </td>
+				<td class="{{quality}}-table-column metadata"> {{quality}} </td>
 
 				{% for iter, val  in values.items %}
-			 	<td class="{{iter}}-table {{iter}}-table-value package-table-row"> {{val}} </td>
+			 	<td class="{{iter}}-table {{iter}}-table-value package-table-row"><div class="package-table-td">{{val | urlize}}</div></td>
 			 	{% endfor %}
 			</tr>
 
