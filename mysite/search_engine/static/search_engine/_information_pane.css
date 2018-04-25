@@ -6,8 +6,8 @@
 .information-card {
 	/*background: black;*/
 	border-style: solid;
-	border-width: 1px;
-	border-color: #dcdee2;
+	border-width: 3px;
+	/*border-color: #dcdee2;*/
 
 /*	min-height: 100px;
 	min-width: 100px;*/
@@ -40,7 +40,9 @@
 	height: 100%;
 	opacity: .5;
 }
-
+.information-card{
+	display: none;
+}
 .package-title {
 }
 

@@ -42,6 +42,29 @@
 }
 
 
+/**
+ *  Borders
+ */
+
+.border-red{
+	border-color: #FF0000;
+}
+.border-orange{
+	border-color: #FF7F00;
+}
+.border-yellow{
+	border-color: #FFFF00;
+}
+.border-green{
+	border-color: #00FF00;
+}
+.border-blue{
+	border-color: #0000FF;
+}
+.border-violet{
+	border-color: #4B0082;
+}
+
 
 /**
  * ######################################################################################################

@@ -2,13 +2,14 @@
 {% load staticfiles %}
 {% load info_pane_extras %}
 <link rel='stylesheet' href="{% static 'search_engine/_information_pane.css'%}" type='text/css' />
+<script src="{% static 'search_engine/_information_pane.js' %}"></script>
 {% endblock %}
 
 <div class="information-panel">
     {% for iter, package in package_data.items %}
 
 	<!-- <div class="col-sm-2 package-card"> -->
-	<div class="information-card" id="{{iter}}">
+	<div class="information-card {{iter}}-information-card" id="{{iter}}">
 		<div class="row">
             <div class="col-sm-8">
                 <div class="package-title">
@@ -19,7 +20,11 @@
                 </div>
             </div>
             <div class="col-sm-4">
+                {% if image_data|get_at_index:iter == "" %}
                 <img src="{% static 'search_engine/default_blank.png' %}" alt="Card image cap">
+                {% else %}
+                <img src="{{ image_data|get_at_index:iter }}" alt="Card image cap">
+                {% endif %}
             </div>
 		</div>
         <div class="line-separator"></div>
@@ -40,8 +45,8 @@
             <div class="short-content"><b>Version:</b> {% dictKeyLookup package "Version" %}</div>
             <div class="short-content"><b>Size:</b> {% dictKeyLookup package "Size" %}</div>
 
-            <div class="short-content"><b>Readme:</b></div>
-            <div class="long-content">{{ package.Readme|show_markdown|safe }}</div>
+            <!-- <div class="short-content"><b>Readme:</b></div> -->
+            <!-- <div class="long-content">{{ package.Readme|show_markdown|safe }}</div> -->
         </div>
 	</div>
 	{% endfor %}

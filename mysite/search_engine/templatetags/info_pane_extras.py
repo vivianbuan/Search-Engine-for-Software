@@ -11,3 +11,7 @@ def dictKeyLookup(the_dict, key):
 @register.filter
 def show_markdown(text):
    return markdownify(text)
+
+@register.filter
+def get_at_index(list, index):
+    return list[index]

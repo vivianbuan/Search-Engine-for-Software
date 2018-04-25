@@ -76,8 +76,6 @@ def results(request):
 		user_query = raw_user_query.replace(' ', '%20')
 		user_query = urlparse(user_query).path
 
-		# serialized_indexer_response = simplejson.dumps([user_query])
-		# return HttpResponse(serialized_indexer_response, content_type='application/json')
 		searchInput = request.GET.get('searchInput')
 		test = request.GET.get('test')
 		if (not test):
@@ -101,8 +99,16 @@ def results(request):
 		else:
 			stackoverflow_response = get_stackoverflow_response(INDEXER_URL, user_query, test=test)
 
+		if test == 6:
+			# serialized_indexer_response = simplejson.dumps(
+			# 	["Image Response", get_image(INDEXER_URL, "machine")])
+			serialized_indexer_response = simplejson.dumps(["Image Response", get_image_list(INDEXER_URL, package_data)])
+			return HttpResponse(serialized_indexer_response, content_type='application/json')
+		else:
+			image_data = get_image_list(INDEXER_URL, package_data)
 
-		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'filter_data': filter_data, 'user_query': raw_user_query, 'results': stackoverflow_response})
+
+		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'image_data': image_data, 'filter_data': filter_data, 'user_query': raw_user_query, 'results': stackoverflow_response})
 
 	# except:
 		#make this a 404
@@ -119,7 +125,7 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 		query += '&facet=true'
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
 			query += '&facet.field=' + key
-		query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=' + user_query + '}&fl='
+		query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=' + user_query + '%20reRankDocs=100000}&fl='
 		# query += 'name,repo_description,score,[features]'
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
 			query += key + ','
@@ -236,6 +242,29 @@ def get_stackoverflow_response(url, user_query, filter_results_by = [], test=0):
 		return response
 
 
+def get_image(url, package_name):
+	query = 'http://' + url + ':8983/solr/icons/select?q=name:' + package_name + "&rows=1"
+
+	connection = urlopen(query)
+	response = simplejson.load(connection)
+
+	response = response['response']['docs']
+
+	for post in response:
+		if 'url' in post.keys():
+			return post['url'][0]
+
+	return ''
+
+
+def get_image_list(url, package_data):
+	imgs = [""] * len(package_data.items())
+
+	for i, package in package_data.items():
+		img = get_image(url, package['Name'])
+		imgs[i] = img
+
+	return imgs
 
 
 		# user_query = re.sub('[^A-Za-z0-9]', '+', raw_user_query)

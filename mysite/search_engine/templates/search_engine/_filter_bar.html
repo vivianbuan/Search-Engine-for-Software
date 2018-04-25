@@ -7,7 +7,7 @@
 
 <!-- note the data-toggle="dropdown" is what's causing it to close on any selection ... I need to change that -->
 <div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle btn-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class="btn btn-secondary dropdown-toggle btn-block" href="#" role="button" id="dropdownMenuLink"  aria-haspopup="true" aria-expanded="false">
     {{fil_name}}
   </a>
 
@@ -15,7 +15,7 @@
 	{% for op in fil_vals %}
 
     <a class="dropdown-item">
-		<input class="{{fil_name}}-checkbox" type="checkbox" id="{{op}}"> 
+		<input class="{{fil_name}}-checkbox option-checkbox" type="checkbox" id="{{op}}">
 		<label  for="{{op}}">
 
 			<!-- <div class="row annoying"> -->
