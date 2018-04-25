@@ -1,1 +1,3 @@
 *.pyc
+mysite/mysite/__pycache__/
+mysite/search_engine/__pycache__/
