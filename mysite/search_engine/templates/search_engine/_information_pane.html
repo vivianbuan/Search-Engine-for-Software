@@ -20,7 +20,11 @@
                 </div>
             </div>
             <div class="col-sm-4">
+                {% if image_data|get_at_index:iter == "" %}
                 <img src="{% static 'search_engine/default_blank.png' %}" alt="Card image cap">
+                {% else %}
+                <img src="{{ image_data|get_at_index:iter }}" alt="Card image cap">
+                {% endif %}
             </div>
 		</div>
         <div class="line-separator"></div>
