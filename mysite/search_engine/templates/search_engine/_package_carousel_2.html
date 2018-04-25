@@ -1,5 +1,6 @@
 {% block styles %}
 {% load staticfiles %}
+{% load info_pane_extras %}
 <link rel='stylesheet' href="{% static 'search_engine/_package_carousel.css'%}" type='text/css' />
 {% endblock %}
 
@@ -10,7 +11,7 @@
 	<!-- <div class="col-sm-2 package-card"> -->
 	<div class="package-card package-unselected" id="{{iter}}">
 		<div>
-			<img src="{% static 'search_engine/default_blank.png' %}" alt="Card image cap">
+            <img src="{% static 'search_engine/default_blank.png' %}" alt="Card image cap">
 		</div>
 		<div class="package-text">
 			{{ package.Name }}
