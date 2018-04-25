@@ -13,64 +13,58 @@ $(document).ready(function() {
     	$(this).mousemove(function(){
     		isDragging = true;    		
     	});
-    	$(this).mouseup(function(){
+    	$(this).unbind().mouseup(function(){
     		if (!isDragging){
-    			$(this).toggleClass('package-selected')
+				$(this).toggleClass('package-selected')
+				$(this).toggleClass('package-unselected')
+    			var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
 
-    			// var colors = {'red', 'orange', 'yellow', 'green', 'blue', 'violet'}
-    			/**
-				 * Handle the table
-    			 */
 				var package_num = $(this).attr('id');
-				var all_none = false;
 
-				var pre_count = 0;
+				/**
+				 *  Expected behavior:
+				 *    1. only set a color that has not been set before
+				 *    2. If there are no more available colors, cancel the package selection
+				 *    3. If deselecting a package, remove all classnames for borders
+				 */
+				if ($(this).hasClass('package-selected')){
+					color_set = false
+					for (i in colors) {
+						color = colors[i]
+						border_class = 'border-'+color
+						if 	($('.'+border_class).length == 0) {
+							$(this).addClass(border_class);
+							$('.'+package_num+'-information-card').addClass(border_class);
+							color_set = true
+							break
+						}
+					}
+					if (!color_set){
+						$('.'+package_num+'-information-card').toggle();
+						$(this).toggleClass('package-selected')
+						$(this).toggleClass('package-unselected')
+					}
 
-				// $('.package-table-header').each(function() {
-			 //    	if ($(this).css('display') != 'none') {
-			 //    		pre_count++;
-			 //    	}
-			 //    	// if ($(this).find('td:empty')) { alert('one empty')}
-			 //    });
-
-			 //    $('.'+package_num+'-table').each(function() {
-			 //    	$(this).toggle();
-			 //    });
-
-
-				// var post_count = 0;
-				// $('.package-table-header').each(function() {
-			 //    	if ($(this).css('display') != 'none') {
-			 //    		post_count++;
-			 //    	}
-			 //    	// if ($(this).find('td:empty')) { alert('one empty')}
-			 //    });
-
-			 //    // alert(pre_count + ' ' + post_count);
-			 //    if ((pre_count == 5 && post_count == 6)){
-    // 				$(this).toggleClass('package-selected')
-
-				// 	$('.'+package_num+'-table').each(function() {
-				// 		$(this).toggle();
-				// 	});
-			 //    }
-			    $('.'+package_num+'-information-card').toggle();
-
-			    // if ((pre_count == 0 && post_count == 1) || (pre_count == 1 && post_count == 0) ){
-			    // 	$('.package-table').toggle();
-			    // }
+				} else {
+					$('.'+package_num+'-information-card').removeClass(function(idx, className) {
+						return (className.match(/(^|\s)border-\S+/g) || []).join(' ');
+					})
+					$(this).removeClass(function(idx, className) {
+						return (className.match(/(^|\s)border-\S+/g) || []).join(' ');
+					})
+				}
+				$('.'+package_num+'-information-card').toggle();
 
     		}
 
-    		// else {}
     	});
-    })
+    });
 
 	$('.option-checkbox').change(function(){
 		alert('checked');
 		// alert(JSON.stringify(this));
 		// $.ajax({
-			
+
 		// })
 	});
 

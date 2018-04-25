@@ -2,7 +2,6 @@
 	/*background: black;*/
 	border-style: solid;
 	border-width: 5px;
-	border-color: #444444;
 
 /*	min-height: 100px;
 	min-width: 100px;*/
@@ -15,7 +14,9 @@
 	position: relative;
 	padding: 0px;
 }
-
+.package-unselected {
+	border-color: #444444;
+}
 .package-card img {
 	max-height: 170px;
 	max-width: 170px;
@@ -37,7 +38,7 @@
 .package-selected {
 	border-style: solid;
 	border-width: 5px;
-	border-color: #003262;
+	/*border-color: #003262;*/
 }
 .package-text {
 	position: absolute;
