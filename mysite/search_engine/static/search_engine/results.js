@@ -47,6 +47,7 @@ $(document).ready(function() {
 			    // alert(pre_count + ' ' + post_count);
 			    if ((pre_count == 3 && post_count == 4)){
     				$(this).toggleClass('package-selected')
+					$(this).toggleClass('package-unselected')
 
 					$('.'+package_num+'-table').each(function() {
 						$(this).toggle();
