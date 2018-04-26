@@ -78,7 +78,6 @@ $(document).ready(function() {
 						}
 					}
 					$('.'+package_num+'-information-card').toggle();
-					alert(color_set)
 					// if (!color_set){
 					// 	alert(color_set)
 					// 	$('.'+package_num+'-information-card').toggle();
