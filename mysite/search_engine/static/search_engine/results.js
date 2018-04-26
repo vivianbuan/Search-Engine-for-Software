@@ -66,7 +66,7 @@ $(document).ready(function() {
 				 *    3. If deselecting a package, remove all classnames for borders
 				 */
 				if ($(this).hasClass('package-selected')){
-					color_set = false
+					// color_set = false
 					for (i in colors) {
 						color = colors[i]
 						border_class = 'border-'+color
@@ -77,11 +77,14 @@ $(document).ready(function() {
 							break
 						}
 					}
-					if (!color_set){
-						$('.'+package_num+'-information-card').toggle();
-						// $(this).toggleClass('package-selected')
-						// $(this).toggleClass('package-unselected')
-					}
+					$('.'+package_num+'-information-card').toggle();
+					alert(color_set)
+					// if (!color_set){
+					// 	alert(color_set)
+					// 	$('.'+package_num+'-information-card').toggle();
+					// 	// $(this).toggleClass('package-selected')
+					// 	// $(this).toggleClass('package-unselected')
+					// }
 
 				} else {
 					$('.'+package_num+'-information-card').removeClass(function(idx, className) {
@@ -91,7 +94,6 @@ $(document).ready(function() {
 						return (className.match(/(^|\s)border-\S+/g) || []).join(' ');
 					})
 				}
-				$('.'+package_num+'-information-card').toggle();
 // >>>>>>> b7bba3d14ae98e13015fcbcea0ecedf56197da08
 
     		}
