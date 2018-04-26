@@ -81,7 +81,6 @@ $(document).ready(function() {
 						$('.'+package_num+'-information-card').toggle();
 						// $(this).toggleClass('package-selected')
 						// $(this).toggleClass('package-unselected')
-						$('.'+package_num+'-information-card').toggle();
 					}
 
 				} else {
