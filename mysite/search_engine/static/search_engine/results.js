@@ -17,7 +17,7 @@ $(document).ready(function() {
     		if (!isDragging){
 				$(this).toggleClass('package-selected')
 				$(this).toggleClass('package-unselected')
-    			var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+    			var colors = ['red', 'green', 'blue'] //'orange', 'yellow']; //, 'green', 'blue', 'violet'];
 
 				var package_num = $(this).attr('id');
 
@@ -45,7 +45,8 @@ $(document).ready(function() {
 			    });
 
 			    // alert(pre_count + ' ' + post_count);
-			    if ((pre_count == 3 && post_count == 4)){
+
+			    if ((pre_count == colors.length && post_count == colors.length+1)){
     				$(this).toggleClass('package-selected')
 					$(this).toggleClass('package-unselected')
 
