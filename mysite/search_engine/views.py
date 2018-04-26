@@ -221,7 +221,8 @@ def get_stackoverflow_response(url, user_query, filter_results_by = [], test=0):
 		# query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=' + user_query + '}' #&fl='
 		# query += '&rows=10'
 		query += '&fl=title_str,link'
-		query += '&rows=20'
+		query += '&rows=40'
+		query += '&hl=true&hl.fl=title,body_markdown'
 
 		if test == 5:
 			serialized_indexer_response = simplejson.dumps(["Query for Stackoverflow Response", query])
@@ -230,16 +231,41 @@ def get_stackoverflow_response(url, user_query, filter_results_by = [], test=0):
 		connection = urlopen(query)
 		response = simplejson.load(connection);
 
-		response = response['response']['docs']
 
-		for post in response:
+		posts_found = []
+		stack_overflow_links = response['response']['docs']
+		highlights = response['highlighting']
+
+		deduped_response = []
+		for post, hl_key in zip(stack_overflow_links, highlights.keys()):
+			# post = stack_overflow_links[r_key]
+			hl = highlights[hl_key]
 			if 'link' in post.keys():
 				post['link'].replace('https://', 'https://www.')
 			for key in post.keys():
 				if key != 'link':
 					post[key] = post[key][0].replace('&#39;', "'").replace("&quot;", '"').replace("&amp;", "&")
 
-		return response
+			#replace post values with any highlights from Solr
+			#also cap the length of the body text
+			# if 'title' in hl.keys():
+			# 	post['title'] = hl['title'][0]
+			if 'body_markdown' in hl.keys():
+				post['body_markdown'] = hl['body_markdown'][0].replace('\n', ' ').replace('\r', ' ')
+			if 'body_markdown' not in post.keys():
+				post['body_markdown'] = ''
+			len_markdown = len(post['body_markdown'])
+			post['body_markdown'] = post['body_markdown'][0:min(120, len_markdown)]
+
+
+			# Perform Deduping
+			if post['link'] not in posts_found:
+				posts_found.append(post['link'])
+				deduped_response.append(post)
+			if len(deduped_response) == 15:
+				break
+
+		return deduped_response
 
 
 def get_image(url, package_name):

@@ -98,7 +98,7 @@ $(document).ready(function() {
     });
 
 	$('.option-checkbox').change(function(){
-		alert('checked');
+		// alert('checked');
 		// alert(JSON.stringify(this));
 		// $.ajax({
 
