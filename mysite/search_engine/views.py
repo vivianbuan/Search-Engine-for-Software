@@ -121,7 +121,7 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 		Create the query
 		'''
 		query_string_base = 'http://' + url + ':8983/solr/nestedpackage/select?q=name:'
-		query = query_string_base + '*'#user_query
+		query = query_string_base + user_query#'*'#user_query
 		query += '&facet=true'
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
 			query += '&facet.field=' + key
@@ -165,7 +165,7 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 			for key, value in package.items():
 				if key in PACKAGE_DETAILS_NEEDED.keys():
 					short_package[PACKAGE_DETAILS_NEEDED[key]] = value
-					if key != 'Language' and key != 'License':
+					if key != 'language' and key != 'license':
 						short_package[PACKAGE_DETAILS_NEEDED[key]] = short_package[PACKAGE_DETAILS_NEEDED[key]][0]
 			package_data[i] = short_package
 			i+=1
