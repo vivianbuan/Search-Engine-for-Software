@@ -11,28 +11,14 @@
     {{fil_name}}
   </a>
 
-  <div class="dropdown-menu" >
+  <div class="dropdown-menu filter-dropdown" id={{fil_name}} >
 	{% for op in fil_vals %}
 
     <a class="dropdown-item">
-		<input class="{{fil_name}}-checkbox option-checkbox" type="checkbox" id="{{op}}">
-		<label  for="{{op}}">
-
-			<!-- <div class="row annoying"> -->
-				<!-- <div class="col-sm-9"> -->
-					{{op.0}}
-				<!-- </div> -->
-				<!-- <div class="col-sm-3"> -->
-					{{op.1}}
-				<!-- </div> -->
-			<!-- </div> -->
-<!-- 
-			<p class="split-para" id="{{op.0}}">
-				{{op.0}}  
-				<span> {{op.1}} </span>
-			</p> -->
-<!-- 			<div class="option-left {{fil_name}}-option" id="{{op.0}}"> {{op.0}} </div> 
-			<div class="option-right">{{op.1}}</div> -->
+		<input class="{{fil_name}}-checkbox option-checkbox" type="checkbox" id="{{op.0}}">
+		<label  for="{{op.0}}">
+			{{op.0}}
+			{{op.1}}
 		</label>
     </a>
 
@@ -41,32 +27,3 @@
 </div>
 {% endfor %}
 
-
-<!-- 
-<div class="panel panel-default filter-panel">
- 	<div class="panel-body">
-		<div class="filter-header"> Filter Packages By:</div>
-
-		{% for fil_name, fil_vals in filter_data.items %}
-		<div class="filter">
-			<div class="filter-name"> {{fil_name}} </div>
-			{% for op in fil_vals %}
-				<div class="option option-{{op}}" id"{{fil_name}}-{{op}}">
-					<div class="row">
-
-						<div class="col-sm-9">
-
-							<input class="checkbox-{{op}}" type="checkbox" > {{op.0}} 
-						</div>
-						<div class="col-sm-3">
-							{{op.1}}
-						</div>
-
-					</div>
-				</div>
-
-			{% endfor %}
-		</div>
-		{% endfor %}
-	</div>
-</div> -->

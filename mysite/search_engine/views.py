@@ -294,6 +294,13 @@ def get_image_list(url, package_data):
 
 	return imgs
 
+def _ajax_reload_carousel(request):
+	searchInput = request.GET.get('searchInput')
+	filters = request.GET.get('filters')
+
+	get_package_response(INDEXER_URL, user_query)
+	return render(request, 'search_engine/templates/search_engine/_package_carousel_2.html', {filters})
+
 
 		# user_query = re.sub('[^A-Za-z0-9]', '+', raw_user_query)
 		# if user_query.replace(' ', '') == '':

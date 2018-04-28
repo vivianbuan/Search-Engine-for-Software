@@ -101,11 +101,32 @@ $(document).ready(function() {
     });
 
 	$('.option-checkbox').change(function(){
-		// alert('checked');
-		// alert(JSON.stringify(this));
-		// $.ajax({
+		checked_filters = {}
+		$('.filter-dropdown').each(function() {
+			filter_type = $(this).attr('id');
 
-		// })
+			checked_filters[filter_type] = [];
+			$('.option-checkbox:checked', this).each(function(){
+				checked_filters[filter_type].push($(this).attr('id'));
+			});
+		});
+		
+		alert(JSON.stringify(checked_filters));
+
+		$.ajax({
+			url: 'http://127.0.0.1:8000/_ajax_reload_carousel',
+			type: 'POST',
+			cache: false,
+			data: checked_filters,
+			datatype: 'json'
+		}).success(function(message){
+			alert(message)
+		}).fail(function(jqXHR, message){
+			alert('fail')
+		}).done(function(){
+			alert('foo')
+		});
+		return false;
 	});
 
 
