@@ -148,9 +148,9 @@ def results(request):
 		# serialized_indexer_response = simplejson.dumps(["Package Data", [len(package_data), package_data]])
 		# return HttpResponse(serialized_indexer_response, content_type='application/json')		
 		if test == 6:
-			# serialized_indexer_response = simplejson.dumps(
-			# 	["Image Response", get_image(INDEXER_URL, "machine")])
-			serialized_indexer_response = simplejson.dumps(["Image Response", get_image_list(INDEXER_URL, package_data)])
+			serialized_indexer_response = simplejson.dumps(
+				["Image Response", get_image(INDEXER_URL, "stacktach-timex")])
+			# serialized_indexer_response = simplejson.dumps(["Image Response", get_image_list(INDEXER_URL, package_data)])
 			return HttpResponse(serialized_indexer_response, content_type='application/json')
 		else:
 			image_data = get_image_list(INDEXER_URL, package_data)
@@ -352,7 +352,7 @@ def get_stackoverflow_response(url, user_query, filter_results_by = [], test=0):
 
 
 def get_image(url, package_name):
-	query = 'http://' + url + ':8983/solr/icons/select?q=name:' + package_name + "&rows=1"
+	query = 'http://' + url + ':8983/solr/icons/select?q=name:' + package_name
 
 	connection = urlopen(query)
 	response = simplejson.load(connection)
@@ -360,9 +360,8 @@ def get_image(url, package_name):
 	response = response['response']['docs']
 
 	for post in response:
-		if 'url' in post.keys():
+		if 'url' in post.keys() and post['name'][0] == package_name:
 			return post['url'][0]
-
 	return ''
 
 
