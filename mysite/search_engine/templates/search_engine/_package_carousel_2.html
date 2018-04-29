@@ -11,8 +11,14 @@
 	<!-- <div class="col-sm-2 package-card"> -->
 	<div class="package-card package-unselected" id="{{iter}}">
 		<div>
-            <img src="{% static 'search_engine/default_blank.png' %}" alt="Card image cap">
+                {% if image_data|get_at_index:iter == "" %}
+               		<img src="{% static 'search_engine/default_blank.png' %}" alt="Card image cap">
+                {% else %}
+                	<img src="{{ image_data|get_at_index:iter }}" alt="Card image cap">
+                {% endif %}
+            <!-- <img src="{% static 'search_engine/default_blank.png' %}" alt="Card image cap"> -->
 		</div>
+
 		<div class="package-text">
 			{{ package.Name }}
 		</div>

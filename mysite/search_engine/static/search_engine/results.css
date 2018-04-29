@@ -9,8 +9,9 @@
 .carousel-container{
 	padding-left:70px;
 	padding-right: 70px;
-	background-color: #444444;
-	color: #eeeeee;
+	/*background-color: #444444;*/
+	background-color: #eeeeee;
+	/*color: #eeeeee;*/
 }
 .filter-bar{
 	padding-left: 20px;
