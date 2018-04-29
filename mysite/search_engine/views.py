@@ -7,6 +7,8 @@ import re
 from urllib.parse import urlparse
 from collections import OrderedDict
 import json
+# from datetime import datetime
+from django.utils import formats
 
 # from jinja2 import Template
 
@@ -17,8 +19,8 @@ import json
 
 PACKAGE_DETAILS_NEEDED = {
 	'name'			   : 'Name',
-	'collaborators_cnt': 'Collaborators',
-	'fork_cnt'		   : 'Fork Count',
+	'collaborators_cnt': '# of Collaborators',
+	'fork_cnt'		   : '# of Github Forks',
 	'repo_description' : 'Description',
 	'version_cnt'      : 'Version',
 	'repo_url'		   : 'Repo URL',
@@ -27,28 +29,25 @@ PACKAGE_DETAILS_NEEDED = {
 	'license'		   : 'License',
 	'homepage_url'	   : 'Homepage',
 	'language'		   : 'Language',
-	'star_cnt'		   : 'Starred in Github by',
+	'star_cnt'		   : '# of Github Stars',
 	'size'			   : 'Size',
 	'readMe'		   : 'Readme',
-
-
-
 	'private'		   : 'Private'
 }
 
 PACKAGE_TABLE_ORDER = [
 	'Name',
 	'Description',
-	'Collaborators',
-	'Fork Count',
-	'Version',
+	'# of Collaborators',
+	'# of Github Forks',
+	'# of Github Stars',
 	'Repo URL',
+	'Homepage',
+	'Version',
 	'Last Updated',
+	'Language',
 	'Owned By',
 	'License',
-	'Homepage',
-	'Language',
-	'Starred in Github by',
 	'Size',
 	'Private',
 	'Readme'
@@ -260,6 +259,10 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 			for key, value in package.items():
 				if key not in table_data.keys():
 					table_data[key] = {}
+				if key == "Last Updated":
+					value = value[0:value.find(' ')]
+				if isinstance(key, int):
+					value = format.number_format(value, field.decimal_places)
 				table_data[key][i] = value
 
 		num_filter_options = 5;

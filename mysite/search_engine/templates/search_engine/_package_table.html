@@ -1,5 +1,8 @@
 {% block styles %}
 {% load staticfiles %}
+{% load info_pane_extras %}
+{% load humanize %}
+
 <link rel='stylesheet' href="{% static 'search_engine/_package_table.css'%}" type='text/css' />
 {% endblock %}
 
@@ -24,10 +27,18 @@
 				<td class="{{quality}}-table-column metadata"> {{quality}} </td>
 
 				{% for iter, val  in values.items %}
-			 	<td class="{{iter}}-table {{iter}}-table-value package-table-row"><div class="package-table-td">{{val | urlize}}</div></td>
+
+					{% if quality == "Readme" %}
+						<td class="{{iter}}-table {{iter}}-table-value package-table-row"><div class="package-table-td">{{val | show_markdown|safe}}</div></td>
+					{% elif quality == "Last Updated" %}
+						<td class="{{iter}}-table {{iter}}-table-value package-table-row"><div class="package-table-td">{{val | urlize}}</div></td>
+					{% else %}
+						<td class="{{iter}}-table {{iter}}-table-value package-table-row"><div class="package-table-td">{{val | urlize | intcomma}}</div></td>
+					{% endif %}
+			 	
 			 	{% endfor %}
 			</tr>
 
 		{% endfor %}
 	</tbody>
-</table>
+</table><br><br><br>

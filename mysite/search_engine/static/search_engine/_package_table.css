@@ -14,6 +14,8 @@
 
 .table-header {
 	background-color: #dee2e6;
+	white-space: nowrap; 
+	width: 15%;
 }
 
 .package-table td { 
