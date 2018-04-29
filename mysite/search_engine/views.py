@@ -185,13 +185,14 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 		Create the query
 		'''
 		query_string_base = 'http://' + url + ':8983/solr/nestedpackage/select?q=name:'
-		query = query_string_base + user_query#'*'#user_query
+		query = query_string_base +  user_query  #'*'#user_query
 		query += '&facet=true'
 		for key in FILTERS:#,_ in FILTERS.items():
 			query += '&facet.field=' + key
 
 		if not get_filters:
-			query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=\"' + user_query + '\"%20reRankDocs=' + str(num_packages) + '}' #100000}'
+
+			query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=\"' + user_query + '\"%20reRankDocs=' + str(max(1,num_packages)) + '}' #100000}'
 		# query += 'name,repo_description,score,[features]'
 		query += '&fl='
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
@@ -202,6 +203,7 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 		else:
 			query += '&rows=100' 
 
+		query += '&fq={!parent%20which=%20path:1.git}'
 		for key, values in filter_results_by.items():
 			if len(values) > 0:
 				query+='&fq='
