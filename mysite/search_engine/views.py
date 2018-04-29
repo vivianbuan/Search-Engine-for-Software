@@ -83,12 +83,32 @@ def results(request):
 		else:
 			test = int(test)
 
+		package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, test=0)
+
+		user_query_list = re.findall(r"[\w']+", raw_user_query)
+		active_filters = {}
+		for key in filter_data.keys():
+			active_filters[key] = []
+			for fil, val in filter_data[key]:
+				if fil.lower() in raw_user_query:
+					active_filters[key].append(fil)
+
+		# for key, values in active_filters.items():
+		# 	# if len(values > 0):
+		# 	if len(values) > 0:
+		# 		for val in values:
+
+		# serialized_indexer_response = simplejson.dumps(["Package Data", active_filters])
+		# return HttpResponse(serialized_indexer_response, content_type='application/json')		
+
+		# 			query+='fq&' + key + ':' + val
+
 
 
 		if (test > 0 and test <= 4):
-			return get_package_response(INDEXER_URL, user_query, test=test)
+			return get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=test)
 		else:
-			package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, test=0)
+			package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=0)
 
 
 		'''
@@ -98,7 +118,9 @@ def results(request):
 			return get_stackoverflow_response(INDEXER_URL, user_query, test=test)
 		else:
 			stackoverflow_response = get_stackoverflow_response(INDEXER_URL, user_query, test=test)
-
+		
+		# serialized_indexer_response = simplejson.dumps(["Package Data", [len(package_data), package_data]])
+		# return HttpResponse(serialized_indexer_response, content_type='application/json')		
 		if test == 6:
 			# serialized_indexer_response = simplejson.dumps(
 			# 	["Image Response", get_image(INDEXER_URL, "machine")])
@@ -115,7 +137,7 @@ def results(request):
 		# return render(request, 'search_engine/index.html')#, {'indexer': indexer_response })
 
 
-def get_package_response(url, user_query, filter_results_by = [], test=0):
+def get_package_response(url, user_query, filter_results_by = {}, test=0):
 
 		'''
 		Create the query
@@ -123,14 +145,23 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 		query_string_base = 'http://' + url + ':8983/solr/nestedpackage/select?q=name:'
 		query = query_string_base + user_query#'*'#user_query
 		query += '&facet=true'
-		for key,_ in PACKAGE_DETAILS_NEEDED.items():
+		for key in FILTERS:#,_ in FILTERS.items():
 			query += '&facet.field=' + key
 		query += '&rq={!ltr%20model=nestedpackage_model%20efi.text="' + user_query + '"%20reRankDocs=100000}&fl='
 		# query += 'name,repo_description,score,[features]'
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
 			query += key + ','
 		query += 'score'
-		query += '&rows=20'
+		query += '&rows=100'
+
+		for key, values in filter_results_by.items():
+			if len(values) > 0:
+				query+='&fq='
+				for val in values:
+					query+= '{}:{}+'.format(key.lower(), val)
+				query = query[:-1]
+
+
 
 		# query += '[features]'
 		# query = query[0:len(query)-1]
@@ -167,8 +198,10 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 					short_package[PACKAGE_DETAILS_NEEDED[key]] = value
 					if key != 'language' and key != 'license':
 						short_package[PACKAGE_DETAILS_NEEDED[key]] = short_package[PACKAGE_DETAILS_NEEDED[key]][0]
-			package_data[i] = short_package
-			i+=1
+			
+			if 'Name' in short_package.keys():
+				package_data[i] = short_package
+				i+=1
 
 
 		for i,package in package_data.items():
@@ -201,10 +234,10 @@ def get_package_response(url, user_query, filter_results_by = [], test=0):
 		Test 3: Get the table_data
 		'''
 		if test == 3:
-			serialized_indexer_response = simplejson.dumps(["Filter Data", table_data])
+			serialized_indexer_response = simplejson.dumps(["Table Data", table_data])
 			return HttpResponse(serialized_indexer_response, content_type='application/json')
 		'''
-		Test 4: Get the package data
+		Test 4: Get the filter data
 		'''
 		if test == 4:
 			serialized_indexer_response = simplejson.dumps(["Filter Data", filter_data])
