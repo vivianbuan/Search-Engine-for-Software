@@ -7,6 +7,8 @@ import re
 from urllib.parse import urlparse
 from collections import OrderedDict
 
+# from jinja2 import Template
+
 
 '''
 ----------------- GLOBAL VARIABLES ------------------
@@ -83,23 +85,28 @@ def results(request):
 		else:
 			test = int(test)
 
-		package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, test=0)
+		package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, test=0, get_filters=True)
+
+		# serialized_indexer_response = simplejson.dumps(["Package Data", filter_data])
+		# return HttpResponse(serialized_indexer_response, content_type='application/json')		
 
 		user_query_list = re.findall(r"[\w']+", raw_user_query)
 		active_filters = {}
 		for key in filter_data.keys():
 			active_filters[key] = []
-			for fil, val in filter_data[key]:
-				if fil.lower() in raw_user_query:
+			for i in range(len(filter_data[key])):
+				fil = filter_data[key][i][0]
+				val = filter_data[key][i][1]
+				if fil.lower() in raw_user_query.lower():
+					filter_data[key][i].append(True)
 					active_filters[key].append(fil)
+				else:
+					filter_data[key][i].append(False)
 
 		# for key, values in active_filters.items():
 		# 	# if len(values > 0):
 		# 	if len(values) > 0:
 		# 		for val in values:
-
-		# serialized_indexer_response = simplejson.dumps(["Package Data", active_filters])
-		# return HttpResponse(serialized_indexer_response, content_type='application/json')		
 
 		# 			query+='fq&' + key + ':' + val
 
@@ -108,7 +115,7 @@ def results(request):
 		if (test > 0 and test <= 4):
 			return get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=test)
 		else:
-			package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=0)
+			package_data, table_data, _ = get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=0)
 
 
 		'''
@@ -129,15 +136,32 @@ def results(request):
 		else:
 			image_data = get_image_list(INDEXER_URL, package_data)
 
-
-		return render(request, 'search_engine/results.html', {'package_data': package_data, 'table_data': table_data, 'image_data': image_data, 'filter_data': filter_data, 'user_query': raw_user_query, 'results': stackoverflow_response})
+		# template = Template('search_engine/results.html')
+		# return Template.render(package_data= package_data, 
+		# 	 table_data= table_data, 
+		# 	 image_data= image_data, 
+		# 	 filter_data= filter_data, 
+		# 	 user_query= raw_user_query, 
+		# 	 results= stackoverflow_response, 
+		# 	 active_filters= active_filters
+		# 	 )
+		return render(request, 'search_engine/results.html', 
+			{'package_data': package_data, 
+			 'table_data': table_data, 
+			 'image_data': image_data, 
+			 'filter_data': filter_data, 
+			 'user_query': raw_user_query, 
+			 'results': stackoverflow_response, 
+			 'active_filters': active_filters
+			 }
+		)
 
 	# except:
 		#make this a 404
 		# return render(request, 'search_engine/index.html')#, {'indexer': indexer_response })
 
 
-def get_package_response(url, user_query, filter_results_by = {}, test=0):
+def get_package_response(url, user_query, filter_results_by = {}, test=0, get_filters=False):
 
 		'''
 		Create the query
@@ -152,7 +176,10 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0):
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
 			query += key + ','
 		query += 'score'
-		query += '&rows=100'
+		if get_filters:
+			query += '&rows=0'
+		else:
+			query += '&rows=100' 
 
 		for key, values in filter_results_by.items():
 			if len(values) > 0:
@@ -214,14 +241,15 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0):
 		for filter_name in FILTERS:
 			raw_filter = raw_filter_data[filter_name]
 			single_filter_data = []
+			new_index = PACKAGE_DETAILS_NEEDED[filter_name]
 			for i in range(0, min(len(raw_filter), num_filter_options*2), 2):
 				option       = raw_filter[i]
 				# serialized_indexer_response = simplejson.dumps(raw_filter[i+1])
 				# return HttpResponse(serialized_indexer_response, content_type='application/json')
 				num_packages = raw_filter[i+1]
-				single_filter_data.append( (option, num_packages))
+				
+				single_filter_data.append( [option, num_packages])
 
-			new_index = PACKAGE_DETAILS_NEEDED[filter_name]
 			filter_data[new_index] = single_filter_data
 
 		'''

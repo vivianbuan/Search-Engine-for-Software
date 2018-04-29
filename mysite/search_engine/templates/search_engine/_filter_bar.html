@@ -3,8 +3,8 @@
 <link rel='stylesheet' href="{% static 'search_engine/_filter_bar.css'%}" type='text/css' />
 {% endblock %}
 
-{% for fil_name, fil_vals in filter_data.items %}
 
+{% for fil_name, fil_vals in filter_data.items %}
 <!-- note the data-toggle="dropdown" is what's causing it to close on any selection ... I need to change that -->
 <div class="dropdown show">
   <a class="btn btn-secondary dropdown-toggle btn-block" href="#" role="button" id="dropdownMenuLink"  aria-haspopup="true" aria-expanded="false">
@@ -14,8 +14,11 @@
   <div class="dropdown-menu filter-dropdown" id={{fil_name}} >
 	{% for op in fil_vals %}
 
+	{% if op.0 in active_filters.fil_name%}
+	foo
+	{% endif %}
     <a class="dropdown-item">
-		<input class="{{fil_name}}-checkbox option-checkbox" type="checkbox" id="{{op.0}}">
+		<input class="{{fil_name}}-checkbox option-checkbox" type="checkbox" id="{{op.0}}"{% if op.2 %} checked {% endif %}>
 		<label  for="{{op.0}}">
 			{{op.0}}
 			{{op.1}}
