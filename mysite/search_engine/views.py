@@ -6,6 +6,7 @@ import simplejson
 import re 
 from urllib.parse import urlparse
 from collections import OrderedDict
+import json
 
 # from jinja2 import Template
 
@@ -379,11 +380,36 @@ def get_image_list(url, package_data):
 	return imgs
 
 def _ajax_reload_carousel(request):
-	searchInput = request.GET.get('searchInput')
-	filters = request.GET.get('filters')
+	# searchInput = request.GET.get('searchInput')
+	# filters = request.GET.get('filters')
 
-	get_package_response(INDEXER_URL, user_query)
-	return render(request, 'search_engine/templates/search_engine/_package_carousel_2.html', {filters})
+	if request.method == 'GET':
+		# return HttpResponse(
+		# 	json.dumps("Hey"),
+		# 	content_type="application/json"
+		# )
+		license = request.GET.getlist('License[]', None)
+		language = request.GET.getlist('Language[]', None)
+
+		filters = {}
+		filters['License'] = license
+		filters['Language'] = language
+
+
+		user_query = "default"
+
+		return HttpResponse(
+			   json.dumps(filters),
+			   content_type="application/json"
+		   )
+	else:
+		return HttpResponse(
+			json.dumps("What"),
+			content_type="application/json"
+		)
+
+	# get_package_response(INDEXER_URL, user_query, filters)
+	# return render(request, 'search_engine/templates/search_engine/_package_carousel_2.html', {filters})
 
 
 		# user_query = re.sub('[^A-Za-z0-9]', '+', raw_user_query)

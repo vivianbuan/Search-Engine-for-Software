@@ -136,13 +136,15 @@ $(document).ready(function() {
 
 		$.ajax({
 			url: 'http://127.0.0.1:8000/_ajax_reload_carousel',
-			type: 'POST',
+			type: 'GET',
 			cache: false,
 			data: checked_filters,
 			datatype: 'json'
-		}).success(function(message){
-			alert(message)
-		}).fail(function(jqXHR, message){
+		}).success(function(json, message){
+			console.log(json)
+			alert('success')
+		}).fail(function(json, message){
+			console.log(json)
 			alert('fail')
 		}).done(function(){
 			alert('foo')
