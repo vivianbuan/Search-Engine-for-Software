@@ -48,15 +48,24 @@
 			{% include "search_engine/_package_carousel_2.html" %}
 		</div>
 	</div>
+
+	<div class="row">
+			<div class="col-sm-10 padding-left-medium padding-bottom-medium">
+			<!-- </div> -->
+			<!-- <div class="col-sm-1"> -->
+				<button class="btn btn-secondary side-by-side-button">Compare Side by Side!</button>
+			</div>
+	</div>
 </div>
 {% endif %}
 
+<div class="container-fluid main-body table-main-body" >
+	{% include "search_engine/_package_table.html" %}
+</div>
 
-<div class="container-fluid main-body" >
+<div class="container-fluid main-body default-main-body" >
 	<div class="row">
-		<div class="col-sm-8">
-
-			{% include "search_engine/_package_table.html" %}
+		<div class="col-sm-8">			
 
 			{% include "search_engine/_standard_results.html" %}
 		</div>
