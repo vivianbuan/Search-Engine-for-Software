@@ -87,21 +87,28 @@ def results(request):
 
 		package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, test=0, get_filters=True)
 
-		# serialized_indexer_response = simplejson.dumps(["Package Data", filter_data])
-		# return HttpResponse(serialized_indexer_response, content_type='application/json')		
-
 		user_query_list = re.findall(r"[\w']+", raw_user_query)
+		stop_words = [] #get words that we don't want in the query anymore because they designate a filter
 		active_filters = {}
 		for key in filter_data.keys():
 			active_filters[key] = []
 			for i in range(len(filter_data[key])):
 				fil = filter_data[key][i][0]
 				val = filter_data[key][i][1]
+				stop_words.append(filter_data[key][i][0].lower())
 				if fil.lower() in raw_user_query.lower():
 					filter_data[key][i].append(True)
 					active_filters[key].append(fil)
 				else:
 					filter_data[key][i].append(False)
+
+		user_query = ' '.join([word for word in raw_user_query.split() if word.lower() not in stop_words ])
+		user_query = user_query.replace(' ', '%20')
+		user_query = urlparse(user_query).path
+
+
+		# serialized_indexer_response = simplejson.dumps(["Package Data", [word for word in raw_user_query.split() if word.lower() not in stop_words ]])
+		# return HttpResponse(serialized_indexer_response, content_type='application/json')		
 
 		# for key, values in active_filters.items():
 		# 	# if len(values > 0):
@@ -117,6 +124,18 @@ def results(request):
 		else:
 			package_data, table_data, _ = get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=0)
 
+		# active_filters = {}
+		# for key in filter_data.keys():
+		# 	active_filters[key] = []
+		# 	for i in range(len(filter_data[key])):
+		# 		fil = filter_data[key][i][0]
+		# 		val = filter_data[key][i][1]
+		# 		stop_words.append(filter_data[key][i][0].lower())
+		# 		if fil.lower() in raw_user_query.lower():
+		# 			filter_data[key][i].append(True)
+		# 			active_filters[key].append(fil)
+		# 		else:
+		# 			filter_data[key][i].append(False)
 
 		'''
 		Get all stackoverflow pages related to these packages.
@@ -171,8 +190,9 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 		query += '&facet=true'
 		for key in FILTERS:#,_ in FILTERS.items():
 			query += '&facet.field=' + key
-		query += '&rq={!ltr%20model=nestedpackage_model%20efi.text="' + user_query + '"%20reRankDocs=100000}&fl='
+		query += '&rq={!ltr%20model=nestedpackage_model%20efi.text="' + user_query + '"%20reRankDocs=100000}'
 		# query += 'name,repo_description,score,[features]'
+		query += '&fl='
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
 			query += key + ','
 		query += 'score'
