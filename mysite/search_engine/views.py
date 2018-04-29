@@ -85,7 +85,7 @@ def results(request):
 		else:
 			test = int(test)
 
-		package_data, table_data, filter_data = get_package_response(INDEXER_URL, user_query, test=0, get_filters=True)
+		package_data, table_data, filter_data, num_packages = get_package_response(INDEXER_URL, user_query, test=0, get_filters=True)
 
 		user_query_list = re.findall(r"[\w']+", raw_user_query)
 		stop_words = [] #get words that we don't want in the query anymore because they designate a filter
@@ -107,7 +107,7 @@ def results(request):
 		user_query = urlparse(user_query).path
 
 
-		# serialized_indexer_response = simplejson.dumps(["Package Data", [word for word in raw_user_query.split() if word.lower() not in stop_words ]])
+		# serialized_indexer_response = simplejson.dumps(["Package Data", num_packages])
 		# return HttpResponse(serialized_indexer_response, content_type='application/json')		
 
 		# for key, values in active_filters.items():
@@ -120,9 +120,9 @@ def results(request):
 
 
 		if (test > 0 and test <= 4):
-			return get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=test)
+			return get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=test, num_packages=num_packages)
 		else:
-			package_data, table_data, _ = get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=0)
+			package_data, table_data, _, _ = get_package_response(INDEXER_URL, user_query, filter_results_by=active_filters, test=0, num_packages=num_packages)
 
 		# active_filters = {}
 		# for key in filter_data.keys():
@@ -180,7 +180,7 @@ def results(request):
 		# return render(request, 'search_engine/index.html')#, {'indexer': indexer_response })
 
 
-def get_package_response(url, user_query, filter_results_by = {}, test=0, get_filters=False):
+def get_package_response(url, user_query, filter_results_by = {}, test=0, get_filters=False, num_packages=100000):
 
 		'''
 		Create the query
@@ -190,7 +190,9 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 		query += '&facet=true'
 		for key in FILTERS:#,_ in FILTERS.items():
 			query += '&facet.field=' + key
-		query += '&rq={!ltr%20model=nestedpackage_model%20efi.text="' + user_query + '"%20reRankDocs=100000}'
+
+		if not get_filters:
+			query += '&rq={!ltr%20model=nestedpackage_model%20efi.text=\"' + user_query + '\"%20reRankDocs=' + str(num_packages) + '}' #100000}'
 		# query += 'name,repo_description,score,[features]'
 		query += '&fl='
 		for key,_ in PACKAGE_DETAILS_NEEDED.items():
@@ -227,7 +229,7 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 
 		raw_package_data = response['docs']
 		raw_filter_data  = indexer_response['facet_counts']['facet_fields']
-		num_packages     = response['numFound']
+		num_found     = response['numFound']
 
 		raw_package_keys = []
 		package_data     = {}
@@ -293,7 +295,7 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 
 		# temp = sorted(table_data.items(), key=lambda i:PACKAGE_TABLE_ORDER.index(i[0]))
 		ordered_table = OrderedDict(sorted(table_data.items(), key=lambda i:PACKAGE_TABLE_ORDER.index(i[0])))
-		return package_data, ordered_table, filter_data
+		return package_data, ordered_table, filter_data, num_found
 
 
 def get_stackoverflow_response(url, user_query, filter_results_by = [], test=0):
