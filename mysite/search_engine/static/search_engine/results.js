@@ -132,7 +132,7 @@ $(document).ready(function() {
 			});
 		});
 		
-		alert(JSON.stringify(checked_filters));
+		// alert(JSON.stringify(checked_filters));
 
 		query = $('.query-bar').val()
 		checked_filters['query'] = query
@@ -166,6 +166,7 @@ $(document).ready(function() {
 			alert('fail')
 		}).done(function(){
 			// alert('foo')
+
 		});
 		return false;
 	});
