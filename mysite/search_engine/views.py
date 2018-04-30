@@ -420,13 +420,16 @@ def _ajax_reload_carousel(request):
 		#    )
 
 		# return HttpResponse(get_package_response(INDEXER_URL, user_query, filters, test=4), content_type="application/json")
-		a, b, c, d = get_package_response(INDEXER_URL, user_query, filters)
-		return HttpResponse(json.dumps(a),
-							content_type="application/json")
+		package_data, b, c, d = get_package_response(INDEXER_URL, user_query, filters)
+		# return HttpResponse(json.dumps(a),
+		# 					content_type="application/json")
+
+		image_data = get_image_list(INDEXER_URL, package_data)
 
 
 
-		return render(request, 'search_engine/templates/search_engine/_package_carousel_2.html', {filters})
+		return render(request, 'search_engine/_package_carousel_2.html',
+					  {'package_data': package_data, 'image_data': image_data})
 
 	else:
 		return HttpResponse(

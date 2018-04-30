@@ -144,14 +144,17 @@ $(document).ready(function() {
 			data: checked_filters,
 			datatype: 'json'
 		}).success(function(json, message){
-			alert(query)
+			// alert(query)
+			// $('.carosel-div').remove()
+			$('.package-carousel').html(json)
+			// $('.foobar').html(json)
 			console.log(json)
-			alert('success')
+			// alert('success')
 		}).fail(function(json, message){
 			console.log(json)
 			alert('fail')
 		}).done(function(){
-			alert('foo')
+			// alert('foo')
 		});
 		return false;
 	});
