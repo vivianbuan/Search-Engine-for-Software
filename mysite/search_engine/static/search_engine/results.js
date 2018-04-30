@@ -64,53 +64,6 @@ $(document).ready(function() {
 						return (className.match(/(^|\s)border-\S+/g) || []).join(' ');
 					})
 				}
-
-
-// <<<<<<< HEAD
-				// var pre_count = 0;
-
-				// $('.package-table-header').each(function() {
-			 //    	if ($(this).css('display') != 'none') {
-			 //    		pre_count++;
-			 //    	}
-			 //    	// if ($(this).find('td:empty')) { alert('one empty')}
-			 //    });
-
-			 //    $('.'+package_num+'-table').each(function() {
-			 //    	$(this).toggle();
-			 //    });
-
-
-				// var post_count = 0;
-				// $('.package-table-header').each(function() {
-			 //    	if ($(this).css('display') != 'none') {
-			 //    		post_count++;
-			 //    	}
-			 //    	// if ($(this).find('td:empty')) { alert('one empty')}
-			 //    });
-
-			    // alert(pre_count + ' ' + post_count);
-
-			  //   if ((pre_count == colors.length && post_count == colors.length+1)){
-    	// 			$(this).toggleClass('package-selected')
-					// $(this).toggleClass('package-unselected')
-
-				
-			  //   }
-
-			    // if ((pre_count == 0 && post_count == 1) || (pre_count == 1 && post_count == 0) ){
-			    // 	$('.package-table').toggle();
-			    // }
-// =======
-				/**
-				 *  Expected behavior:
-				 *    1. only set a color that has not been set before
-				 *    2. If there are no more available colors, cancel the package selection
-				 *    3. If deselecting a package, remove all classnames for borders
-				 */
-				
-// >>>>>>> b7bba3d14ae98e13015fcbcea0ecedf56197da08
-
     		}
 
     	});
@@ -157,6 +110,66 @@ $(document).ready(function() {
 				touchThreshold: 10,
 				slidesToScroll: 1
 			});
+			$('.package-card').mousedown(function(){
+		    	var isDragging = false;
+		    	$(this).mousemove(function(){
+		    		isDragging = true;    		
+		    	});
+		    	$(this).unbind().mouseup(function(){
+		    		if (!isDragging){
+						$(this).toggleClass('package-selected')
+						$(this).toggleClass('package-unselected')
+		    			var colors = ['red', 'green', 'blue'] //'orange', 'yellow']; //, 'green', 'blue', 'violet'];
+
+						var package_num = $(this).attr('id');
+
+						if ($(this).hasClass('package-selected')){
+							color_set = false
+							for (i in colors) {
+								color = colors[i]
+								border_class = 'border-'+color
+								if 	($('.'+border_class).length == 0) {
+									$(this).addClass(border_class);
+									$('.'+package_num+'-information-card').addClass(border_class);
+									color_set = true
+									break
+								}
+							}
+							$('.'+package_num+'-information-card').toggle();
+
+							$('.'+package_num+'-table').each(function() {
+								$(this).toggle();
+							});
+							// $('.'+package_num+'-information-card').toggle();
+							if (!color_set){
+								// alert(color_set)
+								// alert('not color set')
+								$('.'+package_num+'-information-card').toggle();
+								$(this).toggleClass('package-selected')
+								$(this).toggleClass('package-unselected')
+								$('.'+package_num+'-table').each(function() {
+									$(this).toggle();
+								});
+							}
+
+						} else {
+							// alert('foo')
+							$('.'+package_num+'-information-card').toggle();
+							$('.'+package_num+'-table').each(function() {
+								$(this).toggle();
+							});
+
+							$('.'+package_num+'-information-card').removeClass(function(idx, className) {
+								return (className.match(/(^|\s)border-\S+/g) || []).join(' ');
+							})
+							$(this).removeClass(function(idx, className) {
+								return (className.match(/(^|\s)border-\S+/g) || []).join(' ');
+							})
+						}
+		    		}
+
+		    	});
+		    });
 			// $('.package-carousel').html(json)
 			// $('.foobar').html(json)
 			console.log(json)
