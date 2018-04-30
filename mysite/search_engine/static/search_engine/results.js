@@ -138,7 +138,7 @@ $(document).ready(function() {
 		checked_filters['query'] = query
 
 		$.ajax({
-			url: 'http://127.0.0.1:8000/_ajax_reload_carousel',
+			url: 'http://35.230.66.167/_ajax_reload_carousel',
 			type: 'GET',
 			cache: false,
 			data: checked_filters,
