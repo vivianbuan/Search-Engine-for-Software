@@ -89,21 +89,21 @@ def results(request):
 
 	
 		user_query_list = re.findall(r"[\w']+", raw_user_query)
-		stop_words = [] #get words that we don't want in the query anymore because they designate a filter
+		# stop_words = [] #get words that we don't want in the query anymore because they designate a filter
 		active_filters = {}
 		for key in filter_data.keys():
 			active_filters[key] = []
 			for i in range(len(filter_data[key])):
 				fil = filter_data[key][i][0]
 				val = filter_data[key][i][1]
-				stop_words.append(filter_data[key][i][0].lower())
+				# stop_words.append(filter_data[key][i][0].lower())
 				if fil.lower() in raw_user_query.lower():
 					filter_data[key][i].append(True)
 					active_filters[key].append(fil)
 				else:
 					filter_data[key][i].append(False)
 
-		user_query = ' '.join([word for word in raw_user_query.split() if word.lower() not in stop_words ])
+		# user_query = ' '.join([word for word in raw_user_query.split() if word.lower() not in stop_words ])
 		if user_query == '':
 			user_query = '*'
 		user_query = user_query.replace(' ', '%20')
