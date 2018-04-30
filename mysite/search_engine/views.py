@@ -222,7 +222,7 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 			if len(values) > 0:
 				query+='&fq='
 				for val in values:
-					query+= '{}:{}+'.format(key.lower(), val)
+					query+= '{}:{}+'.format(key.lower(), val.replace(' ', '%20'))
 				query = query[:-1]
 
 
