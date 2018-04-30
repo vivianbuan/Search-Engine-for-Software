@@ -155,6 +155,16 @@ def results(request):
 		else:
 			image_data = get_image_list(INDEXER_URL, package_data)
 
+
+		if test == 7:
+			filters = {}
+			filters['License'] = []
+			filters['Language'] = ["Python", "JavaScript"]
+
+			user_query = "machine learning"
+
+			return get_package_response(INDEXER_URL, user_query, filters, test=1)
+
 		# template = Template('search_engine/results.html')
 		# return Template.render(package_data= package_data, 
 		# 	 table_data= table_data, 
@@ -220,11 +230,12 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 		'''
 		Test 1: Get the query
 		'''
-		if test == 1:
-			serialized_indexer_response = simplejson.dumps(["Query for Package Info", query])
-			return HttpResponse(serialized_indexer_response, content_type='application/json')
+		# if test == 1:
+		# 	serialized_indexer_response = simplejson.dumps(["Query for Package Info", query])
+		# 	return HttpResponse(serialized_indexer_response, content_type='application/json')
 
 		connection = urlopen(query)
+
 		indexer_response = simplejson.load(connection);
 		response = indexer_response['response']
 	    # get the search input (so we can use it later)
@@ -399,12 +410,24 @@ def _ajax_reload_carousel(request):
 		filters['Language'] = language
 
 
-		user_query = "default"
+		user_query = request.GET.get('query', "*:*")
+		user_query = user_query.replace(' ', '%20')
+		user_query = urlparse(user_query).path
 
-		return HttpResponse(
-			   json.dumps(filters),
-			   content_type="application/json"
-		   )
+		# return HttpResponse(
+		# 	   json.dumps(user_query),
+		# 	   content_type="application/json"
+		#    )
+
+		# return HttpResponse(get_package_response(INDEXER_URL, user_query, filters, test=4), content_type="application/json")
+		a, b, c, d = get_package_response(INDEXER_URL, user_query, filters)
+		return HttpResponse(json.dumps(a),
+							content_type="application/json")
+
+
+
+		return render(request, 'search_engine/templates/search_engine/_package_carousel_2.html', {filters})
+
 	else:
 		return HttpResponse(
 			json.dumps("What"),

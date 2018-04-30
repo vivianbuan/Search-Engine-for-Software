@@ -134,6 +134,9 @@ $(document).ready(function() {
 		
 		alert(JSON.stringify(checked_filters));
 
+		query = $('.query-bar').val()
+		checked_filters['query'] = query
+
 		$.ajax({
 			url: 'http://127.0.0.1:8000/_ajax_reload_carousel',
 			type: 'GET',
@@ -141,6 +144,7 @@ $(document).ready(function() {
 			data: checked_filters,
 			datatype: 'json'
 		}).success(function(json, message){
+			alert(query)
 			console.log(json)
 			alert('success')
 		}).fail(function(json, message){
