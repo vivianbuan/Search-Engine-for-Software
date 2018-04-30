@@ -145,8 +145,19 @@ $(document).ready(function() {
 			datatype: 'json'
 		}).success(function(json, message){
 			// alert(query)
-			// $('.carosel-div').remove()
-			$('.package-carousel').html(json)
+			$('.carosel-div').html(json).trigger('create');
+
+			$('.package-carousel').slick({
+				arrows:true,
+				infinite: false,
+				slidesToShow: 5,
+				variableWidth: true,
+				// swipe: false,
+				swipeToSlide: true,
+				touchThreshold: 10,
+				slidesToScroll: 1
+			});
+			// $('.package-carousel').html(json)
 			// $('.foobar').html(json)
 			console.log(json)
 			// alert('success')
