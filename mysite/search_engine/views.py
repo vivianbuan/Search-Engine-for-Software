@@ -72,7 +72,7 @@ def index(request):
 	return render(request, 'search_engine/index.html')
 
 def results(request):
-	# try:
+	try:
 
 		raw_user_query = request.GET['searchInput']
 		user_query = raw_user_query.replace(' ', '%20')
@@ -87,6 +87,7 @@ def results(request):
 
 		package_data, table_data, filter_data, num_packages = get_package_response(INDEXER_URL, user_query, test=0, get_filters=True)
 
+	
 		user_query_list = re.findall(r"[\w']+", raw_user_query)
 		stop_words = [] #get words that we don't want in the query anymore because they designate a filter
 		active_filters = {}
@@ -103,11 +104,13 @@ def results(request):
 					filter_data[key][i].append(False)
 
 		user_query = ' '.join([word for word in raw_user_query.split() if word.lower() not in stop_words ])
+		if user_query == '':
+			user_query = '*'
 		user_query = user_query.replace(' ', '%20')
 		user_query = urlparse(user_query).path
 
 
-		# serialized_indexer_response = simplejson.dumps(["Package Data", num_packages])
+		# serialized_indexer_response = simplejson.dumps(["Package Data", user_query])
 		# return HttpResponse(serialized_indexer_response, content_type='application/json')		
 
 		# for key, values in active_filters.items():
@@ -185,9 +188,9 @@ def results(request):
 			 }
 		)
 
-	# except:
+	except:
 		#make this a 404
-		# return render(request, 'search_engine/index.html')#, {'indexer': indexer_response })
+		return render(request, 'search_engine/index.html')#, {'indexer': indexer_response })
 
 
 def get_package_response(url, user_query, filter_results_by = {}, test=0, get_filters=False, num_packages=100000):
@@ -230,9 +233,9 @@ def get_package_response(url, user_query, filter_results_by = {}, test=0, get_fi
 		'''
 		Test 1: Get the query
 		'''
-		# if test == 1:
-		# 	serialized_indexer_response = simplejson.dumps(["Query for Package Info", query])
-		# 	return HttpResponse(serialized_indexer_response, content_type='application/json')
+		if test == 1:
+			serialized_indexer_response = simplejson.dumps(["Query for Package Info", query])
+			return HttpResponse(serialized_indexer_response, content_type='application/json')
 
 		connection = urlopen(query)
 
