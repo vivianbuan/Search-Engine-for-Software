@@ -74,7 +74,7 @@ curl -X POST -H 'Content-type:application/json' --data-binary '{  "replace-field
 ```
 If you have not indexed the file, use 
 ```
-curl -X POST -H 'Content-type:application/json' --data-binary '{"add-field": {"name":"license", "type":"string", "multiValued":false, stored":true}}' http://localhost:8983/solr/films/schema
+curl -X POST -H 'Content-type:application/json' --data-binary '{"add-field": {"name":"license", "type":"string", "multiValued":false, "stored":true}}' http://localhost:8983/solr/films/schema
 ```
 - Index files <br />
 **important**: `-format solr` is needed to make the child documents work properly<br />
