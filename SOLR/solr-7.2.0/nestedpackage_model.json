@@ -7,20 +7,26 @@
     { "name" : "bm25_sim_readme" },
     { "name" : "bm25_sim_name" },
     { "name" : "bm25_sim_language" },
+    { "name" : "bm25_sim_homepage" },
+    { "name" : "bm25_sim_slant" },
     { "name" : "bm25_sim_SO_markdown" },
     { "name" : "bm25_sim_SO_tags" },
     { "name" : "bm25_sim_SO_code" },
+    { "name" : "bm25_sim_SO_title" },
     { "name" : "original_score" }
   ],
   "params" : {
     "weights" : {
-      "bm25_sim_repo_desc" : 0.2,
-      "bm25_sim_readme" : 0.2,
-      "bm25_sim_name" : 0.2,
-      "bm25_sim_language" : 0.2,
-      "bm25_sim_SO_markdown" : 0.2,
-      "bm25_sim_SO_tags" : 0.2,
-      "bm25_sim_SO_code" : 0.2,
+      "bm25_sim_repo_desc" : 0.5,
+      "bm25_sim_readme" : 0.5,
+      "bm25_sim_name" : 0.0,
+      "bm25_sim_language" : 0.0,
+      "bm25_sim_homepage" : 0.5,
+      "bm25_sim_slant" : 0.5,
+      "bm25_sim_SO_markdown" : 1.0,
+      "bm25_sim_SO_tags" : 1.0,
+      "bm25_sim_SO_code" : 0.0,
+      "bm25_sim_SO_title" : 0.0,
       "original_score" : 0.0
     }
   }
