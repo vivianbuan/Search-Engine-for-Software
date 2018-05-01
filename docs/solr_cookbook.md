@@ -33,6 +33,23 @@ If there is already an existing feature store, you have to delete the existing f
 If there is already an existing model, you have to delete the existing model first before uploading new ones
 `curl -XDELETE 'http://localhost:8983/solr/nestedpackage/schema/model-store/nestedpackage_model'`
 
+### Indexing slant querys
+First, add a new field for slant queries.
+`curl -X POST -H 'Content-type:application/json' --data-binary '{
+  "add-field":{
+     "name":"slant_query",
+     "type":"text_general"}
+}' http://localhost:8983/solr/nestedpackage/schema`
+
+Next, index them into existing collection.
+`curl http://localhost:8983/solr/nestedpackage/update?commit=true -d '
+[
+ {"id"         : "24195339",
+  "slant_query"   : {"set":["django testing example", "blabla", "heyhey"]}
+ }
+]'
+`
+
 ## Indexing with nested child
 ### Setting up
 - Start solr: cd into `solr-7.2.0`, do <br />
@@ -49,6 +66,16 @@ $ bin/solr create -c nestedpackage
 curl -X POST -H 'Content-type:application/json' --data-binary '{"add-copy-field" : {"source":"*","dest":"_text_"}}'\
         http://localhost:8983/solr/nestedpackage/schema
 ```
+- Changing field type to make facet work<br />
+Fields need to be changed to string: license, language, link <br />
+If you have already indexed the file, use:
+```
+curl -X POST -H 'Content-type:application/json' --data-binary '{  "replace-field":{"name":"license","type":"string"}}' http://localhost:8983/solr/nestedpackage/schema
+```
+If you have not indexed the file, use 
+```
+curl -X POST -H 'Content-type:application/json' --data-binary '{"add-field": {"name":"license", "type":"string", "multiValued":false, stored":true}}' http://localhost:8983/solr/films/schema
+```
 - Index files <br />
 **important**: `-format solr` is needed to make the child documents work properly<br />
 Right now the "real" data is in SOLR/solr-7.2.0/data/real
@@ -57,7 +84,7 @@ $ bin/post -c nestedpackage ./data/real/* -format solr
 ```
 - Add new files to be indexed
 ```
-curl 'http://localhost:8983/solr/test_nested/update?commit=true' --data-binary \
+curl 'http://localhost:8983/solr/nestedpackage/update?commit=true' --data-binary \
        @data/test_more_document_3.json -H 'Content-type:application/json'
 ```
 
@@ -86,6 +113,14 @@ Note that this only contains git info, no stackoverflow info
 ```
 http://35.230.82.124:8983/solr/nestedpackage/select?
        q={!parent%20which=%22path:1.git%22}body_markdown:[QUERYTERM]
+```
+- [NEW] Query stackoverflow answer and return stackoverflow pages: <br />
+This would also resolve the issue you encountered before that is caused by parent and child has same field (body_markdown)
+```
+http://35.230.82.124:8983/solr/nestedpackage/select?
+       fq={!parent%20which=%20path:2.stack}
+       (+body_markdown:graphics-geek)
+       &q=*:*
 ```
 - Git packge info who has stackoverflow content containg [QUERYTERM] or itself contains [QUERYTERM]<br />
 **This is probably the one you want to use**
