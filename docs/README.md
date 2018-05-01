@@ -12,3 +12,11 @@ These documents are sitting under [Team Drive Folder](https://drive.google.com/d
 ## Links to Meeting Note
 Meetign notes are mostly sitting under issues.
  - [Storyboard](https://github.com/vivianbuan/Search-Engine-for-Software/issues/10)
+
+
+## Links to Spring Meeting Minutes
+ - [2/15/2018](https://docs.google.com/document/d/1TdqrxnyIHLv-VMOFEZ367PCMfh_pjHvlmkSKDzqBxRo/edit?usp=sharing)
+ - [2/9/2018 ](https://drive.google.com/open?id=1KJ1Ny5NTdSq2FnUT5ZYO9YI1-CoNbYPbjNDKS0_3cfw)
+ - [2/8/2018 ](https://drive.google.com/open?id=1FHCLIPDULPNwnsF8B_irjZ9Tg7V__MHwDYg3rMjHrOM)
+ - [2/1/2018 ](https://docs.google.com/document/d/1UYTqnqcSz1AANTreHeWmeFlFHqH1mtznULN4paKKo8s/edit?usp=sharing)
+ - [1/25/2018](https://drive.google.com/open?id=1APcdXTGa3h-hD06ZQYkCEYIU2cDDbKFm0YZ6XM4iNe4)
