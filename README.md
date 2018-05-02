@@ -26,7 +26,7 @@ Contains python scripts that utilize Scrapy, Github APIs and StackOverflow API t
 * [Feature Extraction](https://github.com/vivianbuan/Search-Engine-for-Software/tree/featureExtraction) </br>
 Python scripts to convert crawled GitHub and StackOverflow objects into data structures appropriate for this project.
 * [Indexer](https://github.com/vivianbuan/Search-Engine-for-Software/tree/indexer)</br>
-Solr image, sample data and query command, and tutorials on setting up the server.
+Solr image, sample data and query command, and tutorials on setting up the server. Check out [Solr Cookbook](https://github.com/vivianbuan/Search-Engine-for-Software/blob/indexer/docs/solr_cookbook.md) for instruction on how to set up solr server for the project and how to compile queries.
 * [Ranker](https://github.com/vivianbuan/Search-Engine-for-Software/tree/ranker) </br>
 Contains scripts for experimentation before the data was indexed. Also contains scripts used to scrape and index queries from Slant.co. For more information on the ranking algorithm, look at files inside the SOLR/solr-7.2.0 folder of the indexer branch.
 * [User Interface](https://github.com/vivianbuan/Search-Engine-for-Software/tree/user_interface) </br>
