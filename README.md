@@ -1,4 +1,5 @@
-# Search-Engine-for-Software
-MEng capstone project
+# SoftWare AGgregated and Organized (SWAGO)
+This branch contains Python scripts to convert crawled GitHub and StackOverflow objects into data structures appropriate for this project.
 
-Links to drive folder: https://drive.google.com/drive/folders/0B_5NGlbDuQu5N1doMU0xdUZCRU0?usp=sharing
+# Author(s)
+* [Yidan Zhang](https://github.com/zhangyd)
