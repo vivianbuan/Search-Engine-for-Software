@@ -30,7 +30,7 @@ Solr image, sample data and query command, and tutorials on setting up the serve
 * [Ranker](https://github.com/vivianbuan/Search-Engine-for-Software/tree/ranker) </br>
 Contains scripts for experimentation before the data was indexed. Also contains scripts used to scrape and index queries from Slant.co. For more information on the ranking algorithm, look at files inside the SOLR/solr-7.2.0 folder of the indexer branch.
 * [User Interface](https://github.com/vivianbuan/Search-Engine-for-Software/tree/user_interface) </br>
-The user_interface branch contains the Django framework as well as other static files and templates needed to render the SwaGo website.
+The user_interface branch contains the Django framework as well as other static files and templates needed to render the SwaGo website. Check out [User Interface Documentation](/docs/User%20Interface%20Documentation.pdf) for instruction on how to set up the project on your local machine.
 
 ## Authors
 * [Joshua Choo](https://github.com/choo8)
